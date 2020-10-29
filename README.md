@@ -1,5 +1,5 @@
 # YOU-DONT-KNOW-JS-YET
-![javascript](https://img.shields.io/badge/Docker-ft_server-blue?logo=javascript)
+![javascript](https://img.shields.io/badge/Javascript-YDNJS-blue?logo=javascript)
 
 <br>
 
@@ -14,6 +14,6 @@
 | 2 | [__2_Surveying_JS__](./2_Surveying_JS) | _ | _ | closed |
 
 
-- 참고 자료
+- 참고 자료  
 https://github.com/getify/You-Dont-Know-JS  
 https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md  
