@@ -4,14 +4,12 @@
 <br>
 
 #### ☕ About YOU-DONT-KNOW-JS-YET
-👉This topic is intended to introduce you to system administration. It will make you aware
-of the importance of using scripts to automate your tasks. For that, you will discover
-the "docker" technology and use it to install a complete web server.
+👉YOU-DONT-KNOW-JS-YET
 
 <br>
 
 | Circle | Project | Language | Topics | Assignees | Date of Completion | 
-|:---:|:---|:---:|:---|:---:|
+|:---:|:---|:---:|:---|:---:|:---:|
 | 1 | [__1_What_Is_Javascript?__](./1_What_Is_Javascript?) | javascript | `Spec`, `WASM`, `pollyfill`, `strict mode` | IntraID | 2020. 10. 29. |
 | 2 | [__2_Surveying_JS__](./2_Surveying_JS) | _ | _ | closed |
 
