@@ -8,10 +8,10 @@
 
 <br>
 
-| Circle | Project | Language | Topics | Assignees | Date of Completion | 
-|:---:|:---|:---:|:---|:---:|:---:|
-| 1 | [__1_What_Is_Javascript?__](./1_What_Is_Javascript?) | javascript | `Spec`, `WASM`, `pollyfill`, `strict mode` | IntraID | 2020. 10. 29. |
-| 2 | [__2_Surveying_JS__](./2_Surveying_JS) | _ | _ | closed |
+| Chapter | Language | Topics | Assignees | Date of Completion | 
+|:---|:---:|:---|:---:|:---:|
+|[__1_What_Is_Javascript?__](./1_What_Is_Javascript?) | javascript | `Spec`, `WASM`, `pollyfill`, `strict mode` | IntraID | 2020. 10. 29. |
+| [__2_Surveying_JS__](./2_Surveying_JS) | _ | _ | closed |
 
 
 - 참고 자료  
