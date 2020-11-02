@@ -11,13 +11,13 @@
 
 ## 01장 :cat: Chapter 1: What Is JavaScript?
 
-[6.1　Language Specification](#61---Language-Specification)<br>
-[6.2　Multi-paradigm languages](#62---Multi-paradigm-languages)<br>
-[6.3　Filling the Gaps](#63---Filling-the-Gaps)<br>
-[6.4　Is it an interpreted script or a compiled program](#64---is-it-an-interpreted-script-or-a-compiled-program)<br>
-[6.5　Strict mode](#65---Strict-mode)<br>
+[1.1　Language Specification](#11---Language-Specification)<br>
+[1.2　Multi-paradigm languages](#12---Multi-paradigm-languages)<br>
+[1.3　Filling the Gaps](#13---Filling-the-Gaps)<br>
+[1.4　Is it an interpreted script or a compiled program](#14---is-it-an-interpreted-script-or-a-compiled-program)<br>
+[1.5　Strict mode](#15---Strict-mode)<br>
 
-### 6.1 　  Language Specification
+### 1.1 　  Language Specification
 
 1. JS를 관리하는 기술 운영위원회 인 ECMA은 공식 사양을 관리하며 정기적으로 만나 회의를 하고 변경사항에 대하여 투표 후 표준 조직인 TC39에 제출한다. ( O / X )
 
@@ -80,7 +80,7 @@
 </details>
 <br>
 
-### 6.2 　  Multi-paradigm languages
+### 1.2 　  Multi-paradigm languages
 
 1. 자바스크립트는 함수형 언어이다. ( O / X )
 
@@ -96,7 +96,7 @@
 </details>
 <br>
 
-### 6.3 　  Filling the Gaps
+### 1.3 　  Filling the Gaps
 
 1. 이전 환경에 있는 것처럼 최신 문법을 사용 할 수 있게 API 메서드에 대한 정의를 제공하는 패던을 ```_______``` 이라고 한다.
 
@@ -118,7 +118,7 @@
 </details>
 <br>
 
-### 6.4 　  Is it an interpreted script or a compiled program
+### 1.4 　  Is it an interpreted script or a compiled program
 
 1. JS가 컴파일되기 때문에 코드가 실행되기 전에 정적 오류(예 : 잘못된 구문)에 대한 알림을 받는다. ( O / X )
 
@@ -134,7 +134,7 @@
 </details>
 <br>
 
-### 6.5 　  Strict mode
+### 1.5 　  Strict mode
 
 1. Strict mode 를 전체에 선언해 보세요!
 
