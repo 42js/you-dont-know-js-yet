@@ -1,11 +1,11 @@
 # Surveying JS
 
 ## 요약
-| Name | URL | 
+| Name | URL |
 |:---|:---|
 | holee | [Chapter 2: Surveying JS](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-2:-Surveying-JS) |
 | sunpark | [YDNJSY Get Started - 2. Surveying JS](https://velog.io/@cos/YDNJSY-Get-Started-2-Surveying-JS) |
-| jachoi |  |
+| jachoi | [ydkjs yet! Get Started - Chapter 2 요약 정리](https://n00bh4cker.tistory.com/132)|
 
 ## Quiz
 
@@ -26,7 +26,7 @@
 
    > Obviously, if your application depends on five .js files, and one of them fails, the overall application will probably only partially operate, at best. **p.32**
 
-    
+
 </div>
 </details>
 <br>

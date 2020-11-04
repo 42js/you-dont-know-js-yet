@@ -1,11 +1,11 @@
 # What Is Javascript?
 
 ## 요약
-| Name | URL | 
+| Name | URL |
 |:---|:---|
 | holee | [Chapter 1: What Is JavaScript?](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-1:-What-Is-JavaScript%3F) |
 | sunpark | [YDNJSY Get Started - 1. What is JavaScript?](https://velog.io/@cos/YDNJSY-Get-Started-What-is-JavaScript) |
-| jachoi |  |
+| jachoi | [ydkjs yet! Get Started - Chapter 1 요약 정리](https://n00bh4cker.tistory.com/131)|
 
 ## Quiz
 
@@ -21,7 +21,7 @@
 
 1. JS를 관리하는 기술 운영위원회 인 ECMA은 공식 사양을 관리하며 정기적으로 만나 회의를 하고 변경사항에 대하여 투표 후 표준 조직인 TC39에 제출한다. ( O / X )
 
-2. 스펙에 대한 제안은 TC39 위원들만 가능하고 일반 사람들은 투표권을 갖는다. ( O / X )  
+2. 스펙에 대한 제안은 TC39 위원들만 가능하고 일반 사람들은 투표권을 갖는다. ( O / X )
 
 3. TC39의 구성원은 5단계 과정을 걸쳐서 표준을 제시한다. ( O / X )
 
@@ -75,7 +75,7 @@
 - 4. ```마지막으로 JS VM이 프로그램을 실행한다.```
 
     > **p.24**
-    
+
 </div>
 </details>
 <br>
