@@ -11,7 +11,10 @@
 
 [2.1　Each File is a Program](#21---Each-File-is-a-Program)<br>
 [2.2　Values](#22---Values)<br>
-[2.3　Declaring and Using Variables](#63---Declaring-and-Using-Variables)<br>
+[2.3　Declaring and Using Variables](#23---Declaring-and-Using-Variables)<br>
+[2.4　Functions](#24---Functions)<br>
+[2.5　Comparisons](#25---Comparisons)<br>
+[2.6　How We Organize in JS](#26---How-We-Organize-in-JS)<br>
 
 ### 2.1 　  Each File is a Program
 
@@ -45,7 +48,7 @@ var me = {
     specialties: [ "JS", "Table Tennis" ]
 };
 
-console.log(`My name is ${ me[___빈칸___)] }.`);
+console.log(`My name is ${ me[<빈칸>] }.`);
 // My name is Kyle
 ```
 
@@ -61,9 +64,9 @@ console.log(typeof myValue[2]);
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-1. 자바스크립트의 Primitive value (원시값) 6가지를 설명하세요.
+1. 자바스크립트의 Primitive value (원시값) 7가지를 설명하세요.
 
-    > Number(숫자), String(문자열), Boolean(부울), bigint, Undefined, Symbol이 JS의 Primitive value이다. **p.33~36**
+    > Number(숫자), String(문자열), Boolean(부울), bigint, Undefined, Null, Symbol이 JS의 Primitive value이다. [참고](https://www.ecma-international.org/ecma-262/11.0/index.html#sec-primitive-value) **p.33~36**
 
 2. 다음과 같은 코드가 있다고 할때, 빈칸에 들어갈 코드를 작성하시오.
 
@@ -71,7 +74,7 @@ console.log(typeof myValue[2]);
 
 3. 다음 코드의 출력값을 작성하시오.
 
-    > `false`는 Boolean이기 때문에 `"boolean"`이 출력되고, `null`은 Primitive value가 아니기 때문에 `"object"`가 출력된다. **p.38**
+    > `false`는 Boolean이기 때문에 `"boolean"`이 출력되고, `null`은 [여기](https://developer.mozilla.org/en-US/docs/Glossary/null)를 참고하자. **p.38**
 
 </div>
 </details>
@@ -81,7 +84,7 @@ console.log(typeof myValue[2]);
 
 1. `let` 키워드로 선언한 변수는 Function scoping을 사용한다. ( O / X )
 
-2. 다음 코드에서 에러가 나는 줄수를 찾으시오.
+2. 다음 코드에서 에러가 나는 줄수를 **모두** 찾으시오.
 
 ```javascript
 const hello = "world!"
@@ -93,7 +96,7 @@ if (this_is) {
   hello = "42!";
 }
 
-this = 10;
+console.log(this);
 ```
 
 <details>
@@ -103,6 +106,76 @@ this = 10;
 1. `let` 키워드로 선언한 변수는 Function scoping을 사용한다. ( O / **X** )
 
     > The `let` keyword has some differences to `var`, with the most obvious being that `let` allows a more limited access to the variable than `var`. This is called "block scoping" as opposed to regular or function scoping. **p.40**
+
+2. 다음 코드에서 에러가 나는 줄수를 **모두** 찾으시오.
+
+    > 6번째 줄에서 변수 이름을 this로 할당했는데, this는 키워드이기 때문에 변수 이름으로 생성할 수 없다. 또한 7번째 줄에서는 `const`로 선언한 값을 변경하려 하기 때문에 에러가 날 것이다. 결과적으로 6, 7번째 줄에서 오류가 난다. **p.41**
+
+</div>
+</details>
+<br>
+
+### 2.4 　  Functions
+
+1. 변수에 함수를 넣는 함수표현식은 컴파일 단계에서 변수에 함수를 할당한다. ( O / X )
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1. 변수에 함수를 넣는 함수표현식은 컴파일 단계에서 변수에 함수를 할당한다. ( O / **X** )
+
+    > Different from the function declaration form, a function expression is not associated with its identifier until that statement during runtime. **p.44**
+
+</div>
+</details>
+<br>
+
+### 2.5 　  Comparisons
+
+1. 다음 비교식들의 true, false값을 적으시오.
+
+```javascript
+"" == null;
+"92" < 96;
+"false" == "[]";
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1. 다음 비교식들의 true, false값을 적으시오.
+
+    > False, True, False **p.50~52**
+
+</div>
+</details>
+<br>
+
+### 2.6 　  How We Organize in JS
+
+1. Class를 상속할 때 함수를 상속받기 위해 `super`를 통해 부모 함수를 호출해야 한다. ( O / X )
+
+2. Module에서 새로운 객체를 만들기 위해 `new` 키워드를 사용해야 한다. ( O / X )
+
+3. ES Modules를 통해 함수를 가져올 때 가져오는 함수는 모듈에서 `export` 키워드를, 실제 사용할 파일에선 `import` 키워드를 사용해야 한다. ( O / X )
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1. Class를 상속할 때 함수를 상속받기 위해 `super`를 통해 부모 함수를 호출해야 한다. ( **O** / X )
+
+    > The `super(..)` call in each constructor delegates to the parent `Publication` class's constructor for its initialization work, and then they do more specific things according to their respective publication type (aka, "sub-class" or "child class"). **p.57**
+
+2. Module에서 새로운 객체를 만들기 위해 `new` 키워드를 사용해야 한다. ( O / **X** )
+
+    > The only observable difference here is the lack of using `new`, calling the module factories as normal functions. **p.62**
+
+3. ES Modules를 통해 함수를 가져올 때 가져오는 함수는 모듈에서 `export` 키워드를, 실제 사용할 파일에선 `import` 키워드를 사용해야 한다. ( **O** / X )
+
+    > **p.64~65**
 
 </div>
 </details>
