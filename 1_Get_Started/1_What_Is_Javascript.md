@@ -25,7 +25,7 @@
 
 3. TC39의 구성원은 5단계 과정을 걸쳐서 표준을 제시한다. ( O / X )
 
-4. console.log()는 Javascript Engine에서 정의된다. ( O / X )
+4. console.log()는 Javascript Spec에서 정의된다. ( O / X )
 
 5. JS는 상위호환(Forwards Compatibility)을 지원한다. ( O / X )
 
