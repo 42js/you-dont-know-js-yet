@@ -4,12 +4,12 @@
 | Name | URL | 
 |:---|:---|
 | holee | [Chapter 4: The Bigger Picture](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-4:-The-Bigger-Picture) |
-| sunpark |  |
+| sunpark | [YDNJSY Get Started - 4. The Bigger Picture & Appendix](https://velog.io/@cos/YDNJSY-Get-Started-4-The-Bigger-Picture) |
 | jachoi |  |
 
 ## Quiz
 
-## 01장 :cat: Chapter 4: The Bigger Picture
+## Chapter 4: The Bigger Picture
 
 [4.1　Scope and Closure](#41---Scope-and-Closure)<br>
 [4.2　Prototypes](#42---Prototypes)<br>
