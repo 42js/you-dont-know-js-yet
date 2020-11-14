@@ -8,7 +8,7 @@
 | Title | Study Date | 
 |:---|:---:|
 | [Get Started](./1_Get_Started) | 2020. 10. 29. ~ 2020. 11. 9. |
-| [Scope & Closures](./2_Scope_Closures) |  |
+| [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 7. |
 | Objects & Classes |  |
 | Types & Grammar |  |
 | Sync & Async |  |
@@ -16,10 +16,18 @@
 
 <br>
 
-### 🧑‍💻 Participant
+### 👨‍💻 Participant
 - [Hochan Lee](https://github.com/hochan222)
+
+[![holee's 42 stats](https://badge42.herokuapp.com/api/stats/holee)](https://profile.intra.42.fr/users/holee)
+
 - [Sungwoo Park](https://github.com/cos18)
+
+[![sunpark's 42 stats](https://badge42.herokuapp.com/api/stats/sunpark)](https://profile.intra.42.fr/users/sunpark)
+
 - [Jaeyoung Choi](https://github.com/ExtraMortals)
+
+[![jachoi's 42 stats](https://badge42.herokuapp.com/api/stats/jachoi)](https://profile.intra.42.fr/users/jachoi)
 
 ### 📢 Notice
 - This study is going with Korean.
