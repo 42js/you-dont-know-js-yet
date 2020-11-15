@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 2: Illustrating Lexical Scope](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-2:-Illustrating-Lexical-Scope) |
 | sunpark |  |
 | jachoi |  |
 
