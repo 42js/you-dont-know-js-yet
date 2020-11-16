@@ -5,7 +5,7 @@
 |:---|:---|
 | holee | [Chapter 1: What’s the Scope?](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-1:-What%E2%80%99s-the-Scope%3F) |
 | sunpark |  |
-| jachoi |  |
+| jachoi | [ydkjsy-scope-closures Chapter 1 ~ 2](https://n00bh4cker.tistory.com/136)|
 
 ## Quiz
 
