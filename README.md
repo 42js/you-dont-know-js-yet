@@ -8,7 +8,7 @@
 | Title | Study Date | 
 |:---|:---:|
 | [Get Started](./1_Get_Started) | 2020. 10. 29. ~ 2020. 11. 9. |
-| [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 7. |
+| [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 10. |
 | Objects & Classes |  |
 | Types & Grammar |  |
 | Sync & Async |  |
