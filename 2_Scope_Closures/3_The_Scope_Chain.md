@@ -28,12 +28,23 @@
 
 ### 3.2 　  Function Name Scope 
 
-> dongbkim
+```
+var a = function ofTheTeacher() {
+    console.log(ofTheTeacher);
+};
+
+a();
+
+console.log(ofTheTeacher);
+```
+1. 위 `ofTheTeacher`가 있는 scope에 대해 서술하시오.
+2. 에러가 나는 곳을 찾고, 이유를 서술하시오.
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-
+1.ofTheTeacher is declared as an identifier **inside the function itself**
+2.**console.log(ofTheTeacher)** 1번과 같은 이유.
 </div>
 </details>
 <br>
