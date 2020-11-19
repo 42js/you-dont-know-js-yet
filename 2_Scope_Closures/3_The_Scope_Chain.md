@@ -4,9 +4,8 @@
 | Name | URL |
 |:---|:---|
 | holee | [Chapter 3: The Scope Chain](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-3:-The-Scope-Chain) |
-| sunpark |  |
-| jachoi | [ydkjsy-scope-closures Chapter 3
-](https://n00bh4cker.tistory.com/139)|
+| sunpark | [YDNJSY Scope & Closures - 3. The Scope Chain](https://velog.io/@cos/YDNJSY-Scope-Closures-3-The-Scope-Chain) |
+| jachoi | [ydkjsy-scope-closures Chapter 3](https://n00bh4cker.tistory.com/139) |
 | dongbkim |  |
 
 ## Quiz
