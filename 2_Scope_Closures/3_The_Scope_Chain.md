@@ -18,9 +18,65 @@
 
 > jachoi
 
+1. 다음 코드에서 나타날 결과를 예상해 보시오 (단,use-strict는 사용하지 않았다고 전제 함)
+```
+var a = 1;
+function test()
+{
+  a = 3;
+  {
+    var a = 5;
+    console.log(a);
+  }
+  console.log(a);
+}
+
+test() // => ???
+```
+
+2. 다음 코드에서 나타날 결과를 예상해 보시오
+```
+function test()
+{
+  var a = 3;
+  {
+    let a = 5;
+    console.log(a);
+  }
+  console.log(a);
+}
+
+test(); // => ???
+```
+
+3. 다음 코드에서 나타날 결과를 예상해 보시오
+```
+var fortytwo = 42;
+function foo()
+{
+  var out = {fortytwo : window.fortytwo}; 
+  function bar()
+  {
+    out.fortytwo = 24;
+  }
+  bar();
+  console.log(window.fortytwo);
+  console.log(out.fortytwo);
+}
+```
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+
+1. 섀도잉은 바깥 스코프의 let 을 안쪽 스코프의 var 이 같은 이름을 가질때나 그 반대의 경우에만 일어난다
+따라서 위의 상황에선 따라서 섀도잉이 일어나지 않는다
+(결과 값 5, 5)
+
+2. 1번과 같은 이유로 섀도잉이 일어난다
+(결과 값 5, 3)
+
+3. out 에서는 참조가 아닌 복사가 일어난다 따라서 out 의 요소의 변화는 전역변수값의 변화에 영향을 주지 못한다 
+(결과 값 24, 42)
 
 </div>
 </details>
