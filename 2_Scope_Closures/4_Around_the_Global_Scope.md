@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 4: Aroundthe Global Scope](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-4:-Aroundthe-Global-Scope) |
 | sunpark |  |
 | jachoi |  |
 | dongbkim |  |
