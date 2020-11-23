@@ -51,7 +51,7 @@ const theGlobalSO = //여기에 추가;
 위 Function을 이용하여 글로벌 스코프를 this로 가리키게끔 코드를 작성하시오.
 <br/>
 2.
-```
+```js
 const theGlobalScopeObject =
     (typeof globalThis != "undefined") ? globalThis :
     (typeof global != "undefined") ? global :
@@ -64,11 +64,11 @@ const theGlobalScopeObject =
 <details>
   <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
- 1. 
-    > (new Function("return this"))() 
+ 1.  ** (new Function("return this"))() **
     <br/>
-  A function can be dynamically constructed from code stored in a string value with the Function() constructor, (중략) Such a function will automatically be run in non-strict-mode (for legacy reasons) when invoked with the normal () function invocation as shown;its this will point at **the global object**.(Global This 중 note box)<br/>
- 2.  if you find yourself needing a **reliable global scope reference**.(Global This 중 8번째 문단)
+  A function can be dynamically constructed from code stored in a string value with the Function() constructor, (중략) Such a function will automatically be run in non-strict-mode (for legacy reasons) when invoked with the normal () function invocation as shown;its this will point at ** the global object **.(Global This 중 note box)
+    <br/>
+ 2.  if you find yourself needing a ** reliable global scope reference **.(Global This 중 8번째 문단)
 
 
 </div>
