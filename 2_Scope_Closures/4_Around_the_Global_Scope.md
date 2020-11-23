@@ -4,7 +4,7 @@
 | Name | URL |
 |:---|:---|
 | holee | [Chapter 4: Aroundthe Global Scope](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-4:-Aroundthe-Global-Scope) |
-| sunpark |  |
+| sunpark | [YDNJSY Scope & Closures - 4. Around the Global Scope](https://velog.io/@cos/YDNJSY-Scope-Closures-4-Around-the-Global-Scope) |
 | jachoi |  |
 | dongbkim |  |
 
@@ -15,13 +15,35 @@
 
 ### 4.1 　  Why Global Scope?
 
-> sunpark
+1. 여러 JS 파일들을 하나의 스코프로 통합할 수 있는 방식 3가지는 무엇인가요?
+
+- 1. ```_____________________```
+- 2. ```_____________________```
+- 3. ```_____________________```
+
+2. 다음 코드를 보고 오류가 난다면 그 이유를, 나지 않는다면 출력 결과를 설명하세요.
+```javascript
+(function hello() {
+  var newObject = 'hello'
+  console.log(newObject);
+})();
+
+hello();
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 여러 JS 파일들을 하나의 스코프로 통합할 수 있는 방식 3가지는 무엇인가요?
 
+- 1. ```ES Module 사용```
+- 2. ```번들러를 사용해 하나의 파일로 통합```
+- 3. ```글로벌 스코프 사용```
+
+2. 다음 코드를 보고 오류가 난다면 그 이유를, 나지 않는다면 출력 결과를 설명하세요.
+
+  > hello 함수는 IIFE(즉시실행함수)로 실행되기 때문에 스코프에 선언되지 않고 딱 한번 호출됩니다. 따라서 `hello();`와 같이 별도로 호출하는 것은 오류를 발생시킵니다. 자세한 내용은 [여기](https://velog.io/@doondoony/javascript-iife)와 [여기](https://velog.io/@cos/JS-Reboot-공리와-함수#함수선언식과-함수표현식)를 참고하세요.
 
 </div>
 </details>
