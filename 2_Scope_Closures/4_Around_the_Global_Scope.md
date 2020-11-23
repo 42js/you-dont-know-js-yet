@@ -5,7 +5,7 @@
 |:---|:---|
 | holee | [Chapter 4: Aroundthe Global Scope](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-4:-Aroundthe-Global-Scope) |
 | sunpark | [YDNJSY Scope & Closures - 4. Around the Global Scope](https://velog.io/@cos/YDNJSY-Scope-Closures-4-Around-the-Global-Scope) |
-| jachoi |  |
+| jachoi | [ydkjsy-scope-closures Chapter 4](https://n00bh4cker.tistory.com/140)|
 | dongbkim |  |
 
 ## Quiz
@@ -56,7 +56,7 @@ hello();
 1. 웹브라우저와 웹워커 그리고 노드에서 전역스코프에 접근하기 위해서 사용하는 키워드를 각각 말해보세요!
 
 2. 다음의 경우 섀도잉이 일어나지 않는 이유를 설명해보세요
-```
+```js
 window.something = 42;
 let something = "Kyle";
 console.log(something);
