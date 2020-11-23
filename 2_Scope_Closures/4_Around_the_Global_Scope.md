@@ -31,11 +31,32 @@
 
 > jachoi
 
+1. 웹브라우저와 웹워커 그리고 노드에서 전역스코프에 접근하기 위해서 사용하는 키워드를 각각 말해보세요!
+
+2. 다음의 경우 섀도잉이 일어나지 않는 이유를 설명해보세요
+```
+window.something = 42;
+let something = "Kyle";
+console.log(something);
+// Kyle
+console.log(window.something);
+// 42
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
 
+1.
+- 차례대로 window, self, global
+
+2. 
+ - let 은 전역변수를 만들지만 전역객체의 프로퍼티는 만들지 않기 때문이다
+> The let declaration adds a something global variable but
+not a global object property (see Chapter 3). The effect then is
+that the something lexical identifier shadows the something
+global object property.
 
 </div>
 </details>
