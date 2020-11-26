@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 5: The (Not So) Secret Lifecycle of Variables](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-5:-The-(Not-So)-Secret-Lifecycle-of-Variables) |
 | sunpark |  |
 | jachoi |  |
 | dongbkim |  |
