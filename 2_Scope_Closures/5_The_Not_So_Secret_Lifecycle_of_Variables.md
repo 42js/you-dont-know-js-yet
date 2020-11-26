@@ -213,10 +213,9 @@ function say(){
 
 1. ReferenceError(Cannot access agree before initialization.)
 how do we initialize an uninitialized variable? For let/const, the only way to do so is with an assignment attached to a declaration statement.
-<br/>
-2-1 **, hello?**
-<br/>
-2-2 **ReferenceError: Cannot access 'name' before initialization**, name 선언 줄을 첫번째로 옮긴다.
+
+2.	(1) **, hello?**
+	(2) **ReferenceError: Cannot access 'name' before initialization**, name 선언 줄을 첫번째로 옮긴다.
 
 </div>
 </details>
