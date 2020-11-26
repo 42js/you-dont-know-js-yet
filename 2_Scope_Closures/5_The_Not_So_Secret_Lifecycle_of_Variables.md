@@ -182,14 +182,42 @@ var 는 전역에 위치하므로 계속 재할당이 이루어져서 문제가 
 
 ### 5.4 　  Uninitialized Variables (aka, TDZ)
 
-> dongbkim
 
+> dongbkim
+1. 다음 코드 어디에서 에러가 발생하는지를 서술하고, 한 키워드만 바꿔 에러를 나타나지 않게 하시오.
+```js
+console.log(agree);
+let agree = "dong_ui";
+```
+<br/>
+
+2. 다음 코드들의 결과를 맞추시오. 에러가 있을 시 한 줄을 바꿔 에러를 없애시오.
+```js
+say();
+var name = "suzy";
+function say(){
+	console.log(`${name}, hello?`);
+}
+```
+
+```js
+say();
+const name = "suzy";
+function say(){
+	console.log(`${name}, hello?`);
+}
+```
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. ReferenceError(Cannot access agree before initialization.)
+how do we initialize an uninitialized variable? For let/const, the only way to do so is with an assignment attached to a declaration statement.
 
+2-1 **, hello?**
+2-2 **ReferenceError: Cannot access 'name' before initialization**, name 선언 줄을 첫번째로 옮긴다.
 
 </div>
 </details>
 <br>
+
