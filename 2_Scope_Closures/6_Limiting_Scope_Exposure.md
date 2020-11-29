@@ -32,6 +32,7 @@
 > holee
 
 1. 다음 두 함수에서 각각 변수 cache에 대한 scope를 설명하시오.
+
 (1)
 ```js
 var cache = {};
