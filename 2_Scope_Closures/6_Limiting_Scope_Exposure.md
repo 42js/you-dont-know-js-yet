@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee | (Chapter 6: Limiting Scope Exposure)[https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-6:-Limiting-Scope-Exposure] |
+| holee | [Chapter 6: Limiting Scope Exposure](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-6:-Limiting-Scope-Exposure) |
 | sunpark |  |
 | jachoi |  |
 | dongbkim |  |
