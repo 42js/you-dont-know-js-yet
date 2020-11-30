@@ -115,11 +115,43 @@ void function(a, b) { return console.log(a + b) }(1, 2) // 3
 
 ### 6.3 　  Scoping with Blocks
 
-> sunpark
+1. 객체(Object) 에서 사용하는 중괄호 안은 새로운 스코프로 따진다. ( O / X )
+
+2. let, const를 사용하면서 TDZ error를 피하기 위해 따로 스코프를 만들어 그 스코프 상단에 변수를 초기화 할 수 있다. ( O / X )
+
+3. 두 코드 중 에러가 나는 코드
+  1)
+  ```javascript
+  for (var i = 0; i < 5; i++){
+    console.log(i);
+  }
+  console.log(i);
+  ```
+  2)
+  ```javascript
+  for (let i = 0; i < 5; i++){
+    console.log(i);
+  }
+  console.log(i);
+  ```
+
+4. `catch` 문에서 사용하는 중괄호는 새로운 스코프로 따진다. ( O / X )
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+
+1. 객체(Object) 에서 사용하는 중괄호 안은 새로운 스코프로 따진다. ( O / **X** )
+  > Object literals use `{ .. }` curly-brace pairs to delimit their key-value lists, but such object values are **not** scopes. **p.112**
+
+2. let, const를 사용하면서 TDZ error를 피하기 위해 따로 스코프를 만들어 그 스코프 상단에 변수를 초기화 할 수 있다. ( **O** / X )
+  > My suggestion there was: to minimize the risk of TDZ errors with `let/const` declarations, always put those declarations at the top of their scope. **p.114**
+
+3. 다음 코드에서 변수 `i`는 각각 몇번 선언되었나?
+  > var는 hoisting에 의해 function scope를 사용해 for문 밖에서 선언되지만, let은 for scope 안에서 선언되기 때문에 for문 밖에서 변수를 사용할 수 없다. **p.121~122**
+
+4. `catch` 문에서 사용하는 중괄호는 새로운 스코프로 따진다. ( O / **X** )
+  > ES2019 (recently, at the time of writing) changed  `catch` clauses so their declaration is optional; if the declaration is omitted, the `catch` block is no longer (by default) a scope; it's still a block, though! **p.124**
 
 </div>
 </details>
