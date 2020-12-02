@@ -161,6 +161,17 @@ void function(a, b) { return console.log(a + b) }(1, 2) // 3
 
 > jachoi
 
+1. 블록 안에 포함 된 함수는 대부분의 JS엔진에서 블록스코프의 범위를 지닌다 ( O / X )
+
+2. 다음 FiB 를 호출시 표준 JS 스펙에서 발생할 에러는?
+```js
+if (true) {
+  function FIB() {
+    console.log("Function in Blocks!");
+  }
+}
+FIB();
+```
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
