@@ -36,7 +36,11 @@ function hello(x, y) {
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+	
 1. Naming Collisions, Unexpected Behavior, Unintended Dependency
+	
+	<br/>
+	
 2. following the POLE principle, **temp should be as hidden in scope as possible**. So we block scope tmp (**using let**) to the if block.
 </div>
 </details>
