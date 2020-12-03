@@ -18,8 +18,9 @@
 ### 6.1 　  Least Exposure
 
 > dongbkim
+1. 전역 범위에 변수들을 되도록 선언하면 안되는 이유 3가지를 설명하시오.
 
-1. POLP에 따라 다음 코드를 수정하고 이유를 설명하시오.
+2. POLP에 따라 다음 코드를 수정하고 이유를 설명하시오.
 
 ```js
 function hello(x, y) {
@@ -35,8 +36,8 @@ function hello(x, y) {
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-	
-	1. following the POLE principle, **temp should be as hidden in scope as possible**. So we block scope tmp (**using let**) to the if block.
+1. Naming Collisions, Unexpected Behavior, Unintended Dependency
+2. following the POLE principle, **temp should be as hidden in scope as possible**. So we block scope tmp (**using let**) to the if block.
 </div>
 </details>
 <br>
