@@ -161,9 +161,9 @@ void function(a, b) { return console.log(a + b) }(1, 2) // 3
 
 > jachoi
 
-1. 블록 안에 포함 된 함수는 대부분의 JS엔진에서 블록스코프의 범위를 지닌다 ( O / X )
+1. 블록 안에 포함 된 함수는 V8 엔진에서 블록스코프의 범위를 지닌다 ( O / X )
 
-2. 다음 FiB 를 호출시 표준 JS 스펙에서 발생할 에러는?
+2. 다음 FiB 를 호출시 V8엔진에서 일어날 일을 예상해보시오
 ```js
 if (true) {
   function FIB() {
@@ -172,9 +172,19 @@ if (true) {
 }
 FIB();
 ```
+3. Node 와 크롬은 같은 JS 엔진을 이용한다 ( O / X )
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+
+1. 블록 안에 포함 된 함수는 V8 엔진에서 블록스코프의 범위를 지닌다 ( O / ***X*** )
+ > JS 표준에 따르면 블록스코프의 범위를 가지는것이 맞지만 많은 JS 엔진에선 식별자가 외부에서도 undefined 로 선언된다
+
+2. 정상적으로 "Function in Blocks!" 가 출력 된다
+
+3. Node 와 크롬은 같은 JS 엔진을 이용한다 ( O / X )
+ > Node 와 크롬은 모두 V8 엔진을 이용한다
 
 </div>
 </details>
