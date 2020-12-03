@@ -102,9 +102,7 @@ factorial(6);
 3. 다음 프로그램의 출력은?
 ```js
 ((a, b) => a + b)(1, 2);
-+function(a, b) { return console.log(a + b) }(1, 2) 
-*function(a, b) { return console.log(a + b) }(1, 2)
-^function(a, b) { return console.log(a + b) }(1, 2) 
++function(a, b) { return console.log(a + b) }(1, 2)
 void function(a, b) { return console.log(a + b) }(1, 2)
 ```
 
@@ -124,8 +122,6 @@ void function(a, b) { return console.log(a + b) }(1, 2)
 ```js
 ((a, b) => a + b)(1, 2); // 3
 +function(a, b) { return console.log(a + b) }(1, 2) // 3
-*function(a, b) { return console.log(a + b) }(1, 2) // 3
-^function(a, b) { return console.log(a + b) }(1, 2) // 3
 void function(a, b) { return console.log(a + b) }(1, 2) // 3
 ```
 </div>
