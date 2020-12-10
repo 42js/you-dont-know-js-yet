@@ -156,6 +156,7 @@ keeps[2]();
 클로저는 값에 대한 것이 아니고 해당 변수에 접근하는 것이기 때문에, var의 변수 특징 상 위의 코드에서 값이 계속 유지가 된다. 때문에 각각에 다른 변수를 클로즈 오버하게 해주면 된다.
 
 3. **ㄹ**, ajax에서 closure를 활용했다.
+<br/>
 ㄱ.
 클로즈 오버할 수 있는 변수가 있으나 사용하지 않았다.
 <br/>
@@ -349,7 +350,6 @@ function setupButtonHandler(btn) {
 setupButtonHandler(btn);
 ```
 
-2.
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
