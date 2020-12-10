@@ -121,13 +121,14 @@ div.onclick = function(){
 
 ### 7.3 　  An Alternative Perspective
 
-> sunpark
+1. 클로져를 통해 만든 스코프는 상위 스코프에 종속되어있다. ( O / X )
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 클로져를 통해 만든 스코프는 상위 스코프에 종속되어있다. ( O / **X** )
+  > Closure instead describes the magic of keeping alive a function instance, along with its whole scope environment and chain, for as long as there’s at least one reference to that function instance floating around in any other part of the program.
 
 </div>
 </details>
