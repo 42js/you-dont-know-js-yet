@@ -46,7 +46,7 @@ function manageStudentGrades(studentRecords) {
 
 ```________________```
 
-2. 다음은 GC의 대상으로 표시가 되는가?
+2. 다음은 GC의 대상으로 표함 되는가?
 
 (1)  
 
@@ -91,7 +91,7 @@ function manageStudentGrades(studentRecords) {
 }
 ```
 
-2. 다음은 GC의 대상으로 표시가 되는가?
+2. 다음은 GC의 대상으로 표함 되는가?
 
 ```js
 function f(){
