@@ -63,16 +63,44 @@
 
 > dongbkim
 
+1. 클래식 모듈과 Node CommonJS 모듈은 모두 파일 당 모듈 하나씩이다. (O,X)
+
+<br/>
+
+2. 첫번째 코드를 두번째로 바꾸었을 때, 장점에 대해서 말하시오.
+```js
+module.exports = {};
+```
+```js
+Object.assign(module.exports, {})
+```
+
+<br/>
+
+3. 다음 코드에 대해서 설명하시오.
+```js
+var getName = require("a/b/c/d.js").getName;
+```
+
+<br/>
+<br/>
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. X
+<br/>
+Common Js module 과 ESM이 파일 당 모듈 하나가 원칙이지만 classic module은 아니다. 
+<br/>
 
+2. module.exports를 얕은 복사를 함으로 안전성을 높이며, 한 개 이상의 모듈을 추가할 수 있다. 
+<br/>
 
+3. d.js의 모듈 인스턴스 중 getName만 access했다.
+
+<br/>
 </div>
-</details>
-<br>
-
 ### 8.4 　  Modern ES Modules (ESM)
 
 > holee
