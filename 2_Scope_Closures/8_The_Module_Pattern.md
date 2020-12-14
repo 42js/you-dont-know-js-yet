@@ -92,9 +92,9 @@ getName(73);   // Suzy
 
 1. 다음과 같이 ESM 코드를 작성하였다. import 코드로 알맞은 것은?
 
-> (2), (3)
-> [export default]: 파일 전체를 export하고 이름을 마음대로 정할 수 있다.
-> [export 변수]: 해당 변수만 export하고 해당 변수명 그대로 가져와야한다.
+> (2), (3)  
+> [export default]: 파일 전체를 export하고 이름을 마음대로 정할 수 있다.  
+> [export 변수]: 해당 변수만 export하고 해당 변수명 그대로 가져와야한다.  
 
 </div>
 </details>
