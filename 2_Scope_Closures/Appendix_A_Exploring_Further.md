@@ -60,8 +60,8 @@ var sayName = function(){
 
 2. 다음 빈칸에 들어갈 알맞은 것은?
 
-(1) ```function sayName(){}``` => ```___________```
-(2) ```var sayName = function(){}``` => ```___________```
+(1) ```function sayName(){}``` => ```___________```  
+(2) ```var sayName = function(){}``` => ```___________```  
 
 **ㄱ. 함수 표현식**  
 **ㄴ. 함수 선언식**  
