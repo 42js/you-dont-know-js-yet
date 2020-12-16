@@ -80,7 +80,7 @@ var sayName = function(){
 }
 ```
 
-> Uncaught TypeError: sayName is not a function at <anonymous>:1:1
+> Uncaught TypeError: sayName is not a function at <anonymous>:1:1  
 > '선언과 할당'의 분리가 발생하기 때문이다.
 
 2. 다음 빈칸에 들어갈 알맞은 것은?
