@@ -85,7 +85,7 @@ var sayName = function(){
 
 2. 다음 빈칸에 들어갈 알맞은 것은?
 
-(1) ```function sayName(){}``` => ```함수 선언식```
+(1) ```function sayName(){}``` => ```함수 선언식```  
 (2) ```var sayName = function(){}``` => ```함수 표현식```
 
 </div>
