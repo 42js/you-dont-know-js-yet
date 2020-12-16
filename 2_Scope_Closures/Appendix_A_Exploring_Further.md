@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Appendix A: Exploring Further](https://github.com/hochan222/Everything-in-JavaScript/wiki/Appendix-A:-Exploring-Further_) |
 | sunpark |  |
 | dongbkim |  |
 
@@ -48,11 +48,45 @@
 
 > holee
 
+1. 다음 프로그램의 출력은?
+
+```js
+sayName();
+
+var sayName = function(){
+  console.log('hello world');
+}
+```
+
+2. 다음 빈칸에 들어갈 알맞은 것은?
+
+(1) ```function sayName(){}``` => ```___________```
+(2) ```var sayName = function(){}``` => ```___________```
+
+**ㄱ. 함수 표현식**  
+**ㄴ. 함수 선언식**  
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 다음 프로그램의 출력은?
 
+```js
+sayName();
+
+var sayName = function(){
+  console.log('hello world');
+}
+```
+
+> Uncaught TypeError: sayName is not a function at <anonymous>:1:1
+> '선언과 할당'의 분리가 발생하기 때문이다.
+
+2. 다음 빈칸에 들어갈 알맞은 것은?
+
+(1) ```function sayName(){}``` => ```함수 선언식```
+(2) ```var sayName = function(){}``` => ```함수 표현식```
 
 </div>
 </details>
