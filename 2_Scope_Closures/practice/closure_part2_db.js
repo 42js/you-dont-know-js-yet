@@ -2,7 +2,7 @@ function toggle(...par){
 	var index = 0;
 	return function toggleIn(){
 		console.log(par[index]);
-		index = (++index)%par.length;
+		index = (index + 1) % par.length;
 	}
 };
 
