@@ -34,12 +34,70 @@
 
 > dongbkim
 
+1.  안에 알맞은 결과를 말하시오.
+```js
+var config = {};
+
+config.cb = function(){
+    // ..
+};
+
+
+var [ noName ] = [ function(){} ];
+config.cb.name;
+noName.name
+//위 2 호출 결과
+```
+<br/>
+2. IIFE인 함수들을 고르시오.
+
+```js
+(function a(){
+
+})();
+
+!function b(){
+    // ..
+}();
+
+-function c(){
+	// ..
+}();
+
++function d(){
+    // ..
+}();
+
+~function e(){
+    // ..
+}();
+
+=function f(){
+	// ..
+}();
+```
+<br/>
+3. 익명 함수를 왜 지양하는 것이 좋은지 자유롭게 서술하시오.
+<br/>
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
 
+1. ""  빈 문자열이 나온다.
+> Any assignment of a function expression that's not a simple assignment will also fail name inferencing.
 
+<br/>
+
+2. a, b, d, e
+> The !, +, ~, and several other unary operators (operators with one operand) can all be placed in front of function to turn it into an expression. Then the final () call is valid, which makes it an IIFE.
+
+<br/>
+
+3. Any name you omit is making the program harder to read, harder to debug, harder to extend and maintain later.
+
+<br/>
 </div>
 </details>
 <br>
