@@ -10,7 +10,7 @@
 ## Quiz
 [A.1　Implied Scopes](#A1---Implied-Scopes)<br>
 [A.2　Anonymous vs. Named Functions](#A2---Anonymous-vs-Named-Functions)<br>
-[A.3  Hoisting: Functions and Variables](#A3---Hoisting-Functions-and-Variables)<br>
+[A.3　Hoisting: Functions and Variables](#A3---Hoisting-Functions-and-Variables)<br>
 [A.4　The Case for var](#A4---The-Case-for-var)<br>
 [A.5　What's the Deal with TDZ?](#A5---Whats-the-Deal-with-TDZ)<br>
 [A.6　Are Synchronous Callbacks Still Closures?](#A6---Are-Synchronous-Callbacks-Still-Closures)<br>
@@ -18,13 +18,27 @@
 
 ### A.1 　  Implied Scopes
 
-> sunpark
+1. 함수의 스코프는 중괄호 안 실행구문과 매개변수를 항상 따로 나누어 두개의 스코프로 따진다. ( O / X )
+
+2. 매개변수 스코프의 햇갈리는 작동방식을 막을 수 있는 코딩 스타일 방식을 두가지 서술하시오.
+  1) `_____________`
+  2) `_____________`
+
+3. 함수표현식으로 함수를 선언할 때 변수명이 아닌 함수에 붙이는 이름(`var a = function b(){};` 에서 `b`)은 함수의 실행문 안에서 `let`이나 `const` 키워드를 사용해 다른 변수 이름으로 사용할 수 있다. ( O / X )
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 함수의 스코프는 중괄호 안 실행구문과 매개변수를 항상 따로 나누어 두개의 스코프로 따진다. ( O / **X** )
+  > Default values, rest parameters (using ...), and destructured parameters의 경우에는 두개의 스코프로 나누어 생각하지만, 일반적인 경우에는 하나의 스코프로 따져 생각한다. **p.186**
 
+2. 매개변수 스코프의 햇갈리는 작동방식을 막을 수 있는 코딩 스타일 방식을 두가지 서술하시오.
+  1) `로컬 변수로 매개변수를 쉐도잉하지 말것`
+  2) `초기화 매개변수(default parameter)에서 다른 매개변수를 사용하는 함수를 지정하지 말것` **p.190**
+
+3. 함수표현식으로 함수를 선언할 때 변수명이 아닌 함수에 붙이는 이름(`var a = function b(){};` 에서 `b`)은 함수의 실행문 안에서 `let`이나 `const` 키워드를 사용해 다른 변수 이름으로 사용할 수 있다. ( O / **X** )
+  > But this is perfectly legal shadowing, not re-declaration, because the two `ofTheTeacher` identifiers are in separate scopes. **p.190~191**
 
 </div>
 </details>
