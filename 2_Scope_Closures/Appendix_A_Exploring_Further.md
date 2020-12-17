@@ -37,7 +37,7 @@
   1) `로컬 변수로 매개변수를 쉐도잉하지 말것`
   2) `초기화 매개변수(default parameter)에서 다른 매개변수를 사용하는 함수를 지정하지 말것` **p.190**
 
-3. 함수표현식으로 함수를 선언할 때 변수명이 아닌 함수에 붙이는 이름(`var a = function b(){};` 에서 `b`)은 함수의 실행문 안에서 `let`이나 `const` 키워드를 사용해 다른 변수 이름으로 사용할 수 있다. ( O / **X** )
+3. 함수표현식으로 함수를 선언할 때 변수명이 아닌 함수에 붙이는 이름(`var a = function b(){};` 에서 `b`)은 함수의 실행문 안에서 `let`이나 `const` 키워드를 사용해 다른 변수 이름으로 사용할 수 있다. ( **O** / X )
   > But this is perfectly legal shadowing, not re-declaration, because the two `ofTheTeacher` identifiers are in separate scopes. **p.190~191**
 
 </div>
@@ -48,7 +48,7 @@
 
 > dongbkim
 
-1.  안에 알맞은 결과를 말하시오.
+1. 호출 결과 안에 알맞은 결과를 말하시오.
 ```js
 var config = {};
 
