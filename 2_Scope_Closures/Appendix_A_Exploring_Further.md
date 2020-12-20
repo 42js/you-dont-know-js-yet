@@ -166,13 +166,35 @@ var sayName = function(){
 
 ### A.4 　  The Case for var
 
-> sunpark
+1. Global Scope나 함수 스코프의 최상위에서 변수를 선언할 때엔 ( `var` / `let` ), 한정된 스코프 내부에서 사용하는 변수를 선언할 때엔 ( `var` / `let` )를 사용하는 것이 좋다.
+
+2. 오류가 나지 않게 빈칸에 들어갈 키워드를 선택하세요.
+```javascript
+function commitAction() {
+  do {
+    let result = commit();
+    `[ var / let ]` done = result && result.code == 1;
+  } while (!done);
+}
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. Global Scope나 함수 스코프의 최상위에서 변수를 선언할 때엔 ( **`var`** / `let` ), 한정된 스코프 내부에서 사용하는 변수를 선언할 때엔 ( `var` / **`let`** )를 사용하는 것이 좋다.
+  > If you see a `let`, it tells you that you're dealing with a localized declaration. If you see `var`, it tells you that you're dealing with a function-wide declaration. **p.210**
 
+2. 오류가 나지 않게 빈칸에 들어갈 키워드를 선택하세요.
+```javascript
+function commitAction() {
+  do {
+    let result = commit();
+    var done = result && result.code == 1;
+  } while (!done);
+}
+```
+  > `done` 변수의 경우 스코프 밖인 while문의 조건문에서도 사용되기 때문에 `let`을 사용하면 에러가 발생함으로 `var`를 사용해야 합니다. **p.211**
 
 </div>
 </details>
