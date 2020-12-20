@@ -218,11 +218,78 @@ function commitAction() {
 
 > holee
 
+1. 다음 출력을 설명하시오.
+
+```js
+var length = 101;
+function fn2() {
+	console.log("this.length: "+this.length);
+}
+ 
+var obj = {
+  length: 5,
+  holee: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+ 
+obj.holee(fn2, 1);
+```
+
+#### Output
+
+```js
+this.length: 101
+this.length: 2
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 다음 출력을 설명하시오.
 
+> argument로써 다른 함수내부에 들어가는 건 콜백이다.
+
+```js
+function fn2() {
+    console.log(this)
+}
+```
+
+1.
+> {
+> console: {
+>   log: [Function: log],
+>   warn: [Function: warn],
+>   dir: [Function: dir],
+>   time: [Function: time],
+>   timeEnd: [Function: timeEnd],
+>   timeLog: [Function: timeLog],
+>   trace: [Function: trace],
+>   assert: [Function: assert],
+>   clear: [Function: clear],
+>   count: [Function: count],
+>   countReset: [Function: countReset],
+>   group: [Function: group],
+>   groupEnd: [Function: groupEnd],
+>   table: [Function: table],
+>   debug: [Function: debug],
+>   info: [Function: info],
+>   dirxml: [Function: dirxml],
+>   error: [Function: error],
+>   groupCollapsed: [Function: groupCollapsed],
+>   Console: [Function: Console],
+>   profile: [Function: profile],
+>   profileEnd: [Function: profileEnd],
+>   timeStamp: [Function: timeStamp],
+>   ...
+
+2. 
+> [Arguments] { '0': [Function: fn2], '1': 1 }
+
+이 외에 일반적 경우에서 컨텍스트 변수를 사용하는 콜백은 클로저이다.
 
 </div>
 </details>
