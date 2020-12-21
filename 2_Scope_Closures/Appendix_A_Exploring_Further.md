@@ -204,10 +204,26 @@ function commitAction() {
 
 > dongbkim
 
+1. 왜 const는 자동 초기화가 되지 않는지 서술하시오.
+
+<br/>
+
+2. var 외의 변수들에는 hoisting이 일어나지 않는다.(O, X)
+
+<br/>
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+
+1.  it should only ever be observable with one value.
+
+<br/>
+
+2. var 외의 변수들에는 hoisting이 일어나지 않는다.(O, **X**)
+<br/>it was determined that any sort of access of a variable while in its TDZ is illegal and must result in the TDZ error. 호이스팅이 일어나지만 TDZ존에 있기 때문에 참조에러가 발생한다.
 
 
 </div>
