@@ -313,13 +313,19 @@ function fn2() {
 
 ### A.7 　  Classic Module Variations
 
-> sunpark
+1. Classic Module을 만들 때 바로 객체를 리턴하는 것 보다 `publicAPI`와 같은 변수를 만들어 이를 리턴하는 것을 선호하는 이유를 2가지 서술하시오.
+
+1) `_____________`
+2) `_____________`
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. Classic Module을 만들 때 바로 객체를 리턴하는 것 보다 `publicAPI`와 같은 변수를 만들어 이를 리턴하는 것을 선호하는 이유를 2가지 서술하시오.
 
+1) `변수명을 지정해 리턴하기 때문에 가독성이 좋다.`
+2) `모듈의 라이프사이클에서 접근하기에 변수를 지정하는 방식이 더 편하다.`
 
 </div>
 </details>
