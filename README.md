@@ -33,6 +33,10 @@
 
 [![dongbkim's 42 stats](https://badge42.herokuapp.com/api/stats/dongbkim)](https://profile.intra.42.fr/users/dongbkim)
 
+- [Gwangyeol Im](https://github.com/mkitigy)
+
+[![gim's 42 stats](https://badge42.herokuapp.com/api/stats/gim)](https://profile.intra.42.fr/users/gim)
+
 ### 📢 Notice
 - This study is going with Korean.
 - By default, this study will proceed to the second edition, but in the case of an unpublished book, we will proceed to the first edition. If we proceed to the first edition, we will mark it separately.
