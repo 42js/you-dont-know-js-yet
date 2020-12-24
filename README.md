@@ -29,6 +29,10 @@
 
 [![jachoi's 42 stats](https://badge42.herokuapp.com/api/stats/jachoi)](https://profile.intra.42.fr/users/jachoi)
 
+- [Yunho Jo](https://github.com/YUJO42)
+
+[![yujo's 42 stats](https://badge42.herokuapp.com/api/stats/jachoi)](https://profile.intra.42.fr/users/yujo)
+
 - [Dongbin Kim](https://github.com/dawnbeen)
 
 [![dongbkim's 42 stats](https://badge42.herokuapp.com/api/stats/dongbkim)](https://profile.intra.42.fr/users/dongbkim)
