@@ -41,6 +41,10 @@
 
 [![gim's 42 stats](https://badge42.herokuapp.com/api/stats/gim)](https://profile.intra.42.fr/users/gim)
 
+- [SoHyun Park](https://github.com/pje1740)
+
+[![sohpark's 42 stats](https://badge42.herokuapp.com/api/stats/sohpark)](https://profile.intra.42.fr/users/sohpark)
+
 ### 📢 Notice
-- This study is going with Korean.
+- This study is conducted in Korean.
 - By default, this study will proceed to the second edition, but in the case of an unpublished book, we will proceed to the first edition. If we proceed to the first edition, we will mark it separately.
