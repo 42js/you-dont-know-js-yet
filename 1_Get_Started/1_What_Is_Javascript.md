@@ -52,7 +52,7 @@
 
     > You have to get a TC39 member to champion a proposal for it to be considered “Stage 0” officially. **p.5**
 
-3. TC39의 구성원은 3단계 과정을 걸쳐서 표준을 제시한다. ( **O** / X )
+3. TC39의 구성원은 5단계 과정을 걸쳐서 표준을 제시한다. ( **O** / X )
 
     > All TC39 proposals progress through a five-stage process— of course, since we’re programmers, it’s 0-based!—Stage 0 through Stage  **p.5**
 
