@@ -6,6 +6,7 @@
 | holee | [Chapter 3: Digging to the Roots of JS](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-3:-Digging-to-the-Roots-of-JS) |
 | sunpark | [YDNJSY Get Started - 3. Digging to the Roots of JS](https://velog.io/@cos/YDNJSY-Get-Started-3-Digging-to-the-Roots-of-JS) |
 | jachoi | [ydkjs yet! Get Started - Chapter 3 요약 정리](https://n00bh4cker.tistory.com/133)|
+| gim | [Chapter 3: Digging to the Roots of JS](https://velog.io/@mkitigy/Chapter-3-Digging-to-the-Roots-of-JS)|
 
 ## Quiz
 
