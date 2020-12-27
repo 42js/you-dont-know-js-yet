@@ -21,6 +21,10 @@
 
 [![holee's 42 stats](https://badge42.herokuapp.com/api/stats/holee)](https://profile.intra.42.fr/users/holee)
 
+- [Namseok Kang](https://github.com/nkink)
+
+[![nkang's 42 stats](https://badge42.herokuapp.com/api/stats/nkang)](https://profile.intra.42.fr/users/nkang)
+
 - [Sungwoo Park](https://github.com/cos18)
 
 [![sunpark's 42 stats](https://badge42.herokuapp.com/api/stats/sunpark)](https://profile.intra.42.fr/users/sunpark)
