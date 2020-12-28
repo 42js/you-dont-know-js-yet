@@ -18,8 +18,6 @@ function scheduleMeeting(startTime, durationMinutes) {
 	var endNumber = endHour * 100 + endMinutes;
 	var dayStartNum = Number(dayStart.replace(":", ""));
 	var dayEndNum = Number(dayEnd.replace(":", ""));
-	console.log(dayStartNum);
-	console.log(dayEndNum);
 	if (dayStartNum < endNumber && dayEndNum > endNumber)
 	{
 			return (true);
