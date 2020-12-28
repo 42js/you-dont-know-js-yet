@@ -2,36 +2,24 @@ const dayStart = "07:30";
 const dayEnd = "17:45";
 
 function timeToNumber(time){
-	let buf = time.split(":");
-	return [parseInt(buf[0]), parseInt(buf[1])];
+	let [hour, min] = time.split(":");
+	return [Number(hour), Number(min)];
 }
 
 const start = timeToNumber(dayStart);
 const end = timeToNumber(dayEnd);
 
 function endCompare(time){
-	if(time[0] >= end[0]){
-		if(time[0] == end[0]){
-			if(time[1] > end[1]){
-				return false;
-			}
-		} else {
-			return false;
-		}
+	if(time[0] > end[0] ||(time[0] == end[0] && time[1] > end[1])){
+		return false;
 	}
 	return true;
 }
 
 function scheduleMeeting(startTime,durationMinutes) {
 	let time = timeToNumber(startTime);
-	if(time[0] <= start[0]){
-		if(time[0] == start[0]){
-			if(time[1] < start[1]){
-				return false;
-			}
-		} else {
-			return false;
-		}
+	if(time[0] < start[0] || (time[0] == start[0] && time[1] < start[1]){
+		return fasle;
 	} else {
 		if(!endCompare(time)){
 			return false;
