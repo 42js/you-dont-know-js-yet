@@ -6,7 +6,6 @@ function scheduleMeeting(startTime, durationMinutes) {
 
     console.log(timeToMinute(dayStart) <= startTimeMinute
             && startTimeMinute + durationMinutes <= timeToMinute(dayEnd));
-    
     return ;
 
     function timeToMinute (time) {
