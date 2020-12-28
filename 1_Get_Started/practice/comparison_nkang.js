@@ -5,8 +5,6 @@ function scheduleMeeting(startTime, durationMinutes) {
 	var [ , hour, minutes] = startTime.match(/^(\d{1,2}):(\d{2})$/) || [];
 	hour = Number(hour);
 	minutes = Number(minutes);
-	console.log(hour);
-	console.log(minutes);
 	var endMinutes = durationMinutes + minutes;
 	if (endMinutes >= 60)
 	 {
@@ -18,16 +16,11 @@ function scheduleMeeting(startTime, durationMinutes) {
 		var endHour = hour;
 	}
 	var endNumber = endHour * 100 + endMinutes;
-	console.log(endHour);
-	console.log(endMinutes);
-	console.log(endNumber);
-	console.log(dayStart.replace(":", ""));
-	console.log(dayEnd.replace(":", ""));
 	var dayStartNum = Number(dayStart.replace(":", ""));
 	var dayEndNum = Number(dayEnd.replace(":", ""));
 	console.log(dayStartNum);
 	console.log(dayEndNum);
-	if (dayStart < endNumber && dayEnd > endNumber)
+	if (dayStartNum < endNumber && dayEndNum > endNumber)
 	{
 			return (true);
 	}
