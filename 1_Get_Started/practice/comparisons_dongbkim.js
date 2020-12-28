@@ -38,7 +38,7 @@ function scheduleMeeting(startTime,durationMinutes) {
 		}
 		time[0] += Math.floor(durationMinutes/60);
 		time[1] += durationMinutes%60;
-		if(time[1] > 60){
+		if(time[1] >= 60){
 			time[0]++;
 			time[1]= time[1]%60;
 		}
