@@ -7,6 +7,7 @@
 | sunpark | [YDNJSY Get Started - 3. Digging to the Roots of JS](https://velog.io/@cos/YDNJSY-Get-Started-3-Digging-to-the-Roots-of-JS) |
 | jachoi | [ydkjs yet! Get Started - Chapter 3 요약 정리](https://n00bh4cker.tistory.com/133)|
 | gim | [Chapter 3: Digging to the Roots of JS](https://velog.io/@mkitigy/Chapter-3-Digging-to-the-Roots-of-JS)|
+| nkang | [Chapter 3: Digging to the Roots of JS 요약](https://www.notion.so/nkk/Chapter-3-Digging-to-the-Roots-of-JS-11887ef9aa714b75921f8823ebbe5dfc)|
 
 ## Quiz
 
