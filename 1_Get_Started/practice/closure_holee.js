@@ -1,3 +1,5 @@
+"use strict"
+
 function range(start,end) { 
     start = Number(start) || 0;
   
