@@ -1,12 +1,14 @@
 function range(start, end) {
+  function completeRange(new_end) {
+    if (new_end < start) return [];
+    return Array.from(Array(new_end - start + 1).keys(), (x) => x + start);
+  }
   if (start === undefined || end < start) return [];
   if (end === undefined) {
-    return function (new_end) {
-      if (new_end < start) return [];
-      return Array.from(Array(new_end - start + 1).keys(), (x) => x + start);
-    };
+    return completeRange;
   }
-  return Array.from(Array(end - start + 1).keys(), (x) => x + start);
+
+  return completeRange(end);
 }
 
 console.log(range(3, 3));
