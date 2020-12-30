@@ -25,27 +25,14 @@ var slotMachine = {
     });
   },
   display() {
-    function display_above(curr_reel) {
-      const above = curr_reel.position - 1;
-      return reel.symbols[above < 0 ? reel.symbols.length - 1 : above];
+    for (let linePos = -1; linePos <= 1; linePos++) {
+      let lineSymbols = this.reels.map((r) => {
+        let posIndex =
+          (r.position + reel.symbols.length + linePos) % reel.symbols.length;
+        return reel.symbols[posIndex];
+      });
+      console.log(lineSymbols.join(" | "));
     }
-
-    function display_below(curr_reel) {
-      return reel.symbols[(curr_reel.position + 1) % (reel.symbols.length - 1)];
-    }
-    console.log(
-      `${display_above(this.reels[0])} | ${display_above(
-        this.reels[1]
-      )} | ${display_above(this.reels[2])}`
-    );
-    console.log(
-      `${this.reels[0].display()} | ${this.reels[1].display()} | ${this.reels[2].display()}`
-    );
-    console.log(
-      `${display_below(this.reels[0])} | ${display_below(
-        this.reels[1]
-      )} | ${display_below(this.reels[2])}`
-    );
   },
 };
 
