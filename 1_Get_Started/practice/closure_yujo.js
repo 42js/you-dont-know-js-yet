@@ -4,9 +4,9 @@ function range(start, end) {
   }
   return printResult(end);
 
-  function printResult(end) {
+  function printResult(rangeEnd) {
     const result = [];
-    while (start <= end) {
+    while (start <= rangeEnd) {
       result.push(start++);
     }
     console.log(result);

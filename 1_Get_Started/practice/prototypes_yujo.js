@@ -28,14 +28,11 @@ var slotMachine = {
 
   display() {
     const lines = [];
-
-    for (let i = 0; i < 3; i++) {
-      const min = 0;
-      const max = reel.symbols.length - 1;
+    for (let i = -1; i <= 1; i++) {
       const line = this.reels.map((reel) => {
-        const target = Object.create(reel);
-        target.position = Math.floor(Math.random() * (max - min + 1)) + min;
-        return target.display();
+        return reel.symbols[
+          (reel.position + i + reel.symbols.length) % reel.symbols.length
+        ];
       });
       lines.push(line.join(" | "));
     }
