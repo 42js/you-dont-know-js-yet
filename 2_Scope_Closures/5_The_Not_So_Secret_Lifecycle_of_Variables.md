@@ -7,6 +7,7 @@
 | sunpark |  |
 | jachoi | [ydkjsy-scope-closures Chapter 5](https://n00bh4cker.tistory.com/141)|
 | dongbkim |  |
+| gim | [Chapter 5: The (Not So) Secret Lifecycle of Variables](https://velog.io/@mkitigy/Chapter-5-The-Not-so-Secret-Lifecycle-of-Variables) |
 
 ## Quiz
 
