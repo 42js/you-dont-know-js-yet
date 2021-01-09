@@ -1,16 +1,16 @@
 "use strict";
 
 const isPrime = (function () {
-  const cache = {};
+  const primes = {};
 
-  return checkCache;
+  return checkPrimes;
 
-  function checkCache(v) {
-    if (v in cache) {
-      return cache[v];
+  function checkPrimes(v) {
+    if (v in primes) {
+      return primes[v];
     }
 
-    return (cache[v] = isPrime(v));
+    return (primes[v] = isPrime(v));
   }
 
   function isPrime(v) {
@@ -32,22 +32,22 @@ const isPrime = (function () {
 })();
 
 const factorize = (function () {
-  const cache = {};
+  const factors = {};
 
   return factorize;
 
   function factorize(v) {
-    if (v in cache) {
-      return cache[v];
+    if (v in factors) {
+      return factors[v];
     }
     if (isPrime(v)) {
-      return (cache[v] = [v]);
+      return (factors[v] = [v]);
     }
     let i = Math.floor(Math.sqrt(v));
     while (v % i != 0) {
       i--;
     }
 
-    return (cache[v] = [...factorize(i), ...factorize(v / i)]);
+    return (factors[v] = [...factorize(i), ...factorize(v / i)]);
   }
 })();
