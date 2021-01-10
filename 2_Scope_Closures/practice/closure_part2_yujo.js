@@ -1,6 +1,5 @@
-function toggle() {
+function toggle(...args) {
   let count = 0;
-  const args = arguments;
   function toggle() {
     return args[count++ % args.length];
   }
