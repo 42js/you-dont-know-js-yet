@@ -32,11 +32,7 @@ let factorize = (function hideTheCache() {
         while (v % i != 0) {
           i--;
         }
-        let divisorFactorized = !cache.get(v) ? factorize(i) : cache.get(v);
-        let quotientFactorized = !cache.get(v / i)
-          ? factorize(v / i)
-          : cache.get(v / i);
-        return [...divisorFactorized, ...quotientFactorized];
+        return [...factorize(i), ...factorize(v / i)];
       }
       cache.set(v, [v]);
       return cache.get(v);
@@ -52,4 +48,4 @@ console.log(isPrime(10));
 console.log(isPrime(12));
 
 console.log(factorize(10));
-console.log(factorize(12));
+console.log(factorize(120));
