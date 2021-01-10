@@ -32,7 +32,8 @@ let factorize = (function hideTheCache() {
         while (v % i != 0) {
           i--;
         }
-        return [...factorize(i), ...factorize(v / i)];
+        cache.set(v, [...factorize(i), ...factorize(v / i)]);
+        return cache.get(v);
       }
       cache.set(v, [v]);
       return cache.get(v);
