@@ -1,5 +1,5 @@
 const isPrime = (function () {
-    const cache = {};
+    var cache = {};
 
     return (checkPrimes);
 
@@ -27,26 +27,28 @@ const isPrime = (function () {
     }
 })();
 
-var factorize = (function (_) {
+const factorize = (function () {
     var cache = {};
     
     return (factorize_algorithm);
 
     function factorize_algorithm(v) {
-        if (cache[v])
-            return [v];
+        if (cache[v]) {
+            return cache[v];
+        }
         if (!isPrime(v)) {
             let i = Math.floor(Math.sqrt(v)); 
             while (v % i !== 0) {
                 i--; 
             }
-            return [ 
-                ...factorize_algorithm(i),
-                ...factorize_algorithm(v / i) 
-            ];
+            return (
+                cache[v] = [ 
+                    ...factorize_algorithm(i),
+                    ...factorize_algorithm(v / i) 
+                ]
+            );
         }
-        cache[v] = true;
-        return [v];
+        return (cache[v] = [v]);
     }
 })();
 
@@ -54,6 +56,7 @@ console.log(isPrime(11));
 console.log(isPrime(12));
 console.log(factorize(11));
 console.log(factorize(12));
+console.log(factorize(24));
 console.log(factorize(4327));
 console.log(factorize(4327));
 console.log(factorize(4327));
