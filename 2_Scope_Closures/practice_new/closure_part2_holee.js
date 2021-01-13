@@ -1,8 +1,7 @@
-function toggle(...argv) { 
+function toggle(...options) { 
     let index = 0;
-    let mod = argv.length;
     return function toggleLogic() {
-        console.log(argv[index++ % mod]);
+        console.log(options[index++ % options.length]);
     };
 }
 
