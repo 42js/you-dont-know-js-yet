@@ -83,9 +83,7 @@ function calculator() {
     }
     
     function is_number(str) {
-        if (str >= '0' && str <= '9')
-            return (true);
-        return (false);
+       return (str >= '0' && str <= '9');
     }
     
     function is_operator(str) {
