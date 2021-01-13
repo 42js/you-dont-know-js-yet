@@ -16,7 +16,7 @@ function calculator() {
     if (!isValidInput(input)) {
       throw new Error(INPUT_INVALID_MSG);
     }
-    if (operators.includes(input) && operate()) {
+    if (isOperator(input) && operate()) {
       operator = input;
       number = 0;
 
@@ -35,11 +35,19 @@ function calculator() {
     if (input.length !== INPUT_LENGTH) {
       return false;
     }
-    if (isNaN(Number(input)) && !operators.includes(input)) {
+    if (!isNumber(input) && !isOperator(input)) {
       return false;
     }
 
     return true;
+  }
+
+  function isNumber(input) {
+    return !isNaN(Number(input));
+  }
+
+  function isOperator(input) {
+    return operators.includes(input);
   }
 
   function operate() {
