@@ -4,7 +4,7 @@ const isPrime = (function () {
     return (checkPrimes);
 
     function checkPrimes(v) {
-        if (v in cache)
+        if (cache[v])
             return cache[v];
         return (cache[v] = isPrime(v));
     }
