@@ -1,3 +1,5 @@
+"use strict"
+
 function toggle(...options) { 
     let index = 0;
     return function toggleLogic() {
