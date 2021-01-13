@@ -1,26 +1,25 @@
-function toggle() {
-	let nextToggle = 0;
-	const toggles = arguments;
+function toggle(...toggles) {
+	let nextToggle = -1;
 	return function toggleResult() {
-		console.log(toggles[nextToggle]);
 		nextToggle = nextToggle + 1;
 		if (nextToggle >= toggles.length)
 			nextToggle = 0;
+		return toggles[nextToggle];
 	};
 }
 
 var hello = toggle("hello");
-var onOff = toggle("on","off");
-var speed = toggle("slow","medium","fast");
+var onOff = toggle("on", "off");
+var speed = toggle("slow", "medium", "fast");
 
-hello();      // "hello"
-hello();      // "hello"
+console.log(hello());      // "hello"
+console.log(hello());      // "hello"
 
-onOff();      // "on"
-onOff();      // "off"
-onOff();      // "on"
+console.log(onOff());      //  "on"
+console.log(onOff());      //  "off"
+console.log(onOff());      //  "on"
 
-speed();      // "slow"
-speed();      // "medium"
-speed();      // "fast"
-speed();      // "slow"
+console.log(speed());      // "slow"
+console.log(speed());      // "medium"
+console.log(speed());      // "fast"
+console.log(speed());      // "slow"
