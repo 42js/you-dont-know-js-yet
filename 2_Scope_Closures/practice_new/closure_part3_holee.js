@@ -87,11 +87,8 @@ function calculator() {
     }
     
     function is_operator(str) {
-        if (str === '+' || str === '-'
-        || str === '/' || str === '%'
-        || str === '*')
-            return (true);
-        return (false);
+       return ['+', '-', '/', '%', '*'].includes(str)
+     }
     }
     
     function calc_operator(total, operator, num) {
