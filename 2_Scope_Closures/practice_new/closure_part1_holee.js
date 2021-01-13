@@ -33,7 +33,7 @@ var factorize = (function (_) {
     return (factorize_algorithm);
 
     function factorize_algorithm(v) {
-        if (cache[v.toString()])
+        if (cache[v])
             return [v];
         if (!isPrime(v)) {
             let i = Math.floor(Math.sqrt(v)); 
@@ -45,7 +45,7 @@ var factorize = (function (_) {
                 ...factorize_algorithm(v / i) 
             ];
         }
-        cache[v.toString()] = true;
+        cache[v] = true;
         return [v];
     }
 })();
