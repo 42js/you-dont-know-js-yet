@@ -43,6 +43,9 @@ function calculator() {
   }
 
   function operate() {
+    if (operator === '=') {
+      return true;
+    }
     if (!operator) {
       total = number;
     } else if (operator === '+') {
