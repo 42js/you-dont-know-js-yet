@@ -78,7 +78,9 @@ function calculator() {
       return char;
     } else if (char === "=") {
       if (currentValue !== "") {
-        total = calculate(total, Number(currentValue), operator);
+        operator !== ""
+          ? (total = calculate(total, Number(currentValue), operator))
+          : (total = Number(currentValue));
         currentValue = "";
         operator = "";
       }
@@ -97,4 +99,4 @@ console.log(useCalc(calc, "*8=")); // *5=128
 console.log(useCalc(calc, "7*2*3=")); // 7*2*3=42
 console.log(useCalc(calc, "1/0=")); // 1/0=ERR
 console.log(useCalc(calc, "+3=")); // +3=ERR
-// console.log(useCalc(calc, "51=")); // 51
+console.log(useCalc(calc, "51=")); // 51
