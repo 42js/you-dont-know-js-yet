@@ -42,14 +42,23 @@ function formatTotal(display) {
 }
 
 function calculator() { 
-    var nbr = "";
+    var nbr = '';
     var total = 0;
-    var is_equal = 0;
+    var isEqual = false;
     var operator = '';
 
-    return function calc(key) {
-        if (is_equal) {
-            is_equal = 0;
+    return {
+        number(num) {return calc(num)},
+        plus() {return calc('+')},
+        minus() {return calc('-')},
+        mult() {return calc('*')},
+        div() {return calc('/')},
+        eq() {return calc('=')}
+    }
+    
+    function calc(key, _type) {
+        if (isEqual) {
+            isEqual = false;
             if (is_number(key)) {
                 total = 0;
                 operator = '';
@@ -62,24 +71,24 @@ function calculator() {
         if (is_operator(key)) {
             if (operator === '') {
                 total = Number(nbr);
-                nbr = "";
+                nbr = '';
                 return (operator = key);
             }
-            total = calc_operator(total, operator, Number(nbr));
-            nbr = "";
+            total = operate(total, operator, Number(nbr));
+            nbr = '';
             return (operator = key);
         }
         if (key === '=') {
             if (operator === '') {
                 total = Number(nbr);
             } else {
-                total = calc_operator(total, operator, Number(nbr));
-                is_equal = 1;
-                nbr = "";
+                total = operate(total, operator, Number(nbr));
+                isEqual = true;
+                nbr = '';
             }
             return (formatTotal(total));
         }
-        return "";
+        return '';
     }
 
     function is_number(str) {
@@ -90,41 +99,44 @@ function calculator() {
        return ['+', '-', '/', '%', '*'].includes(str);
     }
 
-    function calc_operator(total, operator, num) {
-        let result = 0;
-
-        if (operator === '+')
-            result = total + num;
-        if (operator === '/')
-            result = total / num;
-        if (operator === '%')
-            result = total % num;
-        if (operator === '-')
-            result = total - num;
-        if (operator === '*')
-            result = total * num;
-        return (result);
+    function operate(a, operation, b) {
+        var formula = {
+            '+': (a, b) => a + b,
+            '-': (a, b) => a - b,
+            '*': (a, b) => a * b,
+            '/': (a, b) => a / b
+        };
+        return (formula[operation](a, b));
     }
 }
 
 var calc = calculator();
 
-function useCalc(calc, keys) { 
+function useCalc(calc,keys) {
+    var keyMappings = {
+        "+": "plus",
+        "-": "minus",
+        "*": "mult",
+        "/": "div",
+        "=": "eq"
+    };
+
     return [...keys].reduce(
-        function showDisplay(display, key){ 
-            var ret = String( calc(key) ); 
+        function showDisplay(display,key){
+            var fn = keyMappings[key] || "number";
+            var ret = String( calc[fn](key) );
             return (
-                display + 
+                display +
                 (
                   (ret != "" && key == "=") ?
                       "=" :
                       ""
-                  )+
-                  ret 
+                ) +
+                ret
             );
         },
         ""
-    ); 
+    );
 }
 
 console.log(useCalc(calc,"4+3="));    // 4+3=7
