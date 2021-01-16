@@ -14,8 +14,8 @@ function calculator() {
   };
 
   let operator = '';
-  let currentValue = 0;
   let totalValue = 0;
+  let currentValue = 0;
 
   return {
     number,
@@ -31,8 +31,8 @@ function calculator() {
       throw new Error(INPUT_INVALID_MSG);
     }
     if (operator === '=') {
-      totalValue = 0;
       operator = '';
+      totalValue = 0;
     }
     currentValue = currentValue * BASE + Number(charInput);
 
