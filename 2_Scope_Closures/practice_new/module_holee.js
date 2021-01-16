@@ -56,7 +56,7 @@ function calculator() {
         eq() {return calc('=')}
     }
     
-    function calc(key, _type) {
+    function calc(key) {
         if (isEqual) {
             isEqual = false;
             if (is_number(key)) {
