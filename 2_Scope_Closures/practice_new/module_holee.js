@@ -92,11 +92,13 @@ function calculator() {
     }
 
     function is_number(str) {
-       return (str >= '0' && str <= '9');
+        if (str === null)
+            return (false);
+        return (str >= '0' && str <= '9');
     }
 
     function is_operator(str) {
-       return ['+', '-', '/', '%', '*'].includes(str);
+        return ['+', '-', '/', '%', '*'].includes(str);
     }
 
     function operate(a, operation, b) {
