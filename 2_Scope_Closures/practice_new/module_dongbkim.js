@@ -1,7 +1,16 @@
 function useCalc(calc,keys) {
+	var keyMappings = {
+		"+": "plus",
+		"-": "minus",
+		"*": "mult",
+		"/": "div",
+		"=": "eq"
+	};
+
 	return [...keys].reduce(
 		function showDisplay(display,key){
-			var ret = String( calc(key) );
+			var fn = keyMappings[key] || "number";
+			var ret = String( calc[fn](key) );
 			return (
 				display +
 				(
@@ -63,35 +72,46 @@ function calculator() {
 	var result = 0;
 	var flag = 0;
 
-	return function realCalculator(parameter){
-		var toNum = Number(parameter);
-		if(Number.isNaN(toNum)) {
-			if(numKept !== null) {
-				 result = operations(result, numKept, operKept);
-				 numKept = null;
-			 }
-			operKept = parameter;
-			if(parameter === "="){
-				flag = 1;
-				operKept = ""
-				return formatTotal(result);
-			}
-			else
-				return operKept;
-		} else {
-			if(flag && operKept === ""){
-				flag = 0;
-				result = 0;
-			}
-			if(typeof numKept === "number"){
-				numKept = (numKept * 10) + toNum;
-				return toNum;
-			}
-			else if (operKept === "")
-				return result = (result * 10) + toNum;
-			else
-				return numKept = toNum;
+	var publicAPI = {
+		number,
+		plus() {return operator("+")},
+		minus(){return operator("-")},
+		mult() {return operator("*")},
+		div() {return operator("/")},
+		eq() {return operator("=")}
+	}
+
+	return publicAPI;
+
+	function number(num){
+		var toNum = Number(num);
+		if(flag && operKept === ""){
+			flag = 0;
+			result = 0;
 		}
+		if(typeof numKept === "number"){
+			numKept = (numKept * 10) + toNum;
+			return toNum;
+		}
+		else if (operKept === "")
+			return result = (result * 10) + toNum;
+		else
+			return numKept = toNum;
+	}
+
+	function operator(parameter){
+		if(numKept !== null) {
+			 result = operations(result, numKept, operKept);
+			 numKept = null;
+		 }
+		operKept = parameter;
+		if(parameter === "="){
+			flag = 1;
+			operKept = ""
+			return formatTotal(result);
+		}
+		else
+			return operKept;
 	}
 
 	function operations(num1, num2, operator){
@@ -109,21 +129,13 @@ function calculator() {
 
 var calc = calculator();
 
-console.log(calc("4"));     // 4
-console.log(calc("+"));     // +
-console.log(calc("7"));     // 7
-console.log(calc("3"));     // 3
-console.log(calc("-"));     // -
-console.log(calc("2"));     // 2
-console.log(calc("="));     // 75
-console.log(calc("*"));     // *
-console.log(calc("4"));     // 4
-console.log(calc("="));     // 300
-console.log(calc("5"));     // 5
-console.log(calc("-"));     // -
-console.log(calc("5"));     // 5
-console.log(calc("="));     // 0
-
+calc.number("4");     // 4
+calc.plus();          // +
+calc.number("7");     // 7
+calc.number("3");     // 3
+calc.minus();         // -
+calc.number("2");     // 2
+calc.eq();            // 75
 
 console.log(useCalc(calc,"4+3="));           // 4+3=7
 console.log(useCalc(calc,"+9="));            // +9=16
