@@ -4,7 +4,7 @@ function calculator() {
   let oprt = "";
 
   let publicAPI = {
-    num,
+    number,
     eq,
     plus() { return operator("+"); },
     minus() { return operator("-"); },
@@ -14,14 +14,14 @@ function calculator() {
 
   return publicAPI;
 
-  function num(key) {
+  function number(key) {
     if (/\d/.test(key)) {
         strNum += key;
         return key;
       } 
   }
 
-  function eq() {
+  function eq(key) {
     if (key == "=") {
         leftNum = fourRules(leftNum, oprt, Number(strNum));
         strNum = "";
