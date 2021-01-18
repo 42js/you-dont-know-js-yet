@@ -6,6 +6,7 @@
 | holee | [Appendix A: Exploring Further](https://github.com/hochan222/Everything-in-JavaScript/wiki/Appendix-A:-Exploring-Further_) |
 | sunpark |  |
 | dongbkim |  |
+| gim | [Appendix A: Exploring Further](https://velog.io/@mkitigy/Appendix-A-Exploring-Further)|
 
 ## Quiz
 [A.1　Implied Scopes](#A1---Implied-Scopes)<br>
