@@ -19,10 +19,10 @@ function calculator() {
 
   return {
     number,
-    plus,
-    minus,
-    mult,
-    div,
+    plus: () => operate('+'),
+    minus: () => operate('-'),
+    mult: () => operate('*'),
+    div: () => operate('/'),
     eq,
   };
 
@@ -43,42 +43,19 @@ function calculator() {
     return charInput && charInput.length === INPUT_LENGTH && !isNaN(charInput);
   }
 
-  function plus() {
-    operate();
-
-    return (operator = '+');
-  }
-
-  function minus() {
-    operate();
-
-    return (operator = '-');
-  }
-
-  function mult() {
-    operate();
-
-    return (operator = '*');
-  }
-
-  function div() {
-    operate();
-
-    return (operator = '/');
-  }
-
   function eq() {
-    operate();
-    operator = '=';
+    operate('=');
 
     return formatTotal(totalValue);
   }
 
-  function operate() {
+  function operate(charInput) {
     if (operator === '=') {
-      return;
+      return (operator = charInput);
     }
     totalValue = operations[operator](totalValue, currentValue);
     currentValue = 0;
+
+    return (operator = charInput);
   }
 }
