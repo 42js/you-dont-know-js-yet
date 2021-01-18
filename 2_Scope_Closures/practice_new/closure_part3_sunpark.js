@@ -33,7 +33,7 @@ function calculator() {
         }
         saveIn = 0;
         if (input === "=") {
-          saveOp = ""
+          saveOp = "";
           isResult = true;
           return formatTotal(saveNum);
         }
