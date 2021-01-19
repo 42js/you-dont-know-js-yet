@@ -23,7 +23,7 @@
 - [Sungwoo Park](https://github.com/cos18)
 - [Yunho Jo](https://github.com/YUJO42)
 - [Dongbin Kim](https://github.com/dawnbeen)
-- [Gwangyeol Im](https://github.com/mkitigy)
+- [Gwangyeol Im](https://github.com/GwangYeol-Im)
 - [SoHyun Park](https://github.com/pje1740)
 
 #### Past
