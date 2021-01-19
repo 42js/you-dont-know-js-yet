@@ -6,7 +6,7 @@
 | holee |  |
 | sunpark |  |
 | dongbkim |  |
-| gim |  |
+| gim | [Chapter 1: this Or That?](https://velog.io/@mkitigy/Chapter-1-this-Or-That) |
 | sohpark |  |
 | nkang |  |
 | yujo |  |
