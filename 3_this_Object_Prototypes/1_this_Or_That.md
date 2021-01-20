@@ -7,7 +7,7 @@
 | sunpark |  |
 | dongbkim |  |
 | gim | [Chapter 1: this Or That?](https://velog.io/@mkitigy/Chapter-1-this-Or-That) |
-| sohpark |  |
+| sohpark | [Chapter 1: this Or That?](https://stitchcoding.tistory.com/37) |
 | nkang |  |
 | yujo |  |
 
