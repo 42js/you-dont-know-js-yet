@@ -49,14 +49,14 @@
 
 ```javascript
 function test(num) {
-	console.log(`Counting ${num} times!`);
-	this.count++;
+  console.log(`Counting ${num} times!`);
+  this.count++;
 }
 
 test.count = 0;
 
 for (var i = 0; i < 10; i++)
-	test.call(test);
+  test.call(test);
 
 console.log(`test.count : ${test.count}`);
 ```
@@ -65,21 +65,21 @@ console.log(`test.count : ${test.count}`);
 
 ```javascript
 function foo() {
-	var a = 10;
-	this.bar();
+  var a = 10;
+  this.bar();
 }
 
 function bar() {
-	console.log(`How about ${this}?`);
+  console.log(`How about ${this}?`);
 }
 
 function test() {
-	console.log(`What is ${this}?`);
-	bar();
+  console.log(`What is ${this}?`);
+  bar();
 
-	function bar() {
-		console.log(`What about ${this} one?`);
-	}
+  function bar() {
+    console.log(`What about ${this} one?`);
+  }
 }
 
 foo();
@@ -96,9 +96,11 @@ foo.call(test);
 
 > for문을 통해 `test` 함수를 실행했지만 `call` 프로퍼티수가 부족해 num에 항상 `undefined` 값으로 할당되 출력된다. (이 부분에서 오류는 나지 않는다) 그리고 `call`을 통해 `this`를 바인딩했기 때문에 마지막 `test.count`값은 정상적으로 카운트 되어 10이 출력된다.
 
+> 참고 : [Function.prototype.call()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+
 2. 이 코드의 실행결과를 함수 안 `this`가 가리키는 것을 중점으로 설명하시오.
 
-> `foo()`를 통해 호출하게 되면 `foo` 안 `this`는 전역변수를 가리켜 전역에 선언되어있는 `bar` 함수를 호출한다. 이때 `bar` 안 `this`도 역시 전역변수를 가리킨다. `bar()`를 통해 호출하게 되면 전과 동일하게 `bar`안 `this`는 전역변수를 가리킨다. `test.call(test)`를 통해 호출하게 되면 `test` 안 `this`는 `test`로 바인딩된다. 하지만 `test` 안 `bar()`에서 `this`는 전역변수를 가리킨다. 마지막으로 `foo.call(test)`는 `foo`안 `this`는 `test`로 바인딩되지만, `test` 객체 안에 `bar` 함수가 없기 때문에 TypeError가 나게 된다.
+> `foo()`를 통해 호출하게 되면 `foo` 안 `this`는 전역변수를 가리켜 전역에 선언되어있는 `bar` 함수를 호출한다. 이때 `bar` 안 `this`도 역시 전역변수를 가리킨다. `bar()`를 통해 호출하게 되면 전과 동일하게 `bar`안 `this`는 전역변수를 가리킨다. `test.call(test)`를 통해 호출하게 되면 `test` 안 `this`는 `test`로 바인딩된다. 하지만 `test` 안 `bar()`에서 `this`는 전역변수를 가리킨다. 마지막으로 `foo.call(test)`는 `foo`안 `this`는 `test`로 바인딩되지만, `test` 객체 안에 `bar` 함수가 없기 때문에 TypeError가 나게 된다. (전역과 다르가 함수 스코프의 경우에는 object로 변수에 접근할 수 없다.)
 
 </div>
 </details>
