@@ -57,12 +57,23 @@
 
 ### 1.3 　  What's `this`?
 
-> dongbkim
+> dongbkim  
+
+
+1. `this`는 함수가 호출되는 방식에 의해 결정되며 컴파일 시의 binding이다.(O / X)
+
+2. `this`는 함수가 어디에서 선언이 되었는지와 관련이 있다.(O / X)
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. `this`는 함수가 호출되는 방식에 의해 결정되며 컴파일 시 binding이다.(O / **X**)
+We said earlier that `this` is not an author-time binding but a runtime binding.
+
+
+2. `this`는 함수가 어디에서 선언이 되었는지와 관련이 있다.(O / **X**)
+`this` binding has nothing to do with where a function is declared, but has instead everything to do with the manner in which the function is called.
 
 
 </div>
