@@ -6,7 +6,7 @@
 | holee |  |
 | sunpark |  |
 | dongbkim |  |
-| gim |  |
+| gim | [Chapter 3: Objects](https://velog.io/@mkitigy/Chapter-3-Objects) |
 | sohpark |  |
 | nkang |  |
 | yujo |  |
