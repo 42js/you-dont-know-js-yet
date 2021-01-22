@@ -6,7 +6,7 @@
 | holee |  |
 | sunpark |  |
 | dongbkim |  |
-| gim |  |
+| gim | [Chapter 2: this All Makes Sense Now!](https://velog.io/@mkitigy/Chapter-2-this-All-Makes-Sense-Now) |
 | sohpark |  |
 | nkang |  |
 | yujo |  |
