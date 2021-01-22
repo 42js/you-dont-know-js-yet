@@ -180,6 +180,8 @@ console.log(obj.a); // ?
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+	
+1. 객체 안에 프로퍼티가 존재하는지 확인할 수 있는 방법 2가지와 해당 프로퍼티의 value 값을 확인하는 방법이 적절치 않은 이유를 얘기해 봅시다.
 
 - `myObj.hasOwnProperty(key);`
 - `key in myObj`
