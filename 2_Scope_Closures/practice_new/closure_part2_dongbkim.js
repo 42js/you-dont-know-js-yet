@@ -1,8 +1,8 @@
-function toggle(...par){
+function toggle(...words){
 	var index = 0;
 	return function toggleIn(){
-		console.log(par[index]);
-		index = (index + 1) % par.length;
+		console.log(words[index]);
+		index = (index + 1) % words.length;
 	}
 };
 

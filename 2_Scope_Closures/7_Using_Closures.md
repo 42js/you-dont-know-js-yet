@@ -6,6 +6,7 @@
 | holee | [Chapter 7: Using Closures](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-7:-Using-Closures) |
 | sunpark |  |
 | dongbkim |  |
+| gim | [Chapter 7: Using Closures](https://velog.io/@mkitigy/Chapter-7-Using-Closures) |
 
 ## Quiz
 [7.1　See the Closure](#71---See-the-Closure)<br>

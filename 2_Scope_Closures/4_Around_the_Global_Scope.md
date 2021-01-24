@@ -7,6 +7,7 @@
 | sunpark | [YDNJSY Scope & Closures - 4. Around the Global Scope](https://velog.io/@cos/YDNJSY-Scope-Closures-4-Around-the-Global-Scope) |
 | jachoi | [ydkjsy-scope-closures Chapter 4](https://n00bh4cker.tistory.com/140)|
 | dongbkim |  |
+| gim | [Chapter 4: Aroundthe Global Scope](https://velog.io/@mkitigy/Chapter-4-Around-the-Global-Scope) |
 
 ## Quiz
 [4.1　Why Global Scope?](#41---Why-Global-Scope)<br>

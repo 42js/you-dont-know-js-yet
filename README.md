@@ -9,7 +9,7 @@
 |:---|:---:|
 | [Get Started](./1_Get_Started) | 2020. 10. 29. ~ 2020. 11. 9. |
 | [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 21. |
-| Objects & Classes |  |
+| [*this* & Object Prototypes (1st ed)](./3_this_Object_Prototypes) | 2021. 01. 21. ~ 2021. 02. 10. |
 | Types & Grammar |  |
 | Sync & Async |  |
 | ES.Next & Beyond |  |
@@ -17,37 +17,17 @@
 <br>
 
 ### 👨‍💻 Participant
+#### Now
 - [Hochan Lee](https://github.com/hochan222)
-
-[![holee's 42 stats](https://badge42.herokuapp.com/api/stats/holee)](https://profile.intra.42.fr/users/holee)
-
 - [Namseok Kang](https://github.com/nkink)
-
-[![nkang's 42 stats](https://badge42.herokuapp.com/api/stats/nkang)](https://profile.intra.42.fr/users/nkang)
-
 - [Sungwoo Park](https://github.com/cos18)
-
-[![sunpark's 42 stats](https://badge42.herokuapp.com/api/stats/sunpark)](https://profile.intra.42.fr/users/sunpark)
-
-- [Jaeyoung Choi](https://github.com/ExtraMortals)
-
-[![jachoi's 42 stats](https://badge42.herokuapp.com/api/stats/jachoi)](https://profile.intra.42.fr/users/jachoi)
-
 - [Yunho Jo](https://github.com/YUJO42)
-
-[![yujo's 42 stats](https://badge42.herokuapp.com/api/stats/yujo)](https://profile.intra.42.fr/users/yujo)
-
 - [Dongbin Kim](https://github.com/dawnbeen)
-
-[![dongbkim's 42 stats](https://badge42.herokuapp.com/api/stats/dongbkim)](https://profile.intra.42.fr/users/dongbkim)
-
-- [Gwangyeol Im](https://github.com/mkitigy)
-
-[![gim's 42 stats](https://badge42.herokuapp.com/api/stats/gim)](https://profile.intra.42.fr/users/gim)
-
+- [Gwangyeol Im](https://github.com/GwangYeol-Im)
 - [SoHyun Park](https://github.com/pje1740)
 
-[![sohpark's 42 stats](https://badge42.herokuapp.com/api/stats/sohpark)](https://profile.intra.42.fr/users/sohpark)
+#### Past
+- [Jaeyoung Choi](https://github.com/ExtraMortals)
 
 ### 📢 Notice
 - This study is conducted in Korean.

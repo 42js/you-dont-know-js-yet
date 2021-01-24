@@ -1,13 +1,10 @@
-function toggle() {
-	var nextToggle = 0;
-	var toggles = arguments;
-	console.log(toggles);
-	return function toggleResult() {
-		console.log(toggles[nextToggle]);
-		nextToggle = nextToggle + 1;
-		if (nextToggle < toggles.length)
-			nextToggle = 0;
-	};
+function toggle(...vals) {
+	let pos = 0;
+	let size = vals.length;
+	
+	return function next(){
+		return (vals[pos++ % size]);
+	}
 }
 
 var hello = toggle("hello");

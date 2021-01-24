@@ -6,6 +6,7 @@
 | holee | [Chapter 8: The Module Pattern](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-8:-The-Module-Pattern) |
 | sunpark |  |
 | dongbkim |  |
+| gim | [Chapter 8: The Module Pattern](https://velog.io/@mkitigy/Chapter-8-The-Module-Pattern) |
 
 ## Quiz
 [8.1　Encapsulation and Least Exposure (POLE)](#81---Encapsulation-and-Least-Exposure-POLE)<br>

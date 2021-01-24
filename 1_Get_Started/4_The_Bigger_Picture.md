@@ -5,6 +5,7 @@
 |:---|:---|
 | holee | [Chapter 4: The Bigger Picture](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-4:-The-Bigger-Picture) |
 | sunpark | [YDNJSY Get Started - 4. The Bigger Picture & Appendix](https://velog.io/@cos/YDNJSY-Get-Started-4-The-Bigger-Picture) |
+| nknag | [Chapter 4: The Bigger Picture](https://www.notion.so/nkk/Chapter-4-The-Bigger-Picture-854077442d9b4753ab088bd730c1ecfb) |
 | jachoi |  |
 
 ## Quiz
