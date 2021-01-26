@@ -69,12 +69,38 @@
 
 > nkang
 
+1. `new` binding과 `call` binding의 우선 순위는 직접적으로 비교할 수 있다.(O/X)
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+(X)
 
+`new foo.call(obj1)` is not allowed, to test new binding directly against explicit binding.
+  
+</div>
+</details>
+<br>
 
+2. 다음 코드의 실행 결과를 설명하여 봅시다.
+```
+function foo(p1,p2) {
+  this.val = p1 + p2;
+}
+var obj1 ={};
+var bar = foo.bind( obj1, "p1" );
+bar("p2");
+var baz = new bar( "p3");
+baz.val;
+```
 
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+p1p3
+
+any argumetns passed after the first `this` binding argument are defaulted as standard arguments to the underlying function.
+  
 </div>
 </details>
 <br>
