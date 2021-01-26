@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 2: this All Makes Sense Now!](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-2:-this-All-Makes-Sense-Now!) |
 | sunpark |  |
 | dongbkim |  |
 | gim | [Chapter 2: this All Makes Sense Now!](https://velog.io/@mkitigy/Chapter-2-this-All-Makes-Sense-Now) |
@@ -97,11 +97,45 @@
 
 > holee
 
+1. 다음 출력은?
+
+```js
+var number = 1;
+
+function a() {
+  var number = 10;
+  b();
+}
+
+function b() {
+  console.log(number);
+}
+
+a(); // ?
+b(); // ?
+```
+
+2. ES6에서 소개하는 화살표함수는 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 this가 사용된다. (O, X)
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 
+```js
+a(); // 1
+b(); // 1
+```
 
+> lexical scope에 관한 이야기다. 함수의 호출로 상위 스코프가 결정된 것이 아니라 함수의 선언에 따라 상위 스코프가 결정되었기 때문에 다음과 같은 결과가 나온다.  
+
+> 함수의 호출에 따라 상위 스코프가 정해지는 것을 Dynamic Scope라고 한다. Perl, Bash Shell 등이 있다.  
+
+> 요즘의 대부분의 프로그램 언어(JavaScropt, C, Java 등)들은 Lexical Scope를 따른다.  
+
+2. ES6에서 소개하는 화살표함수는 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 this가 사용된다. (__O__, X)
+
+> 화살표 함수는 자신의 this가 없습니다.  대신 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 this가 사용됩니다; 화살표 함수는 일반 변수 조회 규칙(normal variable lookup rules)을 따릅니다. 때문에 현재 범위에서 존재하지 않는 this를 찾을 때, 화살표 함수는 바로 바깥 범위에서 this를 찾는것으로 검색을 끝내게 됩니다. [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)  
 
 </div>
 </details>
