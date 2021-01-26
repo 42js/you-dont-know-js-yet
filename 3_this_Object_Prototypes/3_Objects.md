@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 3: Objects](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-3:-Objects) |
 | sunpark |  |
 | dongbkim |  |
 | gim | [Chapter 3: Objects](https://velog.io/@mkitigy/Chapter-3-Objects) |
