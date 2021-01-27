@@ -50,15 +50,129 @@
 
 > (Computed Property Names ~ Property Descriptors) dongbkim
 
+1. 다음 코드에서 에러가 발생하는 부분이 있다면 어떤 에러가 뜨는지 밝히고 고치시오.    
+
+```js
+var prefix = "hi";
+
+var obj = {
+	prifix + "bar" : "hey"
+};
+
+obj["heybar"];
+```
+
+2. property 이름으로 숫자를 사용할 수 있다. (O / X)    
+
+3. 다음 코드의 결과를 예측하시오. 에러가 발생한다면 고치시오.    
+```js
+var myArray = [ "foo", 42, "bar" ];
+
+myArray["baz"] = "baz";
+myArray.woody = "woody";
+myArray["14"] = "buzz"
+
+console.log(myArray.length);
+```
+
+4. 다음 코드의 결과를 예측하시오. 에러가 발생한다면 고치시오.   
+```js
+function anotherFunction() { /*..*/ }
+
+var anotherObject = {
+	c: true
+};
+
+var anotherArray = [];
+
+var myObject = {
+	a: 2,
+	b: anotherObject,
+	c: anotherArray,
+	d: anotherFunction
+};
+
+var newObj = Object.assign(myObject, anotherObject);
+
+console.log(newObj);
+```
+5. 다음 코드의 결과를 예측하시오. 에러가 발생한다면 고치시오.   
+```js
+var myObject = {
+	a: 2,
+	b: 4
+};
+
+myObject.a = 8;
+
+Object.defineProperty( myObject, "a", {
+	value: 4,
+	writable: true,
+	configurable: false,
+	enumerable: true
+} );
+
+console.log(myObject.a);		
+myObject.a = 5;
+console.log(myObject.a);
+
+Object.defineProperty( myObject, "b", {
+	value: 6,
+	writable: false
+} ); 
+console.log(myObject.a);
+myObject.a = 8;
+console.log(myObject.a);
+```  
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
 
 
+1.   
+```js
+var prefix = "hi";
+
+var obj = {
+	prifix + "bar" : "hey"//SyntaxError, key name으로 computed expression을 넣기 위해서는 `[]`을 추가해줘야 한다.
+};
+
+obj["heybar"];//TypeError, 위 에러를 고쳐도 heybar라는 key가 없기 때문에 고쳐줘야 한다.
+```
+
+2. property 이름으로 숫자를 사용할 수 있다. (**O** / X)    
+If you use any other value besides a string (primitive) as the property, it will first be converted to a string.    
+
+3. 15   
+```
+0: "foo"
+1: 42
+2: "bar"
+(empty x 11)
+14: "buzz"
+baz: "baz"
+woody: "woody"
+length: 15
+```
+
+4.  
+```
+a: 2
+b: {c: true}
+c: true
+d: ƒ anotherFunction()
+```
+
+5. 4 5 5 8    
+
 </div>
 </details>
 <br>
+
+
 
 > (Immutability ~ Existence) gim
 
