@@ -83,7 +83,7 @@ console.log(test);
 var prefix = "hi";
 
 var obj = {
-	prifix + "bar" : "hey"
+	prefix + "bar" : "hey"
 };
 
 obj["heybar"];
