@@ -22,11 +22,24 @@
 
 > sunpark
 
+1. 다음 코드의 실행결과는 어떻게 될까?
+```javascript
+var test = {
+  "this": "that",
+  "what": "how"
+}
+
+test.when = "which"
+
+console.log(test);
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 다음 코드의 실행결과는 어떻게 될까?
+> 맨 첫줄에 프로퍼티를 2개 만들었고, `test.when`을 통해 `when`이라는 키의 프로퍼티 역시 만들었다. 결국에 나오는 출력값은 `{ this: 'that', what: 'how', when: 'which' }`가 된다.
 
 </div>
 </details>
@@ -36,11 +49,25 @@
 
 > sunpark
 
+1. 모든 주요 타입은 객체이다. (O / X)
+
+2. 다음 단어를 분류에 맞게 분류해보세요.
+> 보기 : Array, Function, String, null, Number, RegExp, undefined, Boolean, Object, Date
+
+- 리터럴 / 생성자 형식과 무관하게 모두 객체이다 : `_____`, `_____`, `_____`, `_____`
+- 리터럴 형식과 생성자 형식이 존재하고, JS 엔진에서 상황에 맞게 변환해준다 : `_____`, `_____`, `_____`
+- 리터럴 형식이 없어 생성자 형식으로 생성해야 한다 : `_____`
+- 객체 래퍼 형식이 없어 그 자체로 유일값이다 : `_____`, `_____`
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 모든 주요 타입은 객체이다. (O / **X**)
+> 단순 원시 타입은 객체가 아니다. "자바스크립트는 모든 것이 객체다"라는 말은 옳지 않다.
 
+2. 다음 단어를 분류에 맞게 분류해보세요.
+> 리터럴 형식과 생성자 형식이 존재하고, JS 엔진에서 상황에 맞게 변환해준다 : String, Number, Boolean / 객체 래퍼 형식이 없어 그 자체로 유일값이다 : null, undefined / 리터럴 형식이 없어 생성자 형식으로 생성해야 한다 : Date / 리터럴 / 생성자 형식과 무관하게 모두 객체이다 : Object, Function, Array, RegExp
 
 </div>
 </details>
