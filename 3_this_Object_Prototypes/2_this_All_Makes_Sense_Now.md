@@ -155,12 +155,84 @@ any argumetns passed after the first `this` binding argument are defaulted as st
 ### 2.4 　  Binding Exceptions
 
 > yujo
+1. 아래 코드의 출력 결과를 맞춰보세요!
+```js
+function foo() {
+  console.log(this.a);
+  a = 2;
+  bar();
+}
+
+function bar() {
+  console.log(this.a);
+}
+
+var a = 1;
+
+foo.call(null);
+```
+```js
+function foo() {
+  console.log(this.a);
+  a = 2;
+  bar();
+}
+
+function bar() {
+  console.log(this.a);
+}
+
+var a = 1;
+
+foo.call('');
+```
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+```js
+function foo() {
+  console.log(this.a); // 1
+  a = 2;
+  bar();
+}
+
+function bar() {
+  console.log(this.a); // 2
+}
+
+var a = 1;
+
+foo.call(null);
+```
+```js
+function foo() {
+  console.log(this.a); // undefined
+  a = 2;
+  bar(); 
+}
+
+function bar() {
+  console.log(this.a); // 2
+}
+
+var a = 1;
+
+foo.call('');
+```
+
+</div>
+</details>
+<br>
+
+
+2. 만약 위 코드의 결과가 다르게 나왔다면 그 이유는 무엇일까요?
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+```call```,  ```apply```,  ```bind``` 메서드에 첫 번째 인자로 ```null``` 또는 ```undefined```를 넘기면 this 바인딩이 무시되고 기본 바인딩 규칙이 적용되기 때문입니다.
 
 </div>
 </details>
