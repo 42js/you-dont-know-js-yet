@@ -55,11 +55,58 @@
 
 > sohpark
 
+1. 아래 코드에서 1번부터 4번까지 각각의 결과값을 추론해보고 어떤 binding의 예시인지 적어주세요. 
+
+```javascript
+"use strict";
+
+function foo() {
+  console.log(this.a);
+}
+
+function bar(cb) {
+  cb();
+}
+
+var obj = {
+  a: "objobj",
+  foo: foo,
+};
+
+var a = "global!";
+
+// (연속된 호출이 아니라고 가정해주세요)
+foo();            // 1번
+obj.foo();        // 2번
+bar(obj.foo);     // 3번
+new foo("foo?");  // 4번
+```
+
+2. JavaScript의 map, filter 같은 내장 함수는 this 객체를 인자로 넘겨줄 수 없기 때문에 explicit binding을 사용하여 콜백을 넘겨줘야 한다. (O, X)
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1.
 
+|  |1번 | 2번 | 3번 | 4번 |
+|---|:--:|:--:|:--:|:--:|
+결과 | TypeError | objobj | TypeError | undefined|
+종류 | default | implicit | default | new |
+
+1-1번: use strict로 인해 전역을 this로 참조할 수 없기에 undefined.a는 TypeError
+
+1-2번: implicit binding에 의해 obj의 a가 출력됩니다.
+
+1-3번: 단순 함수의 참조값을 bar에 인자로 넘기고 있기 때문에 결국 콜백 호출 시 또 전역을 참조하게 되면서 1번과 동일한 오류가 발생합니다.
+
+1-4번: foo 함수 안에 a의 값이 없기 때문에 undefined가 됩니다. 
+
+2.
+JavaScript의 map, filter 같은 내장 함수는 this 객체를 인자로 넘겨줄 수 없기 때문에 explicit binding을 사용하여 콜백을 넘겨줘야 한다. (O, __X__)
+
+> forEach와 더불어 map, filter는 모두 두번째 인자로 binding할 this 객체를 넘겨줄 수 있습니다. 
 
 </div>
 </details>
