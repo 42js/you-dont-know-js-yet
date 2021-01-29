@@ -6,7 +6,7 @@
 | holee |  |
 | sunpark |  |
 | dongbkim |  |
-| gim |  |
+| gim | [Chapter 4: Mixing (Up) "Class" Objects](https://velog.io/@mkitigy/Chapter-4-Mixing-Up-Class-Objects) |
 | sohpark |  |
 | nkang |  |
 | yujo |  |
