@@ -36,11 +36,65 @@
 
 > yujo
 
+다음 코드의 출력결과를 맞춰보세요!
+
+1.
+```js
+class Person {
+  name = 'yujo';
+  constructor(props) {
+    name = props;
+  }
+
+  showMyName() {
+    console.log(`My name is ${name}`);
+  }
+}
+
+yunho = new Person();
+yunho.showMyName();
+```
+
+2.
+```js
+class Person {
+  name = 'yujo';
+  constructor(props) {
+    name = props;
+  }
+
+  showMyName() {
+    console.log(`My name is ${name}`);
+  }
+}
+
+ yujo = new Person('yunho');
+ yujo.showMyName();
+```
+
+3.
+```js
+class Person {
+  Person(props) {
+    name = props;
+  }
+
+  showMyName() {
+    console.log(`My name is ${name}`);
+  }
+}
+
+ yujo = new Person('yunho');
+ yujo.showMyName();
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. My name is undefined
+1. My name is yunho
+1. My name is yunho
 
 </div>
 </details>
