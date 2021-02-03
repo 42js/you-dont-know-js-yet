@@ -116,12 +116,42 @@ console.log(c.constructor); // ?
 
 > nkang
 
+1. Object.create(null)는 프로토타입 체인을 통해 위임받은 속성이나 함수에서 발생하는 예측하기 어려운 효과들이 발생할 가능성이 없어 데이터를 속성에 단순히 저장만 하기 위해 주로 사용되며 `_________________`라고 불린다. 
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+dictionary
 
 </div>
 </details>
 <br>
+
+2. 다음 코드의 결과는?
+```
+var anotherObject = {
+	cool: function(word) {
+		console.log( "cool!" + ( word || '') );
+	}
+};
+
+var myObject = Object.create( anotherObject );
+
+myObject.doCool = function() {
+	this.cool(", not really..."); 
+};
+
+myObject.cool(); // a)___________________
+myObject.doCool(); // b)___________________
+```
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+a) cool!
+b) cool!, not really...
+
+</div>
+</details>
+<br>
+
