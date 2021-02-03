@@ -132,11 +132,65 @@ class Person {
 
 > holee
 
+1. Javascript는 "다중 상속"을 위한 기본 메커니즘을 제공하지 않는다. (O, X)
+
+2. Javascript에서 상속이라 불리는 동작이 발생할 때 복사가 일어난다. (O, X)
+
+3. ES6의 class와 EX5의 Function Constructor의 차이점은?
+
+```js
+// ES5 Function Constructor
+function Person(name) {
+  this.name = name;
+}
+
+// ES6 Class
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+```
+
+4. 자바스크립트에서 static class member 변수를 선언하는 이유는?
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. Javascript는 "다중 상속"을 위한 기본 메커니즘을 제공하지 않는다. (__O__, X)
 
+2. Javascript에서 상속이라 불리는 동작이 발생할 때 복사가 일어난다. (O, __X__)
+
+> 전통적인 클라스는 복사가 일어나지만 자바스크립트는 참조가 일어난다.  
+
+3. 주요 차이점은 상속을 할 때 발생한다. ES6가 조금 더 사용하고 기억하기 쉽다.  
+
+```js
+// ES5 Function Constructor
+function Student(name, studentId) {
+  // Call constructor of superclass to initialize superclass-derived members.
+  Person.call(this, name);
+
+  // Initialize subclass's own members.
+  this.studentId = studentId;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+// ES6 Class
+class Student extends Person {
+  constructor(name, studentId) {
+    super(name);
+    this.studentId = studentId;
+  }
+}
+```
+
+4. 자바스크립트에서 static class member 변수를 선언하는 이유는?
+
+> 인스턴스에 연결되지 않으며 인스턴스가 무엇을 참조하는지와 관계없이 동일한 값을 갖는다.  
 
 </div>
 </details>
