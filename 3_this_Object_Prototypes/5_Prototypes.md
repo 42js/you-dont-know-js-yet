@@ -160,11 +160,61 @@ console.log(c.constructor); // ?
 
 > sohpark
 
+1. 다음 코드의 출력 결과를 추론하시오.
+2. a1 객체의 프로토타입 체인에는 어떤 객체가 들어있을지 하단부터 순차적으로 서술하시오. 
+
+```javascript
+function Foo(name) {
+  console.log(`Foo`);
+  this.name = name;
+}
+
+Foo.prototype.myName = function () {
+  return this.name;
+};
+
+function Bar(name, label) {
+  console.log("Bar!");
+  this.label = label;
+  this.name = name;
+}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+var a1 = new Bar("a1", "label a1");
+var a2 = new Foo("a2");
+
+console.log(Object.getPrototypeOf(a1).constructor);
+console.log(a1.myName());
+```
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1.
+```
+Bar!
+Foo
+[Function: Foo]
+a1
+```
 
+2.
+```
+// console.dir(a1.__proto__)
+Foo -> Object.create를 통해 생성된 Foo 객체
+	__proto__:
+	myName: ƒ ()
+	constructor: ƒ Foo(name)
+	__proto__: Object
+```
+a1은 Bar을 통해 생성된 객체이기에 우선 Bar.prototype이 가장 아래 존재합니다. Bar.prototype은 Foo.prototype를 prototype으로 갖는 객체이며, Foo.prototype은 가장 최상단인 Object를 prototype으로 갖는 객체입니다. 그리고 가장 마지막은 Object.prototype이 됩니다.
+
+결국 흐름은 이렇습니다.
+
+a1 -> Foo instance -> Foo.prototype -> Object -> Object.prototype
 
 </div>
 </details>
