@@ -136,7 +136,7 @@ class Person {
 
 2. Javascript에서 상속이라 불리는 동작이 발생할 때 복사가 일어난다. (O, X)
 
-3. ES6의 class와 EX5의 Function Constructor의 차이점은?
+3. ES6의 class와 ES5의 Function Constructor의 차이점은?
 
 ```js
 // ES5 Function Constructor
