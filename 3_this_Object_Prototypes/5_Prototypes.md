@@ -20,17 +20,75 @@
 
 ### 5.1 　  [[Prototype]]
 
-> dongbkim
+
+[1~2] 출력 결과를 말하시오.
+```js
+
+var obj1 = {
+	b: 1
+};
+
+Object.defineProperty(obj1, "b",{
+	value: 2,
+	writable: false
+});
+
+var obj2 = Object.create(obj1);
+obj2.c = 2;
+
+var mine = Object.create(obj2);
+mine.d = 2;
+mine.b = 4;
+
+Object.defineProperty(mine, "a",{
+    value: 2,
+    enumerable: false
+})
+
+for (var k in mine){
+    console.log("There is: " + k);//1.
+}
+
+console.log("a" in mine);//2.
+console.log(mine.b, mine.hasOwnProperty("b"));//3.
+mine.b++;
+console.log(mine.b, mine.hasOwnProperty("b"));//4.
+```
+
+1.   
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+```shell
+There is: d
+There is: c
+There is: b
+```
+![mine object](./fig/mine.png)
 
+> the [[Prototype]] chain is consulted, one link at a time...
 
 </div>
 </details>
 <br>
+  
+2,3,4.    
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+2. true      
+3. 2 false    
+4. 2 false   
+
+</div>
+</details>
+<br>
+
+
 
 ### 5.2 　  "Class"
 
