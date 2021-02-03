@@ -200,11 +200,94 @@ class Student extends Person {
 
 > sunpark
 
+1. sunpark는 `Vehicle`을 상속받는 `Car` 오브젝트를 만들려고 했지만, 의도한 결과와는 다른 결과가 나왔습니다. 왜 그렇게 되었으며, 이를 어떻게 수정해야 하는지 설명하세요.
+```javascript
+function mixin( sourceObj, targetObj ) {
+  for (var key in sourceObj) {
+    targetObj[key] = sourceObj[key];
+  }
+  return targetObj;
+}
+
+var Vehicle = {
+  engines: 1,
+
+  ignition: function() {
+    console.log( "Turning on my engine." );
+  },
+
+  drive: function() {
+      this.ignition();
+      console.log( "Steering and moving forward!" );
+  }
+};
+
+var Car = mixin({
+  wheels: 4,
+
+  drive: function() {
+      Vehicle.drive.call( this );
+      console.log(
+          "Rolling on all " + this.wheels + " wheels!"
+      );
+  }
+}, Vehicle);
+
+Vehicle.drive(); // 의도 : Steering and moving forward!
+Car.drive(); // 의도 : Rolling on all 4 wheels!
+
+// 실행결과 : RangeError: Maximum call stack size exceeded
+```
+
+2. 다음 코드의 실행결과는 무엇이며 이를 설명하시오.
+```javascript
+var foo = {
+  check: function() {
+    this.greeting = "Hello World";
+    this.count = this.count ? this.count + 1 : 1;
+  },
+  greet: function() {
+    console.log(`${this.greeting} ${this.count} times!`);
+  }
+};
+
+var bar = {
+  check: function() {
+    foo.check.call(bar);
+    this.greeting = "Bye World";
+  },
+  greet: function() {
+    foo.greet.call(this);
+  }
+};
+
+foo.check();
+bar.check();
+foo.greet(); // (1)
+bar.greet(); // (2)
+
+foo.check.call(bar);
+bar.check.call(foo);
+foo.greet(); // (3)
+bar.greet(); // (4)
+
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. sunpark는 `Vehicle`을 상속받는 `Car` 오브젝트를 만들려고 했지만, 의도한 결과와는 다른 결과가 나왔습니다. 왜 그렇게 되었으며, 이를 어떻게 수정해야 하는지 설명하세요.
+> 1) Car를 정의할 때 mixin 순서가 반대가 되어 값들을 반대로 Vehicle에 들어가게 됩니다. 2) mixin 함수 내부에서 요소값을 가져올때 수정된 내용을 조사하는 if문이 없어 (`if (!(key in targetObj))`) `drive`를 가져올 때 이미 구현된 내용을 유지해야 하지만 무조건 붙어넣어 문제가 생긴다.
 
+2. 다음 코드의 실행결과는 무엇이며 이를 설명하시오.
+```console
+Hello World 1 times!
+Bye World 1 times!
+Bye World 1 times!
+Hello World 3 times!
+```
+> 3, 4번에 대해서는 bar 내부에서의 call은 this가 bar로 지정되었기때문에 밖에서 호출했을 때 call 문(`bar.check.call(foo);`)은 무시된다.
 
 </div>
 </details>
