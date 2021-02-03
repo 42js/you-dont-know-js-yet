@@ -134,7 +134,7 @@ class Person {
 
 1. Javascript는 "다중 상속"을 위한 기본 메커니즘을 제공하지 않는다. (O, X)
 
-2. Javascript에서 상속이라 불리는 동작이 발생할 때 복사가 일어난다. (O, X)
+2. Javascript에서 상속이라 불리는 동작이 발생할 때 값 복사가 일어난다. (O, X)
 
 3. ES6의 class와 ES5의 Function Constructor의 차이점은?
 
@@ -160,7 +160,7 @@ class Person {
 
 1. Javascript는 "다중 상속"을 위한 기본 메커니즘을 제공하지 않는다. (__O__, X)
 
-2. Javascript에서 상속이라 불리는 동작이 발생할 때 복사가 일어난다. (O, __X__)
+2. Javascript에서 상속이라 불리는 동작이 발생할 때 값 복사가 일어난다. (O, __X__)
 
 > 전통적인 클라스는 복사가 일어나지만 자바스크립트는 참조가 일어난다.  
 
