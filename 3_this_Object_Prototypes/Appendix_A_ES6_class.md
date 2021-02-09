@@ -21,11 +21,45 @@
 
 > sohpark
 
+1. ES6 문법에서 상속을 받기 위해 사용하는 키워드는?
+
+2. 위의 ES6 이전 코드를 보고 아래의 ES6 코드를 ES6 문법을 이용하여 똑같은 의미가 될 수 있도록 완성하시오. 
+
+```javascript
+// Before ES6
+function Shape(id, x, y) {
+  this.id = id;
+  this.setLocation(x, y);
+}
+
+function Circle(id, x, y, radius) {
+  Shape.call(this, id, x, y);
+  this.radius = radius;
+}
+
+// ES6
+class Shape {
+  constructor(id, x, y) {
+      this.id = id;
+      this.setLocation(x, y);
+  }
+}
+
+class Circle extends Shape {
+  constructor(id, x, y, radius) {
+    // 이 줄을 완성해주세요.
+    this.radius = radius;
+  }
+}
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. extends
 
+2. ```super(id, x, y);```
 
 </div>
 </details>
