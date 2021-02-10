@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Chapter 6: Behavior Delegation](https://github.com/hochan222/Everything-in-JavaScript/wiki/Chapter-6:-Behavior-Delegation) |
 | sunpark |  |
 | dongbkim |  |
 | gim |  |
@@ -38,11 +38,77 @@
 
 > holee
 
+1. OLOO 스타일에서는 OO 스타일과는 다르게 서로간의 관계에 대해서 부모와 자식 사이로 생각하지 않고 독립적인 객체로서 취급한다. ( **O** / X )  
+
+2. OLOO는 생성과 초기화가 반드시 동일한 작업으로 통합되지 않는 분리 원칙을 더 잘 지원한다. ( O / X )  
+
+3. 다음은 ( OO / OLOO ) 디자인 패턴에 관한 코드이다.
+
+```js
+class Button extends Widget {
+	constructor(width,height,label) {
+		super( width, height );
+		this.label = label || "Default";
+		this.$elem = $( "<button>" ).text( this.label );
+	}
+	render($where) {
+		super.render( $where );
+		this.$elem.click( this.onClick.bind( this ) );
+	}
+	onClick(evt) {
+		console.log( "Button '" + this.label + "' clicked!" );
+	}
+}
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. OLOO 스타일에서는 OO 스타일과는 다르게 서로간의 관계에 대해서 부모와 자식 사이로 생각하지 않고 독립적인 객체로서 취급한다. ( **O** / X )  
 
+2. OLOO는 생성과 초기화가 반드시 동일한 작업으로 통합되지 않는 분리 원칙을 더 잘 지원한다. ( **O** / X )  
+
+3. 다음은 ( **OO** / OLOO ) 디자인 패턴에 관한 코드이다.
+
+```js
+class Button extends Widget {
+	constructor(width,height,label) {
+		super( width, height );
+		this.label = label || "Default";
+		this.$elem = $( "<button>" ).text( this.label );
+	}
+	render($where) {
+		super.render( $where );
+		this.$elem.click( this.onClick.bind( this ) );
+	}
+	onClick(evt) {
+		console.log( "Button '" + this.label + "' clicked!" );
+	}
+}
+```
+
+> 아래는 OOLO에 관한 디자인 패턴이다.
+
+```js
+var Widget = {
+	init: function(width,height){
+		this.width = width || 50;
+		this.height = height || 50;
+		this.$elem = null;
+	},
+	insert: function($where){
+		if (this.$elem) {
+			this.$elem.css( {
+				width: this.width + "px",
+				height: this.height + "px"
+			} ).appendTo( $where );
+		}
+	}
+};
+
+var Button = Object.create( Widget );
+```
 
 </div>
 </details>
