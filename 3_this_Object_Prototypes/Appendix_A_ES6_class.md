@@ -145,11 +145,13 @@ E.foo(); // "D.foo"
 
 > yujo
 
+1. 자바스크립트의 Class는 정적이다. ( O / X )
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 자바스크립트의 Class는 정적이다. ( O / **X** )
 
 </div>
 </details>
