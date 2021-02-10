@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [Appendix A: ES6 class](https://github.com/hochan222/Everything-in-JavaScript/wiki/Appendix-A:-ES6-class) |
 | sunpark |  |
 | dongbkim |  |
 | gim |  |
