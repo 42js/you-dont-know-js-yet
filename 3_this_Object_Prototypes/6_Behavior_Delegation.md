@@ -186,11 +186,38 @@ Object.setPrototypeOf:   326.56
 
 > gim
 
+1. `a instanceof b` 에서 `instanceof` 연산자는 `a` 와 `b` 가 서로 클래스 - 인스턴스 관계인지 검사한다. (O / X)
+
+2. 다음 코드의 결과를 예측해 봅시다.
+
+```js
+var Foo = { /* ... */ };
+
+var Bar = Object.create( Foo );
+Bar...
+
+var b1 = Object.create( Bar );
+
+Foo.isPrototypeOf(Bar); // (1)
+Bar.isPrototypeOf(Foo); // (2)
+Foo.isPrototypeOf(b1); // (3)
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. `a instanceof b` 에서 `instanceof` 연산자는 `a` 와 `b` 가 서로 클래스 - 인스턴스 관계인지 검사한다. (O / __X__)
 
+> instanceof 연산자는 두 객체의 관계를 검사하는 것이 아닌, 두 객체의 관련성 여부를 검사하는 것이기 때문에 직접적으로 인스턴스화 시킨 클래스가 아니더라도 프로토타입 연결이 되어 있다면 `true` 를 반환한다.
+
+2. 다음 코드의 결과를 예측해 봅시다.
+
+```js
+// true, false, true
+```
+
+> `Bar` 가 `Foo` 의 프로토타입 객체와 연결되어 있기 때문에 (1) 번이 `true` 이고, `b1` 또한 연결된 `Foo` 의 prototype link 를 참조하기 때문에 (3) 번도 `true` 이다.
 
 </div>
 </details>
