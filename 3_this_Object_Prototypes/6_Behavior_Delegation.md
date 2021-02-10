@@ -116,13 +116,19 @@ var Button = Object.create( Widget );
 
 ### 6.3 　  Simpler Design
 
-> sunpark
+1. OLOO(Object Link to Other Objects)에서는 상속을 하기 위해 `new` 키워드를 사용해야 한다. ( O / X )
+
+2. A라는 클래스를 상속한 B와 C 클래스가 있다고 할때, B 클래스에서 C 클래스 인스턴스를 사용한다고 할때 구조적으로 문제가 있는 객체지향의 특징 중 하나는?
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. OLOO(Object Link to Other Objects)에서는 상속, 인스턴스화를 하기 위해 `new` 키워드를 사용해야 한다. ( O / **X** )
+> OLOO는 사용하는 인스턴스 자체가 오브젝트이기 때문에 따로 새로 만들 필요가 없다. 상속이나 인스턴스화를 할 때엔 `Object.create()`를 사용한다.
 
+2. A라는 클래스를 상속한 B와 C 클래스가 있다고 할때, B 클래스에서 C 클래스 인스턴스를 사용한다고 할때 구조적으로 문제가 있는 객체지향의 특징 중 하나는?
+> 다형성(Polymorphism)의 문제로 만약 A 클래스에서 사용하는 foo() 함수를 사용한다고 할때 그때 foo가 B클래스에서 오는지 C클래스에서 오는지 확실히 하기 위해 더욱 복잡하게 구조를 짤 수 밖에 없다. 따라서 이에 대해서 책에서는 "Ugly explicit Pseudopolymorphism(추한 명시적 유사 다형성)"  이라고 명명했다.
 
 </div>
 </details>
