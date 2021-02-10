@@ -75,13 +75,15 @@
 <div markdown="1">
 
 1. 객체 내부에서 `concise method declaration`을 사용한 method는 recursion 방식을 사용할 수 없다. (O / **X**)
-     사용할 수는 있지만 자신을 호출하는 형태로는 불가능하다.     
+
+
+	사용할 수는 있지만 자신을 호출하는 형태로는 불가능하다.     
 
 
 
 2. `Object.create`가 `Object.setPrototypeOf`보다 처리 속도 면에서 더 느리다.(O / **X**)    
-
-MDN Object.setPrototypeof()    
+X
+- MDN Object.setPrototypeof()    
 > Warning: Changing the [[Prototype]] of an object is, by the nature of how modern JavaScript engines optimize property accesses, a very slow operation, in every browser and JavaScript engine. (...) Instead, create a new object with the desired [[Prototype]] using Object.create().
 
 
@@ -107,6 +109,7 @@ Object.setPrototypeOf:   326.56
 </div>
 </details>
 <br>
+
 ### 6.5 　  Introspection
 
 > gim
