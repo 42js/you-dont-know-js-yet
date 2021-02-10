@@ -119,23 +119,26 @@ E.foo(); // "D.foo"
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+
 1.
-  ```
+
+```
   Uncaught TypeError: c1.id is not a function
-  ```
+```
+
 2.
-  ```
+```
   newId: c1
   id: function() {
     console.log("newId: " + this.newId );
     console.log("id: " + this.id );
   }
-  ```
+```
   
 3.
-  ```
+```
   Uncaught SyntaxError: 'super' keyword unexpected here
-  ```
+```
 
 </div>
 </details>
