@@ -19,15 +19,22 @@
 [6.4　Nicer Syntax](#64---Nicer-Syntax)<br>
 [6.5　Introspection](#65---Introspection)<br>
 
-### 6.1 　  Toward Delegation-Oriented Design
+### 6.1 Toward Delegation-Oriented Design
 
 > yujo
+
+1. 전통적인 객체 지향 디자인과 위임 지향 디자인의 가장 큰 차이는?
+2. OLOO 스타일로 코드를 작성할 때 누가 어떤 객체를 생성했는지 알고 있는 것은 중요하지 않다. (O / X)
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 부모, 자식 개념이 없고 오브젝트를 연결하는 개념만 존재한다.
+  - 프로토타입 체인에는 복사, 부모 객체로 부터 자식 객체 생성 같은 개념이 존재 하지 않는다. 그저 객체를 연결하는 일만 한다.
+  - 객체 조작의 일부와 책임을 다른 객체에 위임한다.
 
+2. OLOO 스타일로 코드를 작성할 때 누가 어떤 객체를 생성했는지 알고 있는 것은 중요하지 않다. (**O** / X)
 
 </div>
 </details>
