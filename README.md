@@ -10,7 +10,7 @@
 | [Get Started](./1_Get_Started) | 2020. 10. 29. ~ 2020. 11. 9. |
 | [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 21. |
 | [*this* & Object Prototypes (1st ed)](./3_this_Object_Prototypes) | 2021. 01. 21. ~ 2021. 02. 10. |
-| Types & Grammar |  |
+| [Types & Grammar (1st ed)](./4_Types_Grammars) | 2021. 02. 17. ~ 2021. 03. 10. |
 | Sync & Async |  |
 | ES.Next & Beyond |  |
 
