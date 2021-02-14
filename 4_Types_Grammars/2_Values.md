@@ -77,10 +77,45 @@
 
 > yujo
 
+1. 다음 코드를 브라우저 콘솔에 입력했을 때 출력값을 맞춰보세요.
+
+```js
+const a = NaN;
+const b = 'NaN';
+
+window.isNaN(a)
+> (1)
+window.isNaN(b)
+> (2)
+```
+
+2. 다음 코드를 브라우저 콘솔에 입력했을 때 출력값을 맞춰보세요.
+
+```js
+Number.MAX_VALUE < Infinity
+> (1)
+
+Infinity + -Infinity
+> (2)
+
+42 / Infinity
+> (3)
+
+-42 / Infinity
+> (4)
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. (1) true (2) true
+  - `isNaN`은 인자로 받은 값이 `NaN`인지 아닌지만 판별한다. 즉 `NaN`에 대해서만 `ture`를 return한다.
+2. (1) false (2) NaN (3) 0 (4) -0
+  - (1) Infinity는 읽기 전용 프로퍼티로 어떠한 양수값보다 크다. (`Number.MAX_VALUE`는 대략 `1.7976931348623157e+308`)
+  - (2) 무한한 값 + -(무한한 값)이면 숫자가 아니게 되버린다. 두둥 탁
+  - (3)(4) `-0`이 존재하는 이유는 통신시에 부호를 통해 방향을 나타내야 하는 애플리케이션이 존재하기 때문이다.
+  
 
 
 </div>
