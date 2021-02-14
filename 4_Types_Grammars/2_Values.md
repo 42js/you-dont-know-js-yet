@@ -20,19 +20,48 @@
 [2.5　Value Versus Reference](#25---Values-Versus-Reference)<br>
 
 ### 2.1 　  Arrays
-
 > dongbkim
+
+1. 함수의 `arguments`는 배열이다. ( O / X )    
+
+2. 출력 결과를 말하시오.
+
+```js  
+console.log(Array.from('foo'));
+
+console.log(Array.from([1, 2, 3], x => x * x));
+
+const animals = ['ant', 'cat', 'dog', 'duck'];
+
+console.log(animals.slice(2, 100));
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 함수의 `arguments`는 배열이다. ( O / **X** )         
 
+(...)when functions expose the arguments (array-like) **object** (as of ES6, deprecated) to access the arguments as a list.     
+
+```js
+function a() {
+    console.log(arguments);
+}
+a(1,2,3,4,5);
+//[Arguments] { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
+```
+
+2.
+```js
+// expected output: Array ["f", "o", "o"]
+// expected output: Array [1, 4, 9]
+// expected output: Array ["dog", "duck"]
+```
 
 </div>
 </details>
 <br>
-
 ### 2.2 　  Strings
 
 > gim
