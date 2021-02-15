@@ -69,11 +69,20 @@ a(1,2,3,4,5);
 
 > gim
 
+1. 문자열은 문자로 이루어진 배열이다. (O/X)
+2. string 과 array의 가장 두드러지는 차이점은?
+3. `var str = 'string'` 처럼 리터럴 형식으로 할당된 문자열도 관련 메소드를 사용할 수 있는 이유는?
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 문자열은 문자로 이루어진 배열이다. (O/__X__)
+> 문자열과 문자로 이루어진 배열은 엄연히 다른 개념이다. `'foo' !== ['f', 'o', 'o'];`
+2. string 과 array의 가장 두드러지는 차이점은?
+> string은 immutable 하여 자체 값에 대한 변환이 불가능한 반면, array는 mutable하여 내부의 값을 변환할 수 있다.
+3. `var str = 'string'` 처럼 리터럴 형식으로 할당된 문자열도 관련 메소드를 사용할 수 있는 이유는?
+> 메소드에 접근하려 할 때, 엔진이 해당 리터럴을 Built-in Object 인 `String()` 객체로 강제변환 시키기 때문이다. (다른 타입도 마찬가지)
 
 </div>
 </details>
