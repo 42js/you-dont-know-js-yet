@@ -92,11 +92,29 @@ a(1,2,3,4,5);
 
 > [Numberic Syntax ~ Safe Integer Ranges] sohpark
 
+1. 다음 중 SyntaxError가 발생하는 코드를 고르시오.
+
+```javascript
+(42).toFixed(3);  // 1
+42.toFixed(3);    // 2
+0.42.toFixed(3);  // 3
+(42.).toFixed(3); // 4
+```
+
+2. ES6에서 2진수, 8진수, 16진수로 숫자를 표현할 때 앞에 무엇을 붙여야하는지 각각 답하시오. (0으로 시작하는 표기법)
+
+3. 부동소수점의 문제 때문에 두 수가 근사한 경우 동일하다고 판단하기도 합니다. ES6에서 이런 문제를 해결하기 위해 두 수의 차를 (이것) 과 비교하는데, (이것)은? 
+
+4. ES6에서 제공하는 정수의 최대값은 Number의 프로퍼티는?
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 2번. 42뒤의 온점이 연산자가 아닌, 숫자로 인식 되기 때문에 오류가 발생합니다.
+2. 0b, 0o, 0x
+3. Number.EPSILON
+4. MAX_SAFE_INTEGER
 
 </div>
 </details>
