@@ -122,10 +122,66 @@ a(1,2,3,4,5);
 
 > [Testing for Integers ~ 32-Bit (Signed) Integers] nkang
 
+1. 다음중 32-bit safe number인 것은?
+
+    a. 2147483647 b. Infinity c. NaN d. Null
+
+2. 다음 수식 중 결과가 다른 것은?
+
+    a. 2147483647 | 0
+
+    b. 2147483647 | 2
+
+    c. -2147483648 | 1
+
+    d. -(2147483648 | 1)
+
+3. 다음은 [Number.is](http://number.is)Integer(..)의 pre-ES6 폴리필이다. ( )안에 알맞은 숫자는?
+
+    ```jsx
+    if (!Number.isInteger) {
+    	Number.isInteger = function(num) {
+    		return typeof num == "number" && num % (    ) == 0;
+    	};
+    }
+    ```
+
+4. 다음 수식의 계산 결과를 각각 추정하시오
+
+    a. (1.798e+308) /  (1.798e+308)
+
+    b. (1.798e+308) / (1.798e+307)
+
+    c. (1.798e+308) * (5e-324)
+
+    d. (2^53-1) / (2^53-1)
+
+    e. (5e-324) * (1.797e+308)
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+    
+1. a, b와 c는 special number로서 32-bit safe하지 않다(a | 0 연산시 `ToInt32` 연산이 수행됨), d는 empty value
 
+2. c, c의 결과는 -2147483647, 나머지는 모두 2147483647
+
+3. 1, 소숫점 아랫자리 숫자가 있는지 확인하기 위해 `num % 1 == 0`을 검사한다.
+
+4. 
+    a. NaN
+    
+    b. Infinity
+    
+    c. Infinity
+    
+    d. 1
+    
+    e. 8.8783596557672e-16
+   
+   Number.MAX_VALUE는 Number.MAX_VALUE와의 빼기, 나누기 연산은 NaN, 다른 연산은 어떤 수와도 Infinity
+   
+   Number.MIN_VALUE는 정상적인 숫자처럼 계산됨
 
 
 </div>
