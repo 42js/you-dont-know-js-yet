@@ -76,11 +76,50 @@
 
 > sunpark
 
+1. 다음 코드의 실행 결과는 어떻게 될까?
+
+```javascript
+'use strict';
+console.log(typeof b);
+```
+
+2. 다음 코드에서 오류가 나는 부분을 모두 고르시오.
+
+```javascript
+'use strict';
+
+var a;
+let b;
+console.log("test a : ", a);
+console.log("test b : ", b);
+console.log("test c : ", c);
+```
+
+3. ES2021에는 `Promise.any()`가 스펙으로 추가되었다. 이를 이전버젼에서도 사용하기 위해 폴리필(Polyfill)을 추가하려고 아래와 같이 코드를 추가했다고 했을 때, if문 안 빈칸에 들어갈 알맞은 코드는 무엇일까?
+```javascript
+if (<빈칸>) {
+  Promise.prototype.any = /* Polyfill of Promise.any() */
+}
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 다음 코드의 실행 결과는 어떻게 될까?
 
+> 'use strict'를 써도 선언하지 않은 변수는 에러가 나지 않고 undefined가 뜬다.
+
+2. 다음 코드에서 오류가 나는 부분을 모두 고르시오.
+
+> let을 선언만 하고 사용해도 문제없이 에러가 나지 않고 undefined가 뜬다. 당연히 C는 에러가 난다.
+
+3. ES2021에는 `Promise.any()`가 스펙으로 추가되었다. 이를 이전버젼에서도 사용하기 위해 폴리필(Polyfill)을 추가하려고 아래와 같이 코드를 추가했다고 했을 때, if문 안 빈칸에 들어갈 알맞은 코드는 무엇일까?
+```javascript
+if (typeof Promise.prototype.any !== "undefined") {
+  Promise.prototype.any = /* Polyfill of Promise.any() */
+}
+```
 
 </div>
 </details>
