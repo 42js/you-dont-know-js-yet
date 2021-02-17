@@ -239,6 +239,8 @@ Infinity + -Infinity
 
 ### 2.5 　  Value Versus Reference
 
+> holee
+
 1. ```var a = 2; var b = a;```에서 a와 b가 가르키고있는 2의 메모리에 존재하는 위치는 동일하다. ( O / X )  
 
 2. ```var c = [1,2,3]; var d = c;```에서 c와 d가 가르키고있는 배열 [1,2,3]의 메모리에 존재하는 위치는 동일하다. ( O / X )  
@@ -256,8 +258,6 @@ console.log(a);
 ㄴ. [1,2]  
 ㄷ. [1,2,3,4,5]  
 ㄹ. [1,2,3,4,5,length:2]  
-
-> holee
 
 4. 다음 출력 값으로 옳은 것은?  
 
