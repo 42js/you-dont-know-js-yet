@@ -239,13 +239,95 @@ Infinity + -Infinity
 
 ### 2.5 　  Value Versus Reference
 
+1. ```var a = 2; var b = a;```에서 a와 b가 가르키고있는 2의 메모리에 존재하는 위치는 동일하다. ( O / X )  
+
+2. ```var c = [1,2,3]; var d = c;```에서 c와 d가 가르키고있는 배열 [1,2,3]의 메모리에 존재하는 위치는 동일하다. ( O / X )  
+
+3. 다음 출력 값으로 옳은 것은?  
+
+```js
+var a = [1, 2, 3, 4, 5];
+
+a.length = 2;
+console.log(a);
+```
+
+ㄱ. []  
+ㄴ. [1,2]  
+ㄷ. [1,2,3,4,5]  
+ㄹ. [1,2,3,4,5,length:2]  
+
 > holee
+
+4. 다음 출력 값으로 옳은 것은?  
+
+```js
+var b = 2;
+
+foo( b );
+console.log( b );
+
+function foo(x) {
+	x = x + 1;
+	x;
+}
+```
+
+ㄱ. 2
+ㄴ. 3
+ㄷ. "21"
+ㄹ. [3]
+ㅁ. [2, 1]
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. ```var a = 2; var b = a;```에서 a와 b가 가르키고있는 2의 메모리에 존재하는 위치는 동일하다. ( O / **X** )  
 
+> primitive value 는 대입에서 항상 값 복사가 일어난다.  
+
+2. ```var c = [1,2,3]; var d = c;```에서 c와 d가 가르키고있는 배열 [1,2,3]의 메모리에 존재하는 위치는 동일하다. ( **O** / X )  
+
+> array 는 대입에서 항상 값 참조의 복사 일어난다.  
+
+3. 다음 출력 값으로 옳은 것은?  
+
+```js
+var a = [1, 2, 3, 4, 5];
+
+a.length = 2;
+console.log(a);
+```
+
+ㄱ. []  
+ㄴ. [1,2]  
+ㄷ. [1,2,3,4,5]  
+ㄹ. [1,2,3,4,5,length:2]  
+
+답: ㄴ. [1,2]
+
+4. 다음 출력 값으로 옳은 것은?  
+
+```js
+var b = 2;
+
+foo( b );
+console.log( b );
+
+function foo(x) {
+	x = x + 1;
+	x;
+}
+```
+
+ㄱ. 2
+ㄴ. 3
+ㄷ. "21"
+ㄹ. [3]
+ㅁ. [2, 1]
+
+정답: ㄱ. 2
 
 </div>
 </details>
