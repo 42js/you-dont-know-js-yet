@@ -152,12 +152,9 @@ myObject.a = 8;
 console.log(myObject.a);
 ```  
 
-
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-
-
 
 1.   
 ```js
@@ -194,12 +191,9 @@ d: ƒ anotherFunction()
 ```
 
 5. 4 5 5 8    
-
 </div>
 </details>
 <br>
-
-
 
 > (Immutability ~ Existence) gim
 
@@ -377,8 +371,6 @@ for (let i of obj) { // (•̀ᴗ•́)و
 
 3. 
 of 를 in 으로 교체하면 됩니다. 일반 객체는 배열과 달리 @@iterator(iterator 객체를 반환해주는 함수) 가 내장되어 있지 않아 for ... of 를 수행할 수 없습니다. 
-
-
 
 </div>
 </details>

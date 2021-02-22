@@ -261,7 +261,6 @@ b(); // ?
 ```
 
 2. ES6에서 소개하는 화살표함수는 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 this가 사용된다. (O, X)
-
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
