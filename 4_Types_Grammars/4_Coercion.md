@@ -103,6 +103,35 @@ parseInt( a ); // 42
 
 5. ```parseInt (  false,  16  ) ;```에서 출력값은 250이며, 이유는 false에서 fa를 16진수로 해석하여 변환됐기 때문이다. ( O / X )  
 
+6. 아래 코드는 명시적 Boolean 변환에 대한 코드이다. ( O / X )  
+
+```js
+var  d  =  "";
+
+!!d;
+```
+
+7. 다음 Boolean()의 반환값으로 true인것을 고르시오.  
+
+```js
+var a = [];
+var b = {};
+var c = "";
+var d = "0";
+var e = 0;
+var f = null;
+var g;
+
+Boolean( a ); 
+Boolean( b ); 
+Boolean( c ); 
+Boolean( d ); 
+Boolean( e ); 
+Boolean( f ); 
+Boolean( g ); 
+```
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
@@ -141,6 +170,35 @@ parseInt( a ); // 42
 
 5. ```parseInt (  false,  16  ) ;```에서 출력값은 250이며, 이유는 false에서 fa를 16진수로 해석하여 변환됐기 때문이다. ( **O** / X ) 
 
+6. 아래 코드는 명시적 Boolean 변환에 대한 코드이다. ( **O** / X )  
+
+```js
+var  d  =  "";
+
+!!d;
+```
+
+7. 다음 Boolean()의 반환값으로 true인것을 고르시오.  
+
+```js
+var a = [];
+var b = {};
+var c = "";
+var d = "0";
+var e = 0;
+var f = null;
+var g;
+
+Boolean( a ); // true
+Boolean( b ); // true
+Boolean( c ); // false
+Boolean( d ); // true
+Boolean( e ); // false
+Boolean( f ); // false
+Boolean( g ); // false
+```
+
+답: a, b, d
 
 </div>
 </details>
