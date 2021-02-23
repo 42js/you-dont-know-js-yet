@@ -47,11 +47,67 @@
 
 > [ToNumber ~ ToBoolean] nkang
 
+1. 다음 코드들의 결과를 각각 쓰시오
+
+```jsx
+var a = {
+	toString: function(){
+		return 010;
+	}
+};
+var b = {
+	toString: function(){
+		return "010";
+	}
+};
+Number(a); //__________________________________
+Number(b); //__________________________________
+```
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
 
+답: 8 , 10
+
+0-prefixed octal numbers are not handled as octals (just as normal base-10 decimals) in this operation, though such octals are valid as number literals (see Chapter 2).
+
+</div>
+</details>
+<br>
+
+
+```jsx
+var a = new Boolean( false );
+var b = new Number( 0 );
+var c = new String( "" );
+var d = a && b && c;
+console.log(d); //__________________________________
+```
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+답: String {""}, falsy value가 아닌 것은 모두 true로 coercion
+
+</div>
+</details>
+<br>
+
+
+```jsx
+var a = document.all;
+var b = "0";
+var c = a && b;
+console.log(c); //____________________________
+Boolean(c); //_______________________________
+```
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+답: HTMLAllCollection(3) [html, head, body], false document.all은 내용이 존재하는 object이지만 브라우저에서는 false로 취급
 
 </div>
 </details>
