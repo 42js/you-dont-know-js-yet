@@ -46,33 +46,80 @@
 </details>
 <br>
 
+
 ### 3.3 　  Unboxing
 
 > dongbkim
 
+
+1. 다음 코드의 출력 결과를 말하시오.
+```js
+var a = new Number(123);
+var b = a * 1;
+var c = a + "";
+
+typeof a;
+typeof b;
+typeof c;
+```
+
+    
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
 
+1.     
+```
+'object'
+'number'
+'string'
+```
 
+     
 </div>
 </details>
 <br>
+
 
 ### 3.4 　  Natives as Constructors
 
 > [Array(..) ~ Object(..), Function(..), and RegExp(..)] dongbkim
 
+1. 다음 코드의 출력 결과를 말하시오.
+  
+     
+```js
+var b = {};
+var a = Array.apply(b, {length: 5});
+
+a.join(",1");
+a.map(function(v,i){return i});
+```
+     
+2. `Array(1,2,3)` 와 `new Array(1,2,3)`의 각 결과 사이에 차이점이  존재하지 않는다. ( O \ X )      
+        
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+      
+1.    
+
+```md
+[ undefined, undefined, undefined, undefined, undefined ]
+',1,1,1,1'
+[ 0, 1, 2, 3, 4 ]
+```
 
 
+2. 2. `Array(1,2,3)` 와 `new Array(1,2,3)`의 각 결과 사이에 차이점이  존재하지 않는다. ( **O** \ X )        
+> So Array(1,2,3) is the same outcome as new Array(1,2,3).
 
 </div>
 </details>
 <br>
+
+
 
 > [Date(..) and Error(..) ~ Native Prototypes] gim
 
