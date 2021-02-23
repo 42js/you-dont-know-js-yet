@@ -82,8 +82,6 @@
 
 3. 다음 코드에서 예상되는 결과는?
 
-4. 흔히 접할 수 있는 `Uncaught *Error: description` 은 어떤 식으로 발생할까요?
-
 ```js
 function handleException() {
 	try {
@@ -93,6 +91,8 @@ function handleException() {
 	}
 }
 ```
+
+4. 흔히 접할 수 있는 `Uncaught *Error: description` 은 어떤 식으로 발생할까요?
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
