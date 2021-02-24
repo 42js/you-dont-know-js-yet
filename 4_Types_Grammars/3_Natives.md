@@ -14,33 +14,46 @@
 ## Quiz
 
 [3.1　Internal [[Class]]](#31---Internal-Class)<br>
-[3.2　Bocing Wrappers](#32---Bocing-Wrappers)<br>
+[3.2　Boxing Wrappers](#32---Bocing-Wrappers)<br>
 [3.3　Unboxing](#33---Unboxing)<br>
 [3.4　Natives as Constructors](#34---Natives-as-Constructors)<br>
 
 ### 3.1 　  Internal [[Class]]
 
-> sunpark
+1. 모든 Primitive Value들의 internal [[Class]]는 자기 타입의 native constructor를 가지고 있다. ( O / X )
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 모든 Primitive Value들의 internal [[Class]]는 자기 타입의 Native Constructor를 가지고 있다. ( O / **X** )
+> `null`과 `undefined`는 Native Constructor를 가지고 있지 않다. 다만 자기 자신의 `Null`, `Undefined`를 가지고 있다.
 
 </div>
 </details>
 <br>
 
-### 3.2 　  Bocing Wrappers
+### 3.2 　  Boxing Wrappers
 
-> sunpark
+1. 아래 코드는 Boxing된 boolean을 사용해 조건문을 사용하려 했지만, 의도하지 않게 작동되는 부분이 있다. 이를 수정하기 위해 사용되는 내장함수는?
+
+```javascript
+const test = new Boolean(false);
+if (test)
+  console.log("This SHOULD NOT be printed!");
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 아래 코드는 Boxing된 boolean을 사용해 조건문을 사용하려 했지만, 의도하지 않게 작동되는 부분이 있다. 이를 수정하기 위해 사용되는 내장함수는?
 
+```javascript
+const test = new Boolean(false);
+if (test.valueOf())
+  console.log("This SHOULD NOT be printed!");
+```
 
 </div>
 </details>
