@@ -21,11 +21,20 @@
 
 > sohpark
 
+1. 형변환은 정적 타이핑 언어에서는 _____ 시점에, 동적 타이핑 언어에서는 _____ 시점에 이루어진다.
+2. 각각의 예시가 implicit, explicit coercion 중 무엇인지 설명하시오.
+```javascript
+let a = 42;
+let b = String(a);  // 1
+let c = "We are from" + a + "Seoul";  // 2
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 컴파일, 런타임
+2. 1 - explicit | 2 - implicit
 
 </div>
 </details>
@@ -35,11 +44,58 @@
 
 > [ToString] sohpark
 
+1. toString 함수가 자동으로 적용되는 경우는 어떨 때인지 설명하시오.
+2. 다음 출력 결과는?
+```javascript
+let obj = {
+  a: "hi",
+  b: (a, b) => a + b,
+  c: undefined,
+  d: null,
+};
+
+console.log(JSON.stringify(obj));  // 1
+console.log(JSON.stringify("42"))  // 2
+```
+3. 다음 출력 결과는?
+```javascript
+var a = {
+  val: [1, 2, 3, 4, 5],
+
+  toJSON: function () {
+    return this.val.slice(1);
+  },
+};
+
+console.log(a.toJSON() === "[2, 3]");  // 1
+console.log(JSON.stringify(a));  // 2
+```
+4. 다음의 출력 결과는?
+```javascript
+let obj = {
+  a: "hi",
+  b: 42,
+  c: null,
+};
+
+console.log(JSON.stringify(obj, ["b", "c"], "--"));
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 객체가 내장된 toString함수를 가지고 있고, 문자열처럼 사용하려고 할 때 (예를 들어 implicit coercion같은), 자동으로 toString함수가 호출되고, 그 반환값이 대신 사용된다. 
+> if an object has its own `toString()` method on it, and you use that object in a `string`-like way, its `toString()` will automatically be called, and the `string` result of that call will be used instead.
+2. 1 - ```{"a":"hi","d":null}``` | 2 - ```"42"```
+3. 1 - false | 2 - ```[2,3,4,5]```
+4.
+```JSON
+{
+--"b": 42,
+--"c": null
+}
+```
 
 </div>
 </details>
