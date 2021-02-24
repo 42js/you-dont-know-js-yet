@@ -173,12 +173,28 @@ Boolean(c); //_______________________________
 
 > [Explicitly: String <--> Numbers] yujo
 
+1. 다음 코드의 출력값과 타입은?
+```js
+const a = "3.14"
+const b = 5;
+
+console.log(b + +a)
+```
+
+2. 다음 코드의 출력값과 타입은?
+```js
+const c = "3.14"
+const d = "5"
+
+console.log(d + +c)
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
-
+1. 8.14
+2. "3.145"
 </div>
 </details>
 <br>
