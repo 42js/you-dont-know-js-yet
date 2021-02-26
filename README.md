@@ -21,7 +21,7 @@
 - [Hochan Lee](https://github.com/hochan222)
 - [Namseok Kang](https://github.com/nkink)
 - [Sungwoo Park](https://github.com/cos18)
-- [Yunho Jo](https://github.com/YUJO42)
+- [Yunho Jo](https://github.com/yujo11)
 - [Dongbin Kim](https://github.com/dawnbeen)
 - [Gwangyeol Im](https://github.com/GwangYeol-Im)
 - [SoHyun Park](https://github.com/pje1740)
