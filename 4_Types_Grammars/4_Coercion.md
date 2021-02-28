@@ -16,6 +16,9 @@
 [4.1　Converting Values](#41---Converting-Values)<br>
 [4.2　Abstract Value Operations](#42---Abstract-Value-Operations)<br>
 [4.3　Explicit Coercion](#43---Explicit-Coercion)<br>
+[4.4　Implicit Coercion](#44---Implicit-Coercion)<br>
+[4.5　Loose Equals Versus Strict Equals](#45---Loose-Equals-Versus-Strict-Equals)<br>
+[4.6　Abstract Relational Comparison](#46---Abstract-Relational-Comparison)<br>
 
 ### 4.1 　  Converting Values
 
@@ -332,4 +335,68 @@ Boolean( g ); // false
 </details>
 <br>
 
-> 뒷파트는 다음주(3/3)에! 
+### 4.4 　  Implicit Coercion
+
+> [Simplifying Implicitly ~ Implicitly: Booleans --> Numbers] sunpark
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+
+</div>
+</details>
+<br>
+
+> [Implicitly: * --> Boolean ~ Symbol Coercion] dongbkim
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+
+</div>
+</details>
+<br>
+
+### 4.5 　  Loose Equals Versus Strict Equals
+
+> [Equality Performance ~ Abstract Equality] gim
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+
+</div>
+</details>
+<br>
+
+> [Edge Cases] sohpark
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+
+</div>
+</details>
+<br>
+
+### 4.6 　  Abstract Relational Comparison
+
+> sohpark
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+
+</div>
+</details>
+<br>
