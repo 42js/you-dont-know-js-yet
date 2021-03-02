@@ -377,10 +377,31 @@ Boolean( g ); // false
 
 > [Edge Cases] sohpark
 
+1. 각각의 값은?
+```javascript
+[] == ![];
+0 == [null];
+"true" == true;
+0 == "\n";
+42==["42"]
+```
+2. 저자가 ```===```의 사용을 추천하는 경우는?
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 
+```javascript
+[] == ![];       // true
+0 == [null];     // true
+"true" == true;  // false
+0 == "\n";       // true
+42 == ["42"]     // true
+```
+2. 비교 피연산자 중 하나가 boolean, [], "", 0인 경우는 ```==```의 이용을 피하라고 말한다.  
+> If either side of the comparison can have `true` or `false` values, don't ever, EVER use `==`.
+> If either side of the comparison can have `[]`, `""`, or `0` values, seriously consider not using `==`.
 
 
 </div>
@@ -391,11 +412,16 @@ Boolean( g ); // false
 
 > sohpark
 
+1. ```a < b```의 값을 구하기 위해 사용하는 Abstract Relational Comparison 알고리즘의 대략적인 흐름을 설명하시오.
+2. 두 객체를 a, b를 비교할 때, ```a == b```, ```a > b```, ```a < b``` 모두 false임에도 ```a <= b``` 는 true를 반환하는지 설명하시오. 
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. 두 값 모두 먼저 ToPrimitive 함수를 이용하여 값을 치환합니다. 둘 중 하나라도 'string'이 아니라면, 두 값 모두 ToNumber를 이용하여 숫자로 치환한 후 비교합니다.  
+> The algorithm first calls `ToPrimitive` coercion on both values, and if the return result of either call is not a `string`, then both values are coerced to `number` values using the `ToNumber` operation rules, and compared numerically.
+2. ```a <= b``` 는 두 값을 비교하는 것이 아니라 ```a > b```의 반대를 반환하는 로직이기 때문이다. 
 
 </div>
 </details>
