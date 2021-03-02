@@ -37,10 +37,39 @@
 
 > [Contextual Rules] yujo
 
+
+1. 다음 코드의 출력 결과는?
+
+```js
+const obj = () =>  {
+  return {
+    study:  'you don`t know js yet',
+    [123]: '123'
+  }
+}
+
+const { study } = obj();
+console.log(study)
+```
+
+2. 다음 코드의 출력 결과는?
+
+
+```js
+const foo = ({ a, b, c }) => {
+  console.log(a, b, c);
+}
+
+foo({ a : 'you', c : 'know?'})
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+
+1. 'you don`t know js yet'
+2. 'you' undefined 'know?'
 
 
 </div>
@@ -51,12 +80,45 @@
 
 > [Short Circuited ~ Tighter Binding] yujo
 
+1. 다음 코드의 출력 결과는?
+
+```js
+
+const a = 10;
+const b = 0;
+
+console.log(a && b); // (1)
+console.log(b && a); // (2)
+console.log(a || b); // (3)
+console.log(b || a); // (4)
+
+```
+
+2. 다음 코드의 출력 결과는?
+
+```js
+let a = 10;
+let b = a++, a;
+
+console.log(a, b) // (1)
+
+let a = 10;
+let b = (a++, a);
+
+console.log(a, b) // (1)
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. (1) 0 
+   (2) 0 
+   (3) 10 
+   (4) 10
 
-
+2. (1) Uncaught SyntaxError: Identifier 'a' has already been declared
+   (2) 11, 11
 </div>
 </details>
 <br>
