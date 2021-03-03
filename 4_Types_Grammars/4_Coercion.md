@@ -377,10 +377,31 @@ onlyOne(42, 0, 0, 0);         // why false??
 
 > [Implicitly: * --> Boolean ~ Symbol Coercion] dongbkim
 
+
+1. 다음 결과를 예측하시오.
+```js
+console.log(typeof a && null && 0);
+console.log(NaN || "hi");
+```
+
+2. 다음 결괄르 예측하시오.
+```js
+var symToStr = Symbol(1234);
+Number(symToStr);
+```
+
+
+
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+
+1. null / "hi"     
+2. Uncaught **TypeError**: Cannot convert a Symbol value to a number
+> what we'll discuss in this book, explicit coercion of a symbol to a string is allowed, but implicit coercion of the same is disallowed and throws an error.
 
 
 </div>
