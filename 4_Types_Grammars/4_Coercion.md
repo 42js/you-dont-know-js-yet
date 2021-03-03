@@ -339,11 +339,37 @@ Boolean( g ); // false
 
 > [Simplifying Implicitly ~ Implicitly: Booleans --> Numbers] sunpark
 
+1. JS에서 String 타입과 Number 타입를 + 연산자를 통해 연산하게 된다면, 결과는 `___(A)___` 타입을 가지게 된다. Explicit하게 `___(B)___` 타입을 `___(A)___` 타입으로 바로 변환하는 것으로 알겠지만, 실제로는 Implicit하게 `___(B)___` 타입을 `___(C)___` 함수를 통해 나온 값으로 `___(D)___` 함수를 실행해 `___(A)___` 타입으로 변환한다. 빈칸에 들어갈 타입명 / 함수명 은?
+
+2. sunpark는 아래와 같이 매개변수들을 받아 매개변수들 중 하나의 값만 truthy할 경우에 `true`를, 나머지 경우에는 `false`를 리턴하는 `onlyOne` 함수를 만들었다. 하지만 sunpark의 의도대로 함수는 작동하지 않았다. 의도대로 함수가 작동될려면 어떻게 함수를 수정해야 할까?
+
+```javascript
+function onlyOne(...args) {
+  return args.reduce((sum, arg) => arg ? sum + arg : sum, 0) == 1;
+}
+
+onlyOne(false, true, false);  // true!
+onlyOne(42, 0, 0, 0);         // why false??
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. JS에서 String 타입과 Number 타입를 + 연산자를 통해 연산하게 된다면, 결과는 **String** 타입을 가지게 된다. Explicit하게 **Number** 타입을 **String** 타입으로 바로 변환하는 것으로 알겠지만, 실제로는 Implicit하게 **Number** 타입을 **valueOf()** 함수를 통해 나온 값으로 **toString()** 함수를 실행해 **String** 타입으로 변환한다.
 
+2. sunpark는 아래와 같이 매개변수들을 받아 매개변수들 중 하나의 값만 truthy할 경우에 `true`를, 나머지 경우에는 `false`를 리턴하는 `onlyOne` 함수를 만들었다. 하지만 sunpark의 의도대로 함수는 작동하지 않았다. 의도대로 함수가 작동될려면 어떻게 함수를 수정해야 할까?
+
+```javascript
+function onlyOne(...args) {
+  return args.reduce((sum, arg) => !!arg ? sum + !!arg : sum, 0) == 1;
+}
+
+onlyOne(false, true, false);  // true!
+onlyOne(42, 0, 0, 0);         // why false??
+```
+
+> 위와 같이, 값을 더할 때 Boolean으로 coercion해야 정상적으로 작동된다.
 
 </div>
 </details>

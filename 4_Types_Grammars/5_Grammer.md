@@ -272,11 +272,44 @@ function  foo ( a )  {
 
 > sunpark
 
+1. 함수 매개변수에 undefined를 넣어도 arguments 길이에 영향을 끼치지 않는다 ( O / X )
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 함수 매개변수에 undefined를 넣어도 arguments 길이에 영향을 끼치지 않는다 ( O / **X** )
 
+```javascript
+function foo() {
+  console.log(arguments.length);
+  console.log(arguments);
+}
+
+foo(10, undefined);
+/*
+2
+{
+  '0': 10,
+  '1': undefined,
+  length: 2,
+  callee: ƒ foo(),
+  __proto__: {
+    constructor: ƒ Object(),
+    __defineGetter__: ƒ __defineGetter__(),
+    __defineSetter__: ƒ __defineSetter__(),
+    hasOwnProperty: ƒ hasOwnProperty(),
+    __lookupGetter__: ƒ __lookupGetter__(),
+    __lookupSetter__: ƒ __lookupSetter__(),
+    isPrototypeOf: ƒ isPrototypeOf(),
+    propertyIsEnumerable: ƒ propertyIsEnumerable(),
+    toString: ƒ toString(),
+    valueOf: ƒ valueOf(),
+    toLocaleString: ƒ toLocaleString()
+  }
+}
+*/
+```
 
 </div>
 </details>
@@ -286,11 +319,27 @@ function  foo ( a )  {
 
 > sunpark
 
+1. 다음 코드의 작동 결과를 설명하시오.
+
+```javascript
+try {
+  throw "Somethihg!"
+}
+catch (err) {
+  console.log("Catch Error:", err);
+}
+finally {
+  throw "Anything!"
+}
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 다음 코드의 작동 결과를 설명하시오.
 
+![](./fig/4-5.png)
 
 </div>
 </details>
@@ -300,11 +349,15 @@ function  foo ( a )  {
 
 > sunpark
 
+1. switch문을 if, else if, else if, ..., else문을 대체하기 위한 사용법은 무엇인가?
+> hint) `switch (무언가) { case (무언가) ... }`
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. switch문을 if, else if, else if, ..., else문을 대체하기 위한 사용법은 무엇인가?
+> `switch (true) { case (조건) ... }`과 같이 사용하면 if, else if, else if, ..., else문을 대체할 수 있다.
 
 </div>
 </details>
