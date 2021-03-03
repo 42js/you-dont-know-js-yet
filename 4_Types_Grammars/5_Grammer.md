@@ -24,12 +24,26 @@
 ### 5.1 　  Statements & Expressions
 
 > [Statement Completion Values ~ Expression Side Effects] nkang
+ 
+1. 다음 중 side effect가 발생하는 expression을 고르고 그 형태를 설명하라.
+
+```jsx
+var obj = {
+	a: 42
+};
+
+delete obj.b;	// A
+
+var c = 42, d;
+d = ( c++, c ); // B
+
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+B. = 과 ++에서 side effect가 발생. side effect는 result value와 다른 동작이 일어날 때를 의미.
 
 </div>
 </details>
