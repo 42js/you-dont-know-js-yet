@@ -1,4 +1,4 @@
-# Appendix A. Mixed Environment Javascript
+# Promises
 
 ## 요약
 | Name | URL |
@@ -13,4 +13,4 @@
 
 ## Quiz
 
-TBA
+TBU
