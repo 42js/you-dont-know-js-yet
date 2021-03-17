@@ -96,13 +96,90 @@ ajax('url2', add);
 
 ### 1.5 　  Jobs
 
+
 > nkang
+1. 다음 코드의 실행 결과를 순서대로 적으시오. __ - __ - __ - __ - __
+```
+Promise.resolve()//즉시 해소되는 프라미스1
+  .then(_=>console.log('promise1 step1')) //첫번째 then (A)
+  .then(_=>console.log('promise1 step2'));//두번째 then (B)
+ 
+Promise.resolve()//즉시 해소되는 프라미스2
+  .then(_=>console.log('promise2 step1')) //첫번째 then (C)
+  .then(_=>console.log('promise2 step2'));//두번째 then (D)
+ 
+console.log('ec running'); (E)
+
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+E-A-C-B-D
+```
+ec running
+promise1 step1
+promise2 step1
+promise1 step2
+promise2 step2
+```
+프라미스의 then은 즉시 잡큐에 넣도록 스펙에서 규정하고 있으므로 즉시 해소된다 하더라도 현재 실행 중인 EC가 완료된 후 다음 잡으로 실행됨.
 
+resolve로 즉시 해소되어도 then의 함수는 바로 호출되지 않고 우선 EC가 다 해소된 이후 잡큐에서 꺼내 실행됨 
+
+- 처음 등장한 프라미스1의 첫 번째 then이 잡큐에 등록
+- 이 시점에서 then은 실행되지 않으므로 두 번째 then은 무시
+- 이어 두 번째 등장한 프라미스2의 첫 번째 then이 잡큐에 등록. 이제 잡큐에는 두 개의 PromiseJobs가 등록됨
+- 마지막 줄의 console.log가 실행되어 현재의 ScriptJobs가 완료
+- 잡큐에 있는 다음 잡인 1번에서 등록한 첫 번째 프라미스의 첫 번째 then이 실행, 그 결과 다시 then이 호출되어 이를 잡큐에 등록
+- 두 번째 잡큐에 들어있는 잡은 두 번째 프라미스의 첫 번째 then임. 이것도 실행하면 그 결과 잡큐에 두 번째 then의 내용을 등록
+- 이제 첫 번째 프라미스의 두 번째 then이 실행
+- 이어서 두 번째 프라미스의 두 번째 then이 실행
+
+</div>
+</details>
+<br>
+
+2. 다음 코드의 실행 결과를 순서대로 적으시오. __ - __ - __ - __ - __
+```
+console.log('Message no. 1: Sync');
+
+setTimeout(function() {
+  console.log('Message no. 2: setTimeout');
+}, 0);
+ 
+var promise = new Promise(function(resolve, reject) {
+   resolve();
+});
+ 
+promise.then(function(resolve) {
+   console.log('Message no. 3: 1st Promise');
+})
+.then(function(resolve) {
+   console.log('Message no. 4: 2nd Promise');
+});
+console.log('Message no. 5: Sync');
+
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1-5-3-4-2
+```
+Message no. 1: Sync
+Message no. 5: Sync
+Message no. 3: 1st Promise
+Message no. 4: 2nd Promise
+Message no. 2: setTimeout
+```
+Promise가 수행된 후에 반환되는 콜백은 Job Queue에 추가. 
+
+Job Queue는 이벤트 루프의 tick이 오면 큐에 있는 모든 작업을 수행. 
+
+그리고 그 뒤에 Task를 실행.
 
 </div>
 </details>
@@ -112,13 +189,19 @@ ajax('url2', add);
 
 > nkang
 
+다음 문장은 참일까요, 거짓일까요.
+
+A. JS engine이 코드를 실행하는 순서는 코드를 작성하는 순서와 동일하다. (T/F)
+
+B. 컴파일러가 표현식들의 순서를 재배치하는 과정은 관찰 가능하다. (T/F)
+
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+F, F
 
 </div>
 </details>
 <br>
-
