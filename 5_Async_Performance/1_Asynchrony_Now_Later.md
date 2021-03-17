@@ -84,11 +84,32 @@ ajax('url2', add);
 
 > sohpark
 
+1. 두 개의 작업이 동시성을 가진다는 것은 해당 작업의 동작(operation)이 이벤트 루프에서 동시에 일어나는 것을 의미한다. ( O, X ) 
+2. 동시성을 갖지만 상호 작용을 하지 않는 작업에 대해서는 nondeterminism(비결정성 - 실행때마다 작업 순서나 결과가 달라지는 것)을 신경쓰지 않아도 된다. ( O, X )
+3. 다음의 출력 순서는?
+```javascript
+setTimeout(() => {
+    console.log('task1');
+}, 0);
+
+setTimeout(() => {
+    console.log('task2');
+}, 0);
+
+setTimeout(() => {
+    console.log('task3');
+}, 0);
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-
+1. X
+> "Process 1" and "Process 2" run concurrently (task-level parallel), but their individual events run sequentially on the event loop queue.
+2. O
+> As two or more "processes" are interleaving their steps/events concurrently within the same program, they don't necessarily need to interact with each other if the tasks are unrelated. If they don't interact, nondeterminism is perfectly acceptable.
+3. 출력 순서는 적힌 순서대로 보장되지 않는다. 고로 매번 달라질 수 있기에 알 수가 없다. 
 
 </div>
 </details>
