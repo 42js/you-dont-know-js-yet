@@ -90,7 +90,7 @@ setTimeout(
 
 > holee
 
-1. 다음 함수 chargeCreditCard()는 타사 API을 실행하는 함수라 가정하자. 다음 코드에서 문제될 수 있는 것들은 어떤 것들이 있는가?
+1. 다음 함수 chargeCreditCard()는 타사 API(callback)을 실행하는 함수라 가정하자. 다음 코드에서 문제될 수 있는 것들은 어떤 것들이 있는가?
 
 ```js
 analytics.trackPurchase( purchaseData, function(){
