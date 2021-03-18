@@ -123,13 +123,50 @@ analytics.trackPurchase( purchaseData, function(){
 
 ### 2.4 　  Trying to Save Callbacks
 
-> sunpark
+1. 다음 코드는 콜백의 문제를 해결하기 위해 나온 `asyncify`이다. 이 함수에서 `intv` 변수의 역활은 무엇일까?
+
+```javascript
+function asyncify(fn) {
+  var orig_fn = fn,
+    intv = setTimeout( function(){
+      intv = null;
+      if (fn) fn();
+    }, 0 )
+  ;
+
+  fn = null;
+
+  return function() {
+    if (intv) {
+      fn = orig_fn.bind.apply(
+        orig_fn,
+        [this].concat([].slice.call(arguments))
+      );
+    }
+    else
+      orig_fn.apply( this, arguments );
+  };
+}
+
+// 다음과 같이 사용됨
+function result(data) {
+	console.log(a);
+}
+
+ajax("..pre-cached-url..", asyncify(result));
+```
+
+2. 콜백의 `_______` 문제를 해결하기 위해 ES6에서 Promise를 만들게 되었다.
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 다음 코드는 콜백의 문제를 해결하기 위해 나온 `asyncify`이다. 이 함수에서 `intv` 변수의 역활은 무엇일까?
 
+> intv는 setTimeout이 실행된 이후에 null로 초기화되어있는데, 이는 setTimeout이 잡큐에 나온 이후 실행되는 결과이기 때문에, 하단에서 비동기 처리가 실행되었는지, 되지 않았는지 확인할 수 있는 flag로 활용된다.
+
+2. 콜백의 **믿음 문제(trust issue)** 를 해결하기 위해 ES6에서 Promise를 만들게 되었다.
 
 </div>
 </details>
