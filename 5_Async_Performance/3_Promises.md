@@ -122,9 +122,55 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 
 > holee
 
+1. 다음 출력 값들을 예측해보자!
+
+```js
+var p1 = Promise.resolve( 42 );
+var p2 = Promise.resolve( "Hello World" );
+var p3 = Promise.reject( "Oops" );
+
+Promise.race( [p1,p2,p3] )
+.then( function(msg){
+	console.log( msg );		// here!
+} );
+
+Promise.all( [p1,p2,p3] )
+.catch( function(err){
+	console.error( err );	// here!
+} );
+
+Promise.all( [p1,p2] )
+.then( function(msgs){
+	console.log( msgs );	// here!
+} );
+```
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+  
+1. 다음 출력 값들을 예측해보자!
+
+```js
+var p1 = Promise.resolve( 42 );
+var p2 = Promise.resolve( "Hello World" );
+var p3 = Promise.reject( "Oops" );
+
+Promise.race( [p1,p2,p3] )
+.then( function(msg){
+	console.log( msg );		// 42
+} );
+
+Promise.all( [p1,p2,p3] )
+.catch( function(err){
+	console.error( err );	// "Oops"
+} );
+
+Promise.all( [p1,p2] )
+.then( function(msgs){
+	console.log( msgs );	// [42,"Hello World"]
+} );
+```
 
 </div>
 </details>
