@@ -14,34 +14,51 @@
 
 ## Quiz
 
-### 3.1 　 What Is a Promise?
+
+
+### 3.1 　  What Is a Promise?
 
 > dongbkim
+
+1. Promise는 시간-의존적인 상태를 캡슐화하여 시간-독립적인 특성을 갖고 있기 때문에 타이밍이나 결과에 상관없이 예측 가능한 방향으로 구성 가능하다.(O / X)
+2. Promise가 귀결(resolved)될 경우 무조건 그 시점에 불변값(immutable value)이 되므로, 값이 안전하게 넘어간다.(O / X)
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. Promise는 시간-의존적인 상태를 캡슐화하여 시간-독립적인 특성을 갖고 있기 때문에 타이밍이나 결과에 상관없이 예측 가능한 방향으로 구성 가능하다.(**O** / X)
+Because Promises encapsulate the time-dependent state -- waiting on the fulfillment or rejection of the underlying value -- from the outside, the Promise itself is time-independent, and thus Promises can be composed (combined) in predictable ways regardless of the timing or outcome underneath.
+
+2. Promise가 귀결(resolved)될 경우 무조건 그 시점에 불변값(immutable value)이 되므로,  값이 안전하게 넘어간다.(**O** / X)
+ Because a Promise is externally immutable once resolved, it's now safe to pass that value around to any party and know that it cannot be modified accidentally or maliciously.
 </div>
 </details>
 <br>
 
-### 3.2 　 Thenable Duck Typing
+### 3.2 　  Thenable Duck Typing
 
 > dongbkim
+
+1. 임의로 어떤 객체에 `then`이라는 method(function)을 만들었다면 이 객체는 무조건 데네블이다.(O / X)
+
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
+1. 데네블 덕 타이핑 방식을 따르면, 임의로 어떤 객체에 `then`이라는 method(function)을 만든 경우, 이 객체는 무조건 데네블이다.(**O** / X)
+`데네블 덕 타이핑`에 의하면 어떤 객체의 프로미스 여부를 따지기 위해, "함수나 객체이고, 함수인 then을 갖고 있는지"로 판별하는데 이 조건만 충족시키면 데네블로 취급한다.
+
 </div>
 </details>
 <br>
+
 
 ### 3.3 　 Promise Trust
 
 > gim
- 
+
 1. Promise 는 기존의 콜백 방식의 비동기 처리에서 발생하는 _____ 문제를 해결하기 위해 등장했다.
 
 2. 콜백 방식에서 예상할 수 있는 문제점을, Promise는 어떻게 해결할까?
@@ -67,7 +84,7 @@ p1.then((param1, param2, param3) => {
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-	
+
 1. Promise 는 기존의 콜백 방식의 비동기 처리에서 발생하는 제어의 역전(inversion of control) 문제를 해결하기 위해 등장했다.
 
 2. 콜백 방식에서 예상할 수 있는 문제점을, Promise는 어떻게 해결할까?
@@ -189,7 +206,7 @@ Promise.all( [p1,p2] )
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-  
+
 1. 다음 출력 값들을 예측해보자!
 
 ```js
