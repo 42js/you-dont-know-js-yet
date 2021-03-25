@@ -156,9 +156,25 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 
 > nkang
 
+1. 책에서 말하는 각 Error Handling 방법의 문제로 잘못 짝지어진 것은?
+
+- try..catch - async operation을 지원하지 않음
+- end your chain with a final catch(..) - catch가 호출하는 함수 자체에 오류가 있을 경우를 잡아 낼 수 없음. 
+- .done(..) - done이 return 하는 추가적인 unattended promise가 생기는 데에 불과함 
+
+2. 책에서 이야기하는 Error Handling의 요건 두 가지를 설명하시오.
+ 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+1. 
+- try..catch -  It doesn't work across async operations. That is, unless there's some additional environmental support, which we'll come back to with generators in Chapter 4.
+- end your chain with a final catch(..) -  if handleErrors(..) itself also has an error in it? Who catches that? There's still yet another unattended promise: the one catch(..) returns, which we don't capture and don't register a rejection handler for.
+- .done(..) -  the biggest problem is that it's not part of the ES6 standard, so no matter how good it sounds, at best it's a lot longer way off from being a reliable and ubiquitous solution.
+
+2. 
+* Promises could default to reporting (to the developer console) any rejection, on the next Job or event loop tick, if at that exact moment no error handler has been registered for the Promise.
+* For the cases where you want a rejected Promise to hold onto its rejected state for an indefinite amount of time before observing, you could call defer(), which suppresses automatic error reporting on that Promise.
 
 </div>
 </details>
