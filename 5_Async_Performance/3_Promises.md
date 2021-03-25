@@ -168,12 +168,17 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 1. 
+
 - try..catch -  It doesn't work across async operations. That is, unless there's some additional environmental support, which we'll come back to with generators in Chapter 4.
+
 - end your chain with a final catch(..) -  if handleErrors(..) itself also has an error in it? Who catches that? There's still yet another unattended promise: the one catch(..) returns, which we don't capture and don't register a rejection handler for.
+
 - .done(..) -  the biggest problem is that it's not part of the ES6 standard, so no matter how good it sounds, at best it's a lot longer way off from being a reliable and ubiquitous solution.
 
 2. 
+
 * Promises could default to reporting (to the developer console) any rejection, on the next Job or event loop tick, if at that exact moment no error handler has been registered for the Promise.
+
 * For the cases where you want a rejected Promise to hold onto its rejected state for an indefinite amount of time before observing, you could call defer(), which suppresses automatic error reporting on that Promise.
 
 </div>
