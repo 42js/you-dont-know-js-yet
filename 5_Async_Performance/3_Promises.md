@@ -28,9 +28,15 @@
 <div markdown="1">
 
 1. Promise는 시간-의존적인 상태를 캡슐화하여 시간-독립적인 특성을 갖고 있기 때문에 타이밍이나 결과에 상관없이 예측 가능한 방향으로 구성 가능하다.(**O** / X)
+
+
 Because Promises encapsulate the time-dependent state -- waiting on the fulfillment or rejection of the underlying value -- from the outside, the Promise itself is time-independent, and thus Promises can be composed (combined) in predictable ways regardless of the timing or outcome underneath.
 
+
+
 2. Promise가 귀결(resolved)될 경우 무조건 그 시점에 불변값(immutable value)이 되므로,  값이 안전하게 넘어간다.(**O** / X)
+
+
  Because a Promise is externally immutable once resolved, it's now safe to pass that value around to any party and know that it cannot be modified accidentally or maliciously.
 </div>
 </details>
@@ -40,15 +46,17 @@ Because Promises encapsulate the time-dependent state -- waiting on the fulfillm
 
 > dongbkim
 
-1. 임의로 어떤 객체에 `then`이라는 method(function)을 만들었다면 이 객체는 무조건 데네블이다.(O / X)
+1. 임의로 어떤 객체에 `then`이라는 method(function)을 만들었다면 이 객체는 무조건 데너블이다.(O / X)
 
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-1. 데네블 덕 타이핑 방식을 따르면, 임의로 어떤 객체에 `then`이라는 method(function)을 만든 경우, 이 객체는 무조건 데네블이다.(**O** / X)
-`데네블 덕 타이핑`에 의하면 어떤 객체의 프로미스 여부를 따지기 위해, "함수나 객체이고, 함수인 then을 갖고 있는지"로 판별하는데 이 조건만 충족시키면 데네블로 취급한다.
+1. 데너블 덕 타이핑 방식을 따르면, 임의로 어떤 객체에 `then`이라는 method(function)을 만든 경우, 이 객체는 무조건 데너블이다.(**O** / X)
+
+
+`데너블 덕 타이핑`에 의하면 어떤 객체의 프로미스 여부를 따지기 위해, "함수나 객체이고, 함수인 then을 갖고 있는지"로 판별하는데 이 조건만 충족시키면 데너블로 취급한다.
 
 </div>
 </details>
@@ -159,15 +167,15 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 1. 책에서 말하는 각 Error Handling 방법의 문제로 잘못 짝지어진 것은?
 
 - try..catch - async operation을 지원하지 않음
-- end your chain with a final catch(..) - catch가 호출하는 함수 자체에 오류가 있을 경우를 잡아 낼 수 없음. 
-- .done(..) - done이 return 하는 추가적인 unattended promise가 생기는 데에 불과함 
+- end your chain with a final catch(..) - catch가 호출하는 함수 자체에 오류가 있을 경우를 잡아 낼 수 없음.
+- .done(..) - done이 return 하는 추가적인 unattended promise가 생기는 데에 불과함
 
 2. 책에서 이야기하는 Error Handling의 요건 두 가지를 설명하시오.
- 
+
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-1. 
+1.
 
 - try..catch -  It doesn't work across async operations. That is, unless there's some additional environmental support, which we'll come back to with generators in Chapter 4.
 
@@ -175,7 +183,7 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 
 - .done(..) -  the biggest problem is that it's not part of the ES6 standard, so no matter how good it sounds, at best it's a lot longer way off from being a reliable and ubiquitous solution.
 
-2. 
+2.
 
 * Promises could default to reporting (to the developer console) any rejection, on the next Job or event loop tick, if at that exact moment no error handler has been registered for the Promise.
 
@@ -195,7 +203,7 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-[1] `Promise.all([ ])` 은 프라미스 인스턴스들이 담긴 배열 하나를 인자로 받고 해당 인스턴스들이 모두 완료되야 다음으로 넘어간다. 
+[1] `Promise.all([ ])` 은 프라미스 인스턴스들이 담긴 배열 하나를 인자로 받고 해당 인스턴스들이 모두 완료되야 다음으로 넘어간다.
     `Promise.race([ ])`는 프라미스 인스턴스들 중 하나라도 이루어지면 다음으로 넘어간다.
 [2] O
 [3] O
