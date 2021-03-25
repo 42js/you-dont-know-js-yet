@@ -167,11 +167,17 @@ p1.then((num) => num * 2).then((num) => console.log(num));
 ### 3.6 　 Promise Patterns
 
 > yujo
+1. `Promise.all([ ])` 과 `Promise.race([ ])`에 대해 설명하시오.
+2. `Promise.all([ ])`은 하나라도 버려지는 프라미스가 있으면 버려진다. (O / X)
+3. `Promise.race([ ])`은 하나라도 버려지는 프라미스가 있으면 버려진다. (O / X)
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
-
+[1] `Promise.all([ ])` 은 프라미스 인스턴스들이 담긴 배열 하나를 인자로 받고 해당 인스턴스들이 모두 완료되야 다음으로 넘어간다. 
+    `Promise.race([ ])`는 프라미스 인스턴스들 중 하나라도 이루어지면 다음으로 넘어간다.
+[2] O
+[3] O
 </div>
 </details>
 <br>
