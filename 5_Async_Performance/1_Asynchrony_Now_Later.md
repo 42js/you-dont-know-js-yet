@@ -25,10 +25,14 @@
 <div markdown="1">
 
 1. `console` I/O은 항상 동기적으로 작동하기 때문에 온전히 결과를 예측할 수 있다. (O / **X**)
-`console` I/O는 성능상 유리할 경우 백그라운드에서 비동기적으로 처리되므로 "항상 동기적으로 작동된다"는 것은 옳지 않으며,  그로 인한 지연 발생 가능성 때문에 예상치 못한 결과를 얻게 될 수 있으므로 "온전히 결과를 예측할 수 있다"고 볼 수 없다.
+`console` I/O는 성능상 유리할 경우 백그라운드에서 비동기적으로 처리되므로 "항상 동기적으로 작동된다"는 것은 옳지 않으며,  그로 인한 지연 발생 가능성 때문에 예상치 못한 결과를 얻게 될 수 있으므로 "온전히 결과를 예측할 수 있다"고 볼 수 없다.        
  it may perform better (from the page/UI perspective) for a browser to handle console I/O asynchronously in the background, without you perhaps even knowing that occurred. ...(중략)... Just be aware of this possible asynchronicity in I/O in case you ever run into issues in debugging where objects have been modified after a console.log(..) statement and yet you see the unexpected modifications show up.
 
+
+
 2. Chunk 의 단위는 보통 **function** 이다.
+
+
 
 
 </div>
@@ -46,10 +50,10 @@
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-1. `setTimeout`은 타이머가 끝나고 콜백을 이벤트 루프 큐에 넣기 때문에 콜백 실행 시각을 보장할 수는 없다.(O /** X**)
+1. `setTimeout`은 타이머가 끝나고 콜백을 이벤트 루프 큐에 넣기 때문에 콜백 실행 시각을 보장할 수는 없다.(O /** X**)       
 
-"`setTimeout`은 ... 콜백을 이벤트 루프 큐에 넣기 때문에 "이 틀렸다.
-It's important to note that setTimeout(..) doesn't put your callback on the event loop queue. What it does is set up a timer;
+"`setTimeout`은 ... 콜백을 이벤트 루프 큐에 넣기 때문에 "이 틀렸다.    
+It's important to note that setTimeout(..) doesn't put your callback on the event loop queue. What it does is set up a timer.       
 
 
 </div>

@@ -27,14 +27,14 @@
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
 
-1. Promise는 시간-의존적인 상태를 캡슐화하여 시간-독립적인 특성을 갖고 있기 때문에 타이밍이나 결과에 상관없이 예측 가능한 방향으로 구성 가능하다.(**O** / X)
+1. Promise는 시간-의존적인 상태를 캡슐화하여 시간-독립적인 특성을 갖고 있기 때문에 타이밍이나 결과에 상관없이 예측 가능한 방향으로 구성 가능하다.(**O** / X)        
 
 
 Because Promises encapsulate the time-dependent state -- waiting on the fulfillment or rejection of the underlying value -- from the outside, the Promise itself is time-independent, and thus Promises can be composed (combined) in predictable ways regardless of the timing or outcome underneath.
 
 
 
-2. Promise가 귀결(resolved)될 경우 무조건 그 시점에 불변값(immutable value)이 되므로,  값이 안전하게 넘어간다.(**O** / X)
+2. Promise가 귀결(resolved)될 경우 무조건 그 시점에 불변값(immutable value)이 되므로,  값이 안전하게 넘어간다.(**O** / X)         
 
 
  Because a Promise is externally immutable once resolved, it's now safe to pass that value around to any party and know that it cannot be modified accidentally or maliciously.
