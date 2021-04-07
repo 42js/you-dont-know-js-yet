@@ -57,6 +57,47 @@ for (let value of generator()) { // why?
 
 > gim
 
+1. 기존의 콜백을 사용한 비동기 처리와 비교했을 때, 다음 코드로 얻을 수 있는 이점에 대해 이야기 해봅시다.
+
+```jsx
+function foo() {
+  ajax(url, (err, data) => {
+    if (err) {
+      it.throw(err);
+    } else {
+      it.next(data);
+    }
+  });
+}
+
+function* main() {
+  try {
+    var text = yield foo();
+    console.log(text);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+var it = main();
+
+it.next();
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+
+1. async-await 의 `await` 관점으로 보면 좀 더 이해 하기 편하다.
+   - `it.next()` 를 호출 하면 맨 처음 `yield` 지점의 `foo()`를 호출.
+   - `foo()` 의 비동기 처리가 끝날 때까지 `*main`의 후순위 로직은 기다린다.
+   - `ajax()` 에서 받아온 데이터를 판단하여 `it` 객체의 메서드를 호출하고 그에 대한 처리는 `*main` 에서 수행한다.
+
+이와 같은 흐름으로 'ajax 요청 -> 데이터 처리' 의 동기(처럼 보이는) 처리가 가능하다.
+
+</div>
+</details>
+<br>
+
 ### 4.4 　 Generators + Promises
 
 > sohpark
