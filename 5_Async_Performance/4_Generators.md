@@ -21,6 +21,32 @@
 ### 4.2 　 Generator'ing Values
 
 > gim
+ 
+1. ____ 는 producer로서 이전의 값과 연관된 값을 연속적으로 제공한다. 이는 외부에서 해당 스코프의 값을 참조하는 개념인 ____ 를 차용하기 때문에 가능한 디자인 패턴이다.
+2. producer에서 제공한 값을 단계적으로 처리하기 위해 가장 적합한 인터페이스는 ____ 라고 할 수 있다.
+3. `for..of` 구문의 동작 방식
+  - 참조하려는 객체가 ____ 인지 확인한다.
+  - 해당 객체의 _______ 메서드를 자동으로 호출한다.
+  - 위 메서드로 반환된 ____ 객체의 ____ 메서드를 반복적으로 호출하여 해당 value를 참조한다.
+4. generator function 또한 `for..of` 문을 통해 연속적인 값을 참조할 수 있다. 하지만 직접 호출을 해주어야 하는데, 그 이유는 무엇일까?
+```js
+for (let value of generator()) { // why?
+    logic...
+}
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+
+  
+1. Generator / Closure
+2. Iterator
+3. iterable / `Symbol.iterator` / iterator / `next`
+4. 다른 iterable은 `Symbol.iterator` 메서드를 가지고 있는 반면, generator function 은 반환된 iterator 객체가 해당 메서드와 `next`를 모두 가지고 있기 때문에 iterable 이면서 iterator 라고 할 수 있다.
+
+</div>
+</details>
+<br>
 
 ### 4.3 　 Iterating Generators Asynchronously
 
