@@ -80,6 +80,50 @@ s2();
 s2();
 
 ```
+(3)      
+```js
+let x = 1;
+let y = 10;
+
+function *bar(){
+	x--;
+	x = (yield x) + y;
+	yield;
+	x += 10;
+	x *= (yield 2);
+	x--;
+}
+
+function *baz(){
+	var b = (yield 1);
+	y = (yield b) + x;
+	y += (yield 1);
+	x -= yield 20;
+	console.log(x + y);
+}
+
+function step(gen){
+	var it = gen();
+
+	return function go(){
+		var last = it.next(1).value;
+	};
+}
+
+var s1 = step(bar);
+var s2 = step(baz);
+
+s1();
+s1();
+s2();
+s1();
+s2();
+s2();
+s1();
+s2();
+s2();
+
+```
 
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
@@ -127,7 +171,7 @@ do {
 
 
 (2) 42            
-
+(3) 42
 
 
 </div>
