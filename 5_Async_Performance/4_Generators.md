@@ -371,3 +371,111 @@ function* gen() {
 ### 4.8 　 Pre-ES6 Generators
 
 > holee
+
+1. Generator의 ES5 polyfill을 위한 유명한 라이브러리 중 facebook이 만든 (___________)가 있다.
+
+2. 다음은 Generator polyfill 코드의 일부이다. 빈칸에 들어갈 변수의 기능을 설명하라.
+
+```js
+function foo(url) {
+	...
+	return {
+		next: function(v) {
+			if (!__blank__) {
+				__blank__ = 1;
+				return {
+					done: false,
+					value: process()
+				};
+			}
+			else if (__blank__ == 1) {
+				__blank__ = 2;
+				return {
+					done: true,
+					value: process( v )
+				};
+			}
+		...
+}
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1. Generator의 ES5 polyfill을 위한 유명한 라이브러리 중 facebook이 만든 (regenerator)가 있다.
+
+2. 다음은 Generator polyfill 코드의 일부이다. 빈칸에 들어갈 변수의 기능을 설명하라.
+
+```js
+function foo(url) {
+	// manage generator state
+	var state;
+
+	// generator-wide variable declarations
+	var val;
+
+	function process(v) {
+		switch (state) {
+			case 1:
+				console.log( "requesting:", url );
+				return request( url );
+			case 2:
+				val = v;
+				console.log( val );
+				return;
+			case 3:
+				var err = v;
+				console.log( "Oops:", err );
+				return false;
+		}
+	}
+
+	// make and return an iterator
+	return {
+		next: function(v) {
+			// initial state
+			if (!state) {
+				state = 1;
+				return {
+					done: false,
+					value: process()
+				};
+			}
+			// yield resumed successfully
+			else if (state == 1) {
+				state = 2;
+				return {
+					done: true,
+					value: process( v )
+				};
+			}
+			// generator already completed
+			else {
+				return {
+					done: true,
+					value: undefined
+				};
+			}
+		},
+		"throw": function(e) {
+			// the only explicit error handling is in
+			// state *1*
+			if (state == 1) {
+				state = 3;
+				return {
+					done: true,
+					value: process( e )
+				};
+			}
+			// otherwise, an error won't be handled,
+			// so just throw it right back out
+			else {
+				throw e;
+			}
+		}
+	};
+}
+```
+</div>
+</details>
