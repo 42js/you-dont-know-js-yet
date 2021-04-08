@@ -44,13 +44,16 @@ let y = 10;
 function *bar(){
 	x--;
 	x = (yield x) + y;
+	yield;
 	x += 10;
+	x *= (yield 2);
 }
 
 function *baz(){
 	var b = (yield 1);
 	y = (yield b) + x;
 	y += (yield 1);
+	x -= yield 20;
 	console.log(x + y);
 }
 
@@ -71,6 +74,8 @@ s1();
 s2();
 s1();
 s2();
+s2();
+s1();
 s2();
 s2();
 
