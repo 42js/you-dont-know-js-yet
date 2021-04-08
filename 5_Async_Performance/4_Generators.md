@@ -364,9 +364,42 @@ function* gen() {
 
 > yujo
 
+1. 제너레이터의 핵심은 `동시성` 프로그래밍이다. (O / X)
+2. 제너레이터를 사용하면 `병렬` 작업을 실행할 수 있다. (O / X)
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+```
+1.O  
+2.X 
+```
+</div>
+</details>
+<br>	
+
 ### 4.7 　 Thunks
 
 > yujo
+
+1. 비동기 패턴에서 Thunks를 Promise 대신 사용하는 것을 권장한다. (O / X)
+
+
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+```
+1.X 
+
+Thunk는 Prmise의 믿음성/조합성을 보장하지 못 한다.
+```
+
+</div>
+</details>
+<br>	
 
 ### 4.8 　 Pre-ES6 Generators
 
