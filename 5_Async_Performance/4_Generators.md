@@ -18,6 +18,120 @@
 
 > dongbkim
 
+
+1. 다음 코드의 결과를 예측하고 버그가 있다면 고치시오.     
+(1)             
+```js
+function *foo(){
+	yield 1;
+	yield 2;
+	yield 3;
+	return 5;
+}
+
+var it = foo();
+while(it.done != true)
+{
+	console.log(it.next());
+}
+```
+        
+(2)                        
+```js
+let x = 1;
+let y = 10;
+
+function *bar(){
+	x--;
+	x = (yield x) + y;
+	x += 10;
+}
+
+function *baz(){
+	var b = (yield 1);
+	y = (yield b) + x;
+	y += (yield 1);
+	console.log(x + y);
+}
+
+function step(gen){
+	var it = gen();
+	var last;
+
+	return function go(){
+		last = it.next(last).value;
+	};
+}
+
+var s1 = step(bar);
+var s2 = step(baz);
+
+s1();
+s1();
+s2();
+s1();
+s2();
+s2();
+s2();
+
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1.      
+```shell
+{ value: 1, done: false }
+{ value: 2, done: false }
+{ value: 3, done: false }
+{ value: 5, done: true }
+{ value: undefined, done: true }
+{ value: undefined, done: true }
+{ value: undefined, done: true }
+.
+.
+.
+```
+고친 코드
+```js
+function *foo(){
+	yield 1;
+	yield 2;
+	yield 3;
+	return 5;
+}
+
+var it = foo();
+// var buf = it.next();
+// console.log(buf);
+
+// while(buf.done !== true)
+// {
+// 	buf = it.next();
+// 	console.log(buf);
+// }
+
+var buf;
+do {
+	buf = it.next();
+	console.log(buf);
+} while(buf.done !== true);
+
+```
+
+
+(2) 42            
+
+
+
+</div>
+</details>
+<br>
+
+
+
+
 ### 4.2 　 Generator'ing Values
 
 > gim
