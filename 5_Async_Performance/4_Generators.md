@@ -360,6 +360,41 @@ function* gen() {
 
 > nkang
 
+다음 코드의 실행 결과를 쓰시오. 
+
+```jsx
+function *innerGenerator() {
+  yield *['a', 'b', 'c'];
+}
+
+function *generator() {
+  yield *[1, 2, 3];
+  const innerGen = innerGenerator();
+  console.log(innerGen);
+  yield *innerGenerator();
+}
+
+[...generator()];
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+```jsx
+Iterator [Generator] {}
+[ 1, 2, 3, 'a', 'b', 'c' ]
+```
+
+제너레이터는 `yield *` 를 통하여 다른 제너레이터 함수를 실행할 수 있다. innerGeneration를 호출하면 이터레이터 객체가 반환되지만 실제로 innerGenerator가 실행되지는 않는다. 
+
+(yield-delegation doesn't even have to be directed to another generator; it can just be directed to a non-generator, general iterable.)
+
+
+</div>
+</details>
+<br>	
+
 ### 4.6 　 Generator Concurrency
 
 > yujo
