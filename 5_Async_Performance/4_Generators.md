@@ -399,16 +399,43 @@ Iterator [Generator] {}
 
 > yujo
 
-1. 제너레이터의 핵심은 `동시성` 프로그래밍이다. (O / X)
-2. 제너레이터를 사용하면 `병렬` 작업을 실행할 수 있다. (O / X)
+- 다음 코드에서 console에 true가 출력되는 곳은 어디일까요?
 
+```js
+const res = [];
+
+function* foo() {
+  var random = Math.random();
+
+  yield;
+
+  res.push(random);
+}
+
+const it = foo();
+
+console.log(Boolean(res.length)); // (1)
+
+it.next();
+
+console.log(Boolean(res.length)); // (2)
+
+it.next();
+
+console.log(Boolean(res.length)); // (3)
+
+it.next();
+
+console.log(Boolean(res.length)); // (4)
+```
 <details>
 <summary> <b> :page_facing_up: 답지 </b>  </summary>
 <div markdown="1">
+
 ```
-1.O  
-2.X 
+(3), (4)
 ```
+
 </div>
 </details>
 <br>	
@@ -418,7 +445,7 @@ Iterator [Generator] {}
 > yujo
 
 1. 비동기 패턴에서 Thunks를 Promise 대신 사용하는 것을 권장한다. (O / X)
-
+2. Thunk를 간단하게 설명해주세요.
 
 
 <details>
@@ -430,6 +457,18 @@ Iterator [Generator] {}
 1.X 
 
 Thunk는 Prmise의 믿음성/조합성을 보장하지 못 한다.
+
+2. 다른 함수를 호출할 운명을 가진 인자가 없는 함수, Thunk예시는 밑의 fooThunk()
+
+```
+```js
+function foo(x, y) {
+  return x + y;
+}
+
+function fooThunk() {
+  return foo(3, 4)
+}
 ```
 
 </div>
