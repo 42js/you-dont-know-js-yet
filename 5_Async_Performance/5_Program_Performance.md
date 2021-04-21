@@ -13,4 +13,10 @@
 
 ## Quiz
 
-TBU
+### 5.1 　 Web Workers
+
+> nkang
+
+### 5.3 　 asm.js
+
+> yujo

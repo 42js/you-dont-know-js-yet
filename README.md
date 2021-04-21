@@ -11,8 +11,7 @@
 | [Scope & Closures](./2_Scope_Closures) | 2020. 11. 16. ~ 2020. 12. 21. |
 | [*this* & Object Prototypes (1st ed)](./3_this_Object_Prototypes) | 2021. 01. 21. ~ 2021. 02. 10. |
 | [Types & Grammar (1st ed)](./4_Types_Grammars) | 2021. 02. 17. ~ 2021. 03. 03. |
-| [Async & Performance (1st ed)](./5_Async_Performance) |  |
-| ES.Next & Beyond |  |
+| [Async & Performance (1st ed)](./5_Async_Performance) | 2021. 03. 18. ~ 2021. 04. 22. |
 
 <br>
 
