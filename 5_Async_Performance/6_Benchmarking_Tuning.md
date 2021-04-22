@@ -3,7 +3,7 @@
 ## 요약
 | Name | URL |
 |:---|:---|
-| holee |  |
+| holee | [tail_call_optimization](https://gist.github.com/hochan222/f3407f9db47e3237cbd82539525fce60) |
 | sunpark |  |
 | dongbkim |  |
 | gim |  |
@@ -66,3 +66,30 @@
 ### 6.6 　 Tail Call Optimization (TCO)
 
 > holee
+
+1. 구글 크롬은 현재 Tail Call Optimization을 지원한다. ( O, X )
+2. Tail Call Optimization을 고르시오. ( bar, baz )
+```js
+function foo(x) {
+	return x;
+}
+function bar(y) {
+	return foo( y + 1 );	
+}
+function baz() {
+	return 1 + bar( 40 );	
+}
+```
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+  1. 구글 크롬은 현재 Tail Call Optimization을 지원한다. ( O, <strong>X</strong> )
+
+> https://www.chromestatus.com/feature/5516876633341952
+
+2. Tail Call Optimization을 고르시오. ( **bar**, baz )
+
+</div>
+</details>
+<br>
