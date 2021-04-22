@@ -106,6 +106,8 @@ use from
 ### 6.3 　 jsPerf.com
 
 > gim
+ 
+1. 명확한 테스트를 위해 어떤 점을 고려할 수 있을까요? (자유롭게 말해봅시다.)
 
 ### 6.5 　 Microperformance
 
