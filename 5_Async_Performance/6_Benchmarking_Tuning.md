@@ -17,6 +17,75 @@
 
 > dongbkim
 
+
+1. **Benchmark.js**를 이용하여 string을 array로 생성하는 여러가지 방법들을 벤츠마크하였다. 다음 코드에 대해 설명하고 이 코드의 한계에 대해 서술하시오.   
+
+
+```js
+const Benchmark = require("benchmark");
+
+var suite = new Benchmark.Suite();
+const a = "helloWorld1234123rsfkjdlkfjaskdfj1l2341234";
+suite.add("use split\n======\n",function(){
+	a.split("");
+})
+.add("use spread\n======\n", function() {
+	[...a];
+})
+.add("use from\n======\n", function(){
+	Array.from(a);
+})
+.on("cycle", function(e){
+	console.log(String(e.target));
+})
+.on("complete", function(){
+	console.log("1st WINNER :::::>>"+this.filter("fastest").map("name"));
+})
+.run();
+
+```
+
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+
+1. 위 코드에 의하면 첫번째 방법이 제일 빠르나, 다른 짧은 string로 테스트 했을 때, 두번째 방법이 제일 빠르다고 나온다. 즉, 해당 테스트 케이스의 경우 대부분 첫번째 방법이 빠르다고 할 수 있으나, 원래 이 코드의 작성 목적인 "string을 array로 생성하는 여러가지 방법들을 벤츠마크"를 테스트하기 위해서 케이스가 충분하지 않아 신뢰도가 떨어진다.
+```
+# 위 코드 결과
+use split
+======
+ x 2,847,807 ops/sec ±0.85% (92 runs sampled)
+use spread
+======
+ x 1,672,102 ops/sec ±0.78% (95 runs sampled)
+use from
+======
+ x 1,660,838 ops/sec ±0.82% (95 runs sampled)
+1st WINNER :::::>>use split
+======
+```
+```
+use split
+======
+ x 12,157,825 ops/sec ±1.44% (89 runs sampled)
+use spread
+======
+ x 18,289,626 ops/sec ±0.85% (91 runs sampled)
+use from
+======
+ x 16,969,832 ops/sec ±0.80% (94 runs sampled)
+1st WINNER :::::>>use spread
+======
+```
+
+
+</div>
+</details>
+<br>
+
+
 ### 6.2 　 Context Is King
 
 > sunpark
