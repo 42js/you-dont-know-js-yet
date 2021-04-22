@@ -68,7 +68,8 @@
 > holee
 
 1. 구글 크롬은 현재 Tail Call Optimization을 지원한다. ( O, X )
-2. Tail Call Optimization을 고르시오. ( bar, baz )
+2. 사파리는 현재 Tail Call Optimization을 지원한다. ( O, X )
+3. Tail Call Optimization을 고르시오. ( bar, baz )
 ```js
 function foo(x) {
 	return x;
@@ -88,7 +89,8 @@ function baz() {
 
 > https://www.chromestatus.com/feature/5516876633341952
 
-2. Tail Call Optimization을 고르시오. ( **bar**, baz )
+2. 사파리는 현재 Tail Call Optimization을 지원한다. ( <strong>O</strong>, X )
+3. Tail Call Optimization을 고르시오. ( **bar**, baz )
 
 </div>
 </details>
