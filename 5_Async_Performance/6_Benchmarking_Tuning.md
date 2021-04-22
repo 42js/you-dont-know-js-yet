@@ -25,23 +25,23 @@
 const Benchmark = require("benchmark");
 
 var suite = new Benchmark.Suite();
-const a = "helloWorld1234123rsfkjdlkfjaskdfj1l2341234";
-suite.add("use split\n======\n",function(){
+const a = "hello";
+suite.add("\n======\nuse split",function(){
 	a.split("");
 })
-.add("use spread\n======\n", function() {
+.add("\n======\nuse spread", function() {
 	[...a];
 })
-.add("use from\n======\n", function(){
+.add("\n======\nuse from", function(){
 	Array.from(a);
 })
 .on("cycle", function(e){
 	console.log(String(e.target));
 })
 .on("complete", function(){
-	console.log("1st WINNER :::::>>"+this.filter("fastest").map("name"));
+	console.log("\n======\n1st WINNER vvvvv"+this.filter("fastest").map("name"));
 })
-.run();
+.run({"async": true});
 
 ```
 
@@ -54,30 +54,36 @@ suite.add("use split\n======\n",function(){
 1. 위 코드에 의하면 첫번째 방법이 제일 빠르나, 다른 짧은 string로 테스트 했을 때, 두번째 방법이 제일 빠르다고 나온다. 즉, 해당 테스트 케이스의 경우 대부분 첫번째 방법이 빠르다고 할 수 있으나, 원래 이 코드의 작성 목적인 "string을 array로 생성하는 여러가지 방법들을 벤츠마크"를 테스트하기 위해서 케이스가 충분하지 않아 신뢰도가 떨어진다.
 ```
 # 위 코드 결과
+
+======
+use split x 5,399,034 ops/sec ±1.50% (85 runs sampled)
+
+======
+use spread x 2,552,140 ops/sec ±0.98% (86 runs sampled)
+
+======
+use from x 2,529,205 ops/sec ±0.94% (88 runs sampled)
+
+======
+1st WINNER vvvvv
+======
 use split
-======
- x 2,847,807 ops/sec ±0.85% (92 runs sampled)
-use spread
-======
- x 1,672,102 ops/sec ±0.78% (95 runs sampled)
-use from
-======
- x 1,660,838 ops/sec ±0.82% (95 runs sampled)
-1st WINNER :::::>>use split
-======
 ```
 ```
-use split
+# 짧은 스트링 테스트 결과
 ======
- x 12,157,825 ops/sec ±1.44% (89 runs sampled)
+use split x 9,219,866 ops/sec ±16.07% (67 runs sampled)
+
+======
+use spread x 26,158,032 ops/sec ±1.02% (87 runs sampled)
+
+======
+use from x 22,984,017 ops/sec ±2.07% (86 runs sampled)
+
+======
+1st WINNER vvvvv
+======
 use spread
-======
- x 18,289,626 ops/sec ±0.85% (91 runs sampled)
-use from
-======
- x 16,969,832 ops/sec ±0.80% (94 runs sampled)
-1st WINNER :::::>>use spread
-======
 ```
 
 
