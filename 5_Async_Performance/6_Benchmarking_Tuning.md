@@ -90,6 +90,19 @@ use from
 
 > sunpark
 
+1. JS 코딩을 할 때 알고리즘 문제를 풀 때처럼 시간복잡도를 계산하여 사소한 차이(ex. O(N) vs O(NlgN))도 줄여야 최적화에 도움이 된다. ( O / X )
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+
+1. JS 코딩을 할 때 알고리즘 문제를 풀 때처럼 시간복잡도를 계산하여 사소한 차이(ex. O(N) vs O(NlgN))도 줄여야 최적화에 도움이 된다. ( O / **X** )
+> JS에서 미시성능에 너무 집중하다 보면 컴파일러나 엔진에서 이를 생략하거나 무시하는 작업들도 있기 때문에 미시성능에 집중하지 않아도 된다.
+
+</div>
+</details>
+<br>
+
 ### 6.3 　 jsPerf.com
 
 > gim
