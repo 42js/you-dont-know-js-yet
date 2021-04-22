@@ -72,3 +72,20 @@
 ### 5.3 　 asm.js
 
 > yujo
+
+1. asm.js는 모든 타입을 다룰 수 있다. (O / X)
+2. asm.js는 JavaScript에 기반한 공식 스펙이다. (O / X)
+3. asm.js는 지속적으로 업데이트 되고 있다. (O / X)
+
+<details>
+<summary> <b> :page_facing_up: 답지 </b>  </summary>
+<div markdown="1">
+  
+1. X / 숫자 타입만 다룰 수 있다.
+2. X / asm.js는 JavaScript에 기반한 비공식 스펙이다.
+3. X / 2014년을 끝으로 Depreacte 되었다.
+  - [asm.js / MDN](https://developer.mozilla.org/en-US/docs/Games/Tools/asm.js?source=post_page)
+
+</div>
+</details>
+<br>
